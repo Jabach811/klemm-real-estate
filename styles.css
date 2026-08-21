@@ -70,7 +70,11 @@ nav a {
 nav a:hover { border-bottom-color: var(--brick); }
 nav a.active { border-bottom-color: var(--brick); }
 .nav-phone { color: var(--brick); font-weight: 600; }
-@media (max-width: 640px) { .nav-hide { display: none; } }
+@media (max-width: 640px) {
+  header { flex-wrap: wrap; padding: 14px var(--pad) 10px; row-gap: 2px; }
+  nav { width: 100%; justify-content: space-between; gap: 10px; }
+  nav a { font-size: 13px; padding: 6px 0; }
+}
 
 /* ---------- hero ---------- */
 .hero {
