@@ -1,0 +1,9 @@
+# Local tooling
+.claude/
+
+# Working files, not part of the site
+mocks/
+04eliteagentwebsites.md
+05synthesisandrankings.md
+font view.png
+klemm windmill hero animation.mp4
