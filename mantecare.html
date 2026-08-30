@@ -3,21 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jack Klemm — Klemm Real Estate | Tracy, CA</title>
-<meta name="description" content="38 years selling homes in Tracy, Mountain House, Manteca, and Lathrop. Nearly 4,000 homes sold. Jack Klemm coordinates repairs, staging, photography, and virtual tours — one broker, start to close. 5.0★ across 123 Zillow reviews.">
+<title>Sell Your Manteca Home — Jack Klemm | Klemm Real Estate</title>
+<meta name="description" content="Selling a home in Manteca? Jack Klemm has sold nearly 4,000 homes across San Joaquin County since 1988. He coordinates repairs, staging, photography, and virtual tours — one broker, start to close.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* neighborhoods */
+  .hoods { padding: clamp(72px, 11vh, 140px) var(--pad); background: var(--paper-deep); }
+  .hoods .areas-grid { align-items: start; }
+  .hoods .area-photo-frame { background: var(--paper); }
+  .hoods .area-list li { border-color: color-mix(in srgb, var(--hairline) 60%, var(--ink-soft)); }
+</style>
 </head>
 <body>
 
 <header>
-  <a class="wordmark" href="#">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" href="https://klemmre.com">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="index.html" class="nav-hide active">Home</a>
-    <a href="about.html" class="nav-hide">About</a>
-    <a href="listings.html" class="nav-hide">Featured Listings</a>
+    <a href="mantecare.html" class="nav-hide active">Home</a>
+    <a href="#about" class="nav-hide">About</a>
+    <a href="#listings" class="nav-hide">Featured Listings</a>
     <div class="menu nav-hide">
       <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
       <div class="drop">
@@ -52,40 +59,81 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="Klemm windmill hero.png">
-      <source src="klemm-hero-loop.mp4" type="video/mp4">
-    </video>
+    <img src="Manteca City Scape 1.jpg" alt="">
   </div>
-  <h1 class="reveal-load">Thirty-eight years selling homes in Tracy. <strong>Nearly four thousand sold.</strong> <span class="accent">One agent who handles all&nbsp;of&nbsp;it.</span></h1>
+  <span class="city-tag reveal-load">Manteca, California</span>
+  <h1 class="reveal-load">Selling a home in Manteca? <strong>Hand Jack the keys.</strong> <span class="accent">He handles all&nbsp;of&nbsp;it.</span></h1>
   <div class="hero-kicker reveal-load">
     <span class="stars">★★★★★</span>
     <em>5.0 on Zillow across 123 client reviews</em>
   </div>
   <div class="hero-sub reveal-load">
-    <p>Repair bids, cleaning, staging, photography, virtual tours, inspections, escrow — Jack Klemm coordinates every step himself, so you're never the general contractor of your own sale.</p>
-    <a class="btn" href="sell.html#start">Start with a free home valuation</a>
+    <p>Repair bids, cleaning, staging, photography, virtual tours, inspections, escrow — Jack Klemm coordinates every step of getting a Manteca home show-ready, so you're never the general contractor of your own sale.</p>
+    <a class="btn" href="sell.html#start">Get your free Manteca home valuation</a>
   </div>
 </section>
 
 <section class="stats" aria-label="Track record">
-  <div class="stat reveal"><b>38</b><small>Years in Tracy real estate</small></div>
+  <div class="stat reveal"><b>38</b><small>Years in San Joaquin County</small></div>
   <div class="stat reveal"><b>3,900+</b><small>Homes sold since 1988</small></div>
   <div class="stat reveal"><b>5.0<span style="font-size:0.5em">/5</span></b><small>Zillow rating · 123 reviews</small></div>
   <div class="stat reveal"><b>~75</b><small>Homes sold every year</small></div>
 </section>
 
-<section class="showready" id="sell">
+<section class="soldhere" id="listings">
+  <div class="soldhere-head reveal">
+    <span class="eyebrow">On the market with Jack, right now</span>
+    <h2>Manteca homes he's selling this season.</h2>
+    <p>Not a national portal feed — these are Jack's own listings, prepared and marketed the same way yours would be.</p>
+  </div>
+  <div class="listings reveal">
+    <div class="listing">
+      <div class="listing-photo">
+        <div class="asset-slot">
+          <i>Photo needed</i>
+          <p>Exterior hero shot of 2505 Chrysler Avenue — the listing photography already exists, use the lead image.</p>
+        </div>
+      </div>
+      <div class="listing-copy">
+        <b>$875,000</b>
+        <span>2505 Chrysler Avenue, Manteca</span>
+        <small>3 bed · 2.5 bath · 2,364 sq ft</small>
+      </div>
+    </div>
+    <div class="listing">
+      <div class="listing-photo">
+        <div class="asset-slot">
+          <i>Photo needed</i>
+          <p>Exterior hero shot of 2498 Pepper Tree Lane — lead image from the listing set.</p>
+        </div>
+      </div>
+      <div class="listing-copy">
+        <b>$730,000</b>
+        <span>2498 Pepper Tree Lane, Manteca</span>
+        <small>3 bed · 2.5 bath · 2,634 sq ft</small>
+      </div>
+    </div>
+    <div class="listing">
+      <div class="listing-photo">
+        <div class="asset-slot">
+          <i>Photo needed</i>
+          <p>Exterior hero shot of 2442 Pepper Tree Lane — lead image from the listing set.</p>
+        </div>
+      </div>
+      <div class="listing-copy">
+        <b>$724,000</b>
+        <span>2442 Pepper Tree Lane, Manteca</span>
+        <small>2 bed · 2.5 bath · 2,634 sq ft</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="showready" id="sell" style="padding-top:0">
   <div class="showready-head reveal">
     <span class="eyebrow">The Show-Ready Sale</span>
     <h2>You hand Jack the keys. He hands you back a sold sign.</h2>
     <p>Most agents list your house as-is and hope. Jack gets it ready first — lining up the bids, the stagers, and the photographers so you're not managing contractors while trying to move your life.</p>
-  </div>
-  <div class="showready-media reveal">
-    <img src="staging-detail.jpg" alt="A warm, staged kitchen ready for listing photography">
-    <div class="showready-media-copy">
-      <span class="eyebrow">Before the first showing</span>
-      <p>A home that feels cared for earns attention before a buyer has even walked through the door.</p>
-    </div>
   </div>
   <div class="steps reveal">
     <div class="step">
@@ -101,7 +149,7 @@
     <div class="step">
       <i>03</i>
       <h3>Model-home marketing</h3>
-      <p>Professional photography, virtual tours, and pricing built on three decades of Tracy market data.</p>
+      <p>Professional photography, virtual tours, and pricing built on decades of San Joaquin County sales data.</p>
     </div>
     <div class="step">
       <i>04</i>
@@ -109,66 +157,65 @@
       <p>Offers, negotiation, inspections, paperwork — Jack walks the sale all the way to closing day.</p>
     </div>
   </div>
-  <p class="fineprint reveal"><b>Recent result:</b> a Tracy listing sold over asking with a signed contract in under a week — sellers had already moved to Florida and never came back for a single showing.</p>
 </section>
 
 <section class="quotes" id="reviews">
   <div class="quote reveal">
-    <span class="eyebrow">What clients say</span>
-    <blockquote style="margin-top:20px">"We left everything to Jack and were able to move before it even listed. <span class="hl">We could not be happier.</span>"</blockquote>
-    <cite>Rob &amp; Gladys Copeland · Sold in Tracy</cite>
+    <span class="eyebrow">What Manteca sellers say</span>
+    <blockquote style="margin-top:20px">"A very knowledgeable realtor who knows how to market a house — with <span class="hl">an awesome crew who takes videos and photos</span> as part of the marketing strategy."</blockquote>
+    <cite>Conlou Antoine · Sold in Manteca</cite>
   </div>
   <div class="quote reveal">
-    <blockquote>"Jack safely navigated us around every minefield. His marketing and photos were great. <span class="hl">That guy is fantastic.</span>"</blockquote>
-    <cite>Marcus &amp; Shin Van Overbeek · Sold in Tracy</cite>
+    <blockquote>"We left everything to Jack and were able to move before it even listed. <span class="hl">We could not be happier.</span>"</blockquote>
+    <cite>Rob &amp; Gladys Copeland · Sold with Klemm Real Estate</cite>
   </div>
   <div class="quote reveal">
     <blockquote>"If integrity, trustworthiness and service matter to you, Jack is your guy. <span class="hl">We wish we could take him with us.</span>"</blockquote>
     <cite>Lisa Snyder · Relocated out of state</cite>
   </div>
   <div class="quotes-cta reveal">
-    <a href="reviews.html">Read the reviews →</a>
+    <a href="reviews.html">Read all 123 reviews →</a>
   </div>
 </section>
 
-<section class="about">
-  <div class="about-grid">
-    <img class="reveal" src="Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
-    <div class="about-copy reveal">
-      <span class="eyebrow">Tracy's broker since 1988</span>
-      <h2>The agent who answers his own phone.</h2>
-      <p>Jack Klemm has been selling homes in Tracy since 1988 — nearly four thousand of them. He's not a team with his name on it. When you call, you get Jack: the same person who prices your home, runs the contractors, and negotiates your contract.</p>
-      <p>Klemm Real Estate is his own independent brokerage, which means no franchise playbook and no handing you off. Just a broker who's watched this market for thirty-eight years and knows what your street sells for.</p>
-    </div>
-  </div>
-</section>
-
-<section class="areas">
+<section class="hoods">
   <div class="areas-grid">
     <div class="areas-intro reveal">
-      <span class="eyebrow">Where Jack works</span>
-      <p>Five communities, one specialist. Jack has lived and sold here for nearly four decades — he knows what your street sold for, not just your ZIP code.</p>
+      <span class="eyebrow">Jack knows your street</span>
+      <p>Manteca isn't one market — Woodward Park and a Del Webb Woodbridge cottage sell to different buyers at different prices. Jack prices by neighborhood, not ZIP code.</p>
       <div class="area-photo-frame" aria-hidden="true">
-        <img class="on" src="Tracy City Scape 1.jpg" alt="">
-        <img src="Mountain House City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Manteca City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Lathrop City Scape 1.jpg" alt="" loading="lazy">
-        <img src="River Islands City Scape 1.jpg" alt="" loading="lazy">
+        <img class="on" src="Manteca City Scape 1.jpg" alt="">
+        <div class="asset-slot" style="position:absolute; inset:0;">
+          <i>Photos needed</i>
+          <p>One photo per neighborhood below — street-level, golden hour. The city scape covers the default view; each list item should swap to its own shot on hover, same as the main site's areas section.</p>
+        </div>
       </div>
     </div>
     <ul class="area-list reveal">
-      <li class="on"><b>Tracy</b><span>Home base since 1988</span></li>
-      <li><b>Mountain House</b><span>New construction &amp; resale</span></li>
-      <li><b>Manteca</b><span>Family neighborhoods</span></li>
-      <li><b>Lathrop</b><span>Commuter corridor</span></li>
-      <li><b>River Islands</b><span>Master-planned waterfront</span></li>
+      <li class="on"><b>Woodward Park</b><span>Family neighborhoods</span></li>
+      <li><b>Del Webb Woodbridge</b><span>55+ resort living</span></li>
+      <li><b>Union Ranch</b><span>Newer construction</span></li>
+      <li><b>Oakwood Shores</b><span>Lakefront estates</span></li>
+      <li><b>Downtown Manteca</b><span>Established streets</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <img class="reveal" src="Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Your broker, twenty minutes away</span>
+      <h2>The agent who answers his own phone.</h2>
+      <p>Jack Klemm has sold homes across San Joaquin County since 1988 — nearly four thousand of them, a good share right here in Manteca. He's not a team with his name on it. When you call, you get Jack: the same person who prices your home, runs the contractors, and negotiates your contract.</p>
+      <p>Klemm Real Estate is his own independent brokerage. No franchise playbook, no handing you off — just a broker who knows what your street sells for.</p>
+    </div>
   </div>
 </section>
 
 <section class="doors" id="buy">
   <a class="door" href="sell.html">
-    <h3>Sell my home</h3>
+    <h3>Sell my Manteca home</h3>
     <p>Free valuation and a show-ready plan for your exact house.</p>
     <span class="go">Get started</span>
   </a>
@@ -194,7 +241,7 @@
     </div>
   </div>
   <div class="foot-legal">
-    <span>© 2026 Klemm Real Estate · DRE #01004092</span>
+    <span>© 2026 Klemm Real Estate · DRE #01004092 · <a href="https://klemmre.com" style="color:inherit">klemmre.com</a></span>
     <span><a href="https://www.facebook.com/JackKlemmRE" style="color:inherit">Facebook</a> · <a href="https://www.zillow.com/profile/JackCKlemm" style="color:inherit">Zillow</a></span>
   </div>
 </footer>
@@ -204,27 +251,6 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  const areaLis = document.querySelectorAll('.area-list li');
-  const areaImgs = [...document.querySelectorAll('.area-photo-frame img')];
-  let areaCurrent = areaImgs[0];
-  let areaClear;
-  areaLis.forEach((li, i) => {
-    const show = () => {
-      if (areaImgs[i] === areaCurrent) return;
-      areaLis.forEach(l => l.classList.remove('on'));
-      li.classList.add('on');
-      areaImgs.forEach(im => im.classList.remove('prev'));
-      areaCurrent.classList.add('prev');
-      areaCurrent.classList.remove('on');
-      areaImgs[i].classList.add('on');
-      areaCurrent = areaImgs[i];
-      clearTimeout(areaClear);
-      areaClear = setTimeout(() => areaImgs.forEach(im => im.classList.remove('prev')), 470);
-    };
-    li.addEventListener('mouseenter', show);
-    li.addEventListener('click', show);
-  });
 
   document.querySelectorAll('.menu > button').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -245,13 +271,6 @@
       m.querySelector('button').setAttribute('aria-expanded', 'false');
     });
   });
-
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const v = document.querySelector('.hero-media video');
-    const img = new Image();
-    img.src = v.poster;
-    v.replaceWith(img);
-  }
 </script>
 
 </body>
