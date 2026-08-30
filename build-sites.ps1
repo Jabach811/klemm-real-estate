@@ -28,7 +28,7 @@ $cityEntryPoints = @{
   'cities/mountain-house/index.html' = 'mountainhousere.html'
   'cities/lathrop/index.html' = 'lathropre.html'
   'cities/river-islands/index.html' = 'riverislandsre.html'
-  'cities/manteca/woodbridge.html' = 'woodbridgere.html'
+  'cities/woodbridge/index.html' = 'woodbridgere.html'
 }
 foreach ($source in $cityEntryPoints.Keys) {
   $content = Get-Content -LiteralPath (Join-Path $project $source) -Raw

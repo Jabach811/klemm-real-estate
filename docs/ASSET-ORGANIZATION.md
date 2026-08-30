@@ -1,7 +1,7 @@
 # Project organization
 
 - `cities/<city>/index.html` is that city's live page when one exists.
-- `cities/<city>/assets/` contains all imagery, video, notes, and neighborhood material for that city. Neighborhood-specific material belongs one level deeper, such as `cities/manteca/assets/del-webb-woodbridge/`.
+- `cities/<city>/assets/` contains all imagery, video, notes, and neighborhood material for that city. A named community with its own page gets its own folder, such as `cities/woodbridge/`, even when it sits inside another city.
 - `shared/jack/` contains Jack-specific imagery. `shared/listing-prep/` contains reusable staging and listing-prep photography.
 - `site/` holds shared site pages and styling. The build preserves their existing public root URLs and also publishes each city folder at `cities/<city>/`.
 
