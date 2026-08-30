@@ -23,5 +23,5 @@ All images are wide, copy-safe compositions intended for restrained motion rathe
 - `manteca-orchard-neighborhood.png`: slow left-to-right pan from orchard edge toward neighborhood homes.
 
 ## DW Woodbridge
-- `dw-woodbridge-clubhouse-hero.png`: slow push toward the clubhouse; fountain and reflections are the only live movement.
-- `dw-woodbridge-bocce-garden.png`: slow garden-level drift toward the pavilion; warm late-day light, no people required.
+- `woodbridge/assets/clubhouse-hero.png`: slow push toward the clubhouse; fountain and reflections are the only live movement.
+- `woodbridge/assets/bocce-garden.png`: slow garden-level drift toward the pavilion; warm late-day light, no people required.
