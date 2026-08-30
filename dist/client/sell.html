@@ -163,9 +163,9 @@
 <body>
 
 <header>
-  <a class="wordmark" href="index.html">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" data-home href="index.html">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="index.html" class="nav-hide">Home</a>
+    <a href="index.html" class="nav-hide" data-home>Home</a>
     <a href="about.html" class="nav-hide">About</a>
     <a href="listings.html" class="nav-hide">Featured Listings</a>
     <div class="menu nav-hide">
@@ -270,15 +270,15 @@
   <div class="process-photo reveal">
     <div class="photo-stack">
       <figure class="on" data-steps="0,1">
-        <img src="staging-before.jpg" alt="A living room stripped for prep, drop cloths over the floor and a ladder by the window">
+        <img src="shared/listing-prep/staging-before.jpg" alt="A living room stripped for prep, drop cloths over the floor and a ladder by the window">
         <figcaption><b>Before</b> — walk-through and prep</figcaption>
       </figure>
       <figure data-steps="2,3">
-        <img src="staging-after.jpg" alt="The same living room staged with a linen sofa, walnut table, and sheer curtains" loading="lazy">
+        <img src="shared/listing-prep/staging-after.jpg" alt="The same living room staged with a linen sofa, walnut table, and sheer curtains" loading="lazy">
         <figcaption><b>After</b> — the same room, staged</figcaption>
       </figure>
       <figure data-steps="4,5">
-        <img src="staging-detail.jpg" alt="A styled kitchen counter with a wooden bowl of lemons, linen towel, and potted herb" loading="lazy">
+        <img src="shared/listing-prep/staging-detail.jpg" alt="A styled kitchen counter with a wooden bowl of lemons, linen towel, and potted herb" loading="lazy">
         <figcaption><b>Show-ready</b> — down to the details</figcaption>
       </figure>
     </div>
@@ -294,7 +294,7 @@
   </div>
 </section>
 
-<img class="band-photo" src="Mountain House City Scape 1.jpg" alt="Rooftops of Mountain House, California, with the Altamont hills behind" loading="lazy">
+<img class="band-photo" src="cities/mountain-house/assets/Mountain House City Scape 1.jpg" alt="Rooftops of Mountain House, California, with the Altamont hills behind" loading="lazy">
 
 <section class="quotes" aria-label="Seller reviews">
   <div class="quote reveal">
@@ -354,6 +354,17 @@
       btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
   document.addEventListener('click', e => {
     if (e.target.closest('.menu')) return;
     document.querySelectorAll('.menu.open').forEach(m => {
@@ -383,6 +394,9 @@
     });
   }, { rootMargin: '-45% 0px -45% 0px' });
   steps.forEach(li => stepIO.observe(li));
+
+  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
+  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
 </body>

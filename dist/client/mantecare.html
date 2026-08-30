@@ -15,12 +15,14 @@
   .hoods .areas-grid { align-items: start; }
   .hoods .area-photo-frame { background: var(--paper); }
   .hoods .area-list li { border-color: color-mix(in srgb, var(--hairline) 60%, var(--ink-soft)); }
+  .hoods .area-list li { cursor: pointer; }
+  .hoods .area-list li:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="wordmark" href="https://klemmre.com">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" href="mantecare.html">Klemm <span>Real Estate</span></a>
   <nav>
     <a href="mantecare.html" class="nav-hide active">Home</a>
     <a href="#about" class="nav-hide">About</a>
@@ -59,7 +61,9 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img src="Manteca City Scape 1.jpg" alt="">
+    <video autoplay muted loop playsinline poster="cities/manteca/assets/Manteca Water Tower.png">
+      <source src="cities/manteca/assets/Manteca Hero Animation.mp4" type="video/mp4">
+    </video>
   </div>
   <span class="city-tag reveal-load">Manteca, California</span>
   <h1 class="reveal-load">Selling a home in Manteca? <strong>Hand Jack the keys.</strong> <span class="accent">He handles all&nbsp;of&nbsp;it.</span></h1>
@@ -89,10 +93,7 @@
   <div class="listings reveal">
     <div class="listing">
       <div class="listing-photo">
-        <div class="asset-slot">
-          <i>Photo needed</i>
-          <p>Exterior hero shot of 2505 Chrysler Avenue — the listing photography already exists, use the lead image.</p>
-        </div>
+        <img src="cities/manteca/assets/2505 Chrysler Avenue, Manteca.png" alt="2505 Chrysler Avenue, Manteca">
       </div>
       <div class="listing-copy">
         <b>$875,000</b>
@@ -102,10 +103,7 @@
     </div>
     <div class="listing">
       <div class="listing-photo">
-        <div class="asset-slot">
-          <i>Photo needed</i>
-          <p>Exterior hero shot of 2498 Pepper Tree Lane — lead image from the listing set.</p>
-        </div>
+        <img src="cities/manteca/assets/2498 Pepper Tree Lane, Manteca.png" alt="2498 Pepper Tree Lane, Manteca">
       </div>
       <div class="listing-copy">
         <b>$730,000</b>
@@ -115,10 +113,7 @@
     </div>
     <div class="listing">
       <div class="listing-photo">
-        <div class="asset-slot">
-          <i>Photo needed</i>
-          <p>Exterior hero shot of 2442 Pepper Tree Lane — lead image from the listing set.</p>
-        </div>
+        <img src="cities/manteca/assets/2442 Pepper Tree Lane, Manteca.png" alt="2442 Pepper Tree Lane, Manteca">
       </div>
       <div class="listing-copy">
         <b>$724,000</b>
@@ -184,26 +179,26 @@
       <span class="eyebrow">Jack knows your street</span>
       <p>Manteca isn't one market — Woodward Park and a Del Webb Woodbridge cottage sell to different buyers at different prices. Jack prices by neighborhood, not ZIP code.</p>
       <div class="area-photo-frame" aria-hidden="true">
-        <img class="on" src="Manteca City Scape 1.jpg" alt="">
-        <div class="asset-slot" style="position:absolute; inset:0;">
-          <i>Photos needed</i>
-          <p>One photo per neighborhood below — street-level, golden hour. The city scape covers the default view; each list item should swap to its own shot on hover, same as the main site's areas section.</p>
-        </div>
+        <img class="on" src="cities/manteca/assets/manteca-woodward-park-family-neighborhood.png" alt="">
+        <img src="cities/manteca/assets/manteca-del-webb-woodbridge-lakeview.png" alt="" loading="lazy">
+        <img src="cities/manteca/assets/manteca-union-ranch-new-construction.png" alt="" loading="lazy">
+        <img src="cities/manteca/assets/manteca-oakwood-shores-lakefront-estates.png" alt="" loading="lazy">
+        <img src="cities/manteca/assets/manteca-downtown-established-streets.png" alt="" loading="lazy">
       </div>
     </div>
     <ul class="area-list reveal">
-      <li class="on"><b>Woodward Park</b><span>Family neighborhoods</span></li>
-      <li><b>Del Webb Woodbridge</b><span>55+ resort living</span></li>
-      <li><b>Union Ranch</b><span>Newer construction</span></li>
-      <li><b>Oakwood Shores</b><span>Lakefront estates</span></li>
-      <li><b>Downtown Manteca</b><span>Established streets</span></li>
+      <li class="on" role="button" tabindex="0"><b>Woodward Park</b><span>Family neighborhoods</span></li>
+      <li role="button" tabindex="0"><b>Del Webb Woodbridge</b><span>55+ resort living</span></li>
+      <li role="button" tabindex="0"><b>Union Ranch</b><span>Newer construction</span></li>
+      <li role="button" tabindex="0"><b>Oakwood Shores</b><span>Lakefront estates</span></li>
+      <li role="button" tabindex="0"><b>Downtown Manteca</b><span>Established streets</span></li>
     </ul>
   </div>
 </section>
 
 <section class="about" id="about">
   <div class="about-grid">
-    <img class="reveal" src="Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
+    <img class="reveal" src="shared/jack/Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
     <div class="about-copy reveal">
       <span class="eyebrow">Your broker, twenty minutes away</span>
       <h2>The agent who answers his own phone.</h2>
@@ -252,6 +247,34 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  const areaLis = document.querySelectorAll('.area-list li');
+  const areaImgs = [...document.querySelectorAll('.area-photo-frame img')];
+  let areaCurrent = areaImgs[0];
+  let areaClear;
+  areaLis.forEach((li, i) => {
+    const show = () => {
+      if (areaImgs[i] === areaCurrent) return;
+      areaLis.forEach(l => l.classList.remove('on'));
+      li.classList.add('on');
+      areaImgs.forEach(im => im.classList.remove('prev'));
+      areaCurrent.classList.add('prev');
+      areaCurrent.classList.remove('on');
+      areaImgs[i].classList.add('on');
+      areaCurrent = areaImgs[i];
+      clearTimeout(areaClear);
+      areaClear = setTimeout(() => areaImgs.forEach(im => im.classList.remove('prev')), 470);
+    };
+    li.addEventListener('mouseenter', show);
+    li.addEventListener('focus', show);
+    li.addEventListener('click', show);
+    li.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        show();
+      }
+    });
+  });
+
   document.querySelectorAll('.menu > button').forEach(btn => {
     btn.addEventListener('click', () => {
       const menu = btn.parentElement;
@@ -264,6 +287,17 @@
       btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
   document.addEventListener('click', e => {
     if (e.target.closest('.menu')) return;
     document.querySelectorAll('.menu.open').forEach(m => {
@@ -271,6 +305,28 @@
       m.querySelector('button').setAttribute('aria-expanded', 'false');
     });
   });
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const v = document.querySelector('.hero-media video');
+    const img = new Image();
+    img.src = v.poster;
+    v.replaceWith(img);
+  }
+
+  const heroVideo = document.querySelector('.hero-media video');
+  if (heroVideo) {
+    const slowestRate = 0.5;
+    const easeLoop = () => {
+      if (heroVideo.duration) {
+        const p = heroVideo.currentTime / heroVideo.duration;
+        heroVideo.playbackRate = 1 - (1 - slowestRate) * Math.sin(Math.PI * p);
+      }
+      requestAnimationFrame(easeLoop);
+    };
+    requestAnimationFrame(easeLoop);
+  }
+
+  try { sessionStorage.setItem('klemm-city-home', location.pathname + location.search); } catch (e) {}
 </script>
 
 </body>

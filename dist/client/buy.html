@@ -141,9 +141,9 @@
 <body>
 
 <header>
-  <a class="wordmark" href="index.html">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" data-home href="index.html">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="index.html" class="nav-hide">Home</a>
+    <a href="index.html" class="nav-hide" data-home>Home</a>
     <a href="about.html" class="nav-hide">About</a>
     <a href="listings.html" class="nav-hide">Featured Listings</a>
     <div class="menu nav-hide">
@@ -226,7 +226,7 @@
   </ol>
   </div>
   <div class="process-photo reveal">
-    <img src="buy-street.jpg" alt="The front of a two-story stucco home at golden hour, seen from the sidewalk" loading="lazy">
+    <img src="shared/listing-prep/buy-street.jpg" alt="The front of a two-story stucco home at golden hour, seen from the sidewalk" loading="lazy">
   </div>
   </div>
 </section>
@@ -239,7 +239,7 @@
   </div>
 </section>
 
-<img class="band-photo" src="Altamont Scape 1.jpg" alt="Windmills on the golden Altamont hills that Tracy commuters cross every morning" loading="lazy">
+<img class="band-photo" src="cities/tracy/assets/Altamont Scape 1.jpg" alt="Windmills on the golden Altamont hills that Tracy commuters cross every morning" loading="lazy">
 
 <section class="start" id="start">
   <span class="eyebrow">Start here</span>
@@ -284,6 +284,17 @@
       btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
   document.addEventListener('click', e => {
     if (e.target.closest('.menu')) return;
     document.querySelectorAll('.menu.open').forEach(m => {
@@ -291,6 +302,9 @@
       m.querySelector('button').setAttribute('aria-expanded', 'false');
     });
   });
+
+  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
+  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
 </body>

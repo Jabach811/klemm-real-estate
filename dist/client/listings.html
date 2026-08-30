@@ -45,9 +45,9 @@
 <body>
 
 <header>
-  <a class="wordmark" href="index.html">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" data-home href="index.html">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="index.html" class="nav-hide">Home</a>
+    <a href="index.html" class="nav-hide" data-home>Home</a>
     <a href="about.html" class="nav-hide">About</a>
     <a href="listings.html" class="nav-hide active">Featured Listings</a>
     <div class="menu nav-hide">
@@ -234,6 +234,17 @@
       btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
   document.addEventListener('click', e => {
     if (e.target.closest('.menu')) return;
     document.querySelectorAll('.menu.open').forEach(m => {
@@ -241,6 +252,9 @@
       m.querySelector('button').setAttribute('aria-expanded', 'false');
     });
   });
+
+  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
+  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
 </body>

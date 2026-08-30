@@ -13,7 +13,7 @@
 <body>
 
 <header>
-  <a class="wordmark" href="#">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" href="index.html">Klemm <span>Real Estate</span></a>
   <nav>
     <a href="index.html" class="nav-hide active">Home</a>
     <a href="about.html" class="nav-hide">About</a>
@@ -52,8 +52,8 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="Klemm windmill hero.png">
-      <source src="klemm-hero-loop.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="cities/tracy/assets/Klemm windmill hero.png">
+      <source src="cities/tracy/assets/klemm-hero-loop.mp4" type="video/mp4">
     </video>
   </div>
   <h1 class="reveal-load">Thirty-eight years selling homes in Tracy. <strong>Nearly four thousand sold.</strong> <span class="accent">One agent who handles all&nbsp;of&nbsp;it.</span></h1>
@@ -81,7 +81,7 @@
     <p>Most agents list your house as-is and hope. Jack gets it ready first — lining up the bids, the stagers, and the photographers so you're not managing contractors while trying to move your life.</p>
   </div>
   <div class="showready-media reveal">
-    <img src="staging-detail.jpg" alt="A warm, staged kitchen ready for listing photography">
+    <img src="shared/listing-prep/staging-detail.jpg" alt="A warm, staged kitchen ready for listing photography">
     <div class="showready-media-copy">
       <span class="eyebrow">Before the first showing</span>
       <p>A home that feels cared for earns attention before a buyer has even walked through the door.</p>
@@ -133,7 +133,7 @@
 
 <section class="about">
   <div class="about-grid">
-    <img class="reveal" src="Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
+    <img class="reveal" src="shared/jack/Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
     <div class="about-copy reveal">
       <span class="eyebrow">Tracy's broker since 1988</span>
       <h2>The agent who answers his own phone.</h2>
@@ -149,11 +149,11 @@
       <span class="eyebrow">Where Jack works</span>
       <p>Five communities, one specialist. Jack has lived and sold here for nearly four decades — he knows what your street sold for, not just your ZIP code.</p>
       <div class="area-photo-frame" aria-hidden="true">
-        <img class="on" src="Tracy City Scape 1.jpg" alt="">
-        <img src="Mountain House City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Manteca City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Lathrop City Scape 1.jpg" alt="" loading="lazy">
-        <img src="River Islands City Scape 1.jpg" alt="" loading="lazy">
+        <img class="on" src="cities/tracy/assets/Tracy City Scape 1.jpg" alt="">
+        <img src="cities/mountain-house/assets/Mountain House City Scape 1.jpg" alt="" loading="lazy">
+        <img src="cities/manteca/assets/Manteca City Scape 1.jpg" alt="" loading="lazy">
+        <img src="cities/lathrop/assets/Lathrop City Scape 1.jpg" alt="" loading="lazy">
+        <img src="cities/river-islands/assets/River Islands City Scape 1.jpg" alt="" loading="lazy">
       </div>
     </div>
     <ul class="area-list reveal">
@@ -238,6 +238,17 @@
       btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
   document.addEventListener('click', e => {
     if (e.target.closest('.menu')) return;
     document.querySelectorAll('.menu.open').forEach(m => {
@@ -252,6 +263,8 @@
     img.src = v.poster;
     v.replaceWith(img);
   }
+
+  try { sessionStorage.setItem('klemm-city-home', location.pathname + location.search); } catch (e) {}
 </script>
 
 </body>
