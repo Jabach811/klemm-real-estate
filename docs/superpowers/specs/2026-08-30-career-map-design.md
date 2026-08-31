@@ -47,15 +47,17 @@ Not dots — blurred density fields, closer to weather than to pins. The story i
 
 ### 3. The Specialist
 
-19 years, about 310 sales, high average price. Two tight clusters thirty miles apart: waterfront in River Islands, and 55-and-over at Del Webb at Woodbridge. A thin scatter of one-offs elsewhere.
+19 years, about 310 sales, high average price. Two clusters roughly eight miles apart: waterfront in River Islands, and 55-and-over at Del Webb at Woodbridge, which sits inside Manteca. A thin scatter of one-offs elsewhere.
+
+Note: Del Webb at Woodbridge is in Manteca. It is not the unincorporated Woodbridge near Lodi, which appears on most county maps. The Lodi one should not be labeled on the drawn basemap at all — having both would be actively confusing.
 
 **Treatment: split frame — map beside a re-sort.**
 
-On a map this profile looks scattered and weak: two small dots on a mostly empty county. So the map is shown, honestly, and then beside it the same sales are re-sorted by buyer type, where they snap into two dense confident blocks.
+The two clusters sit close enough together that on a map they read as a single territory. That is the problem, and the screen is built around it. The map is shown honestly, where the sales look like one ordinary blob in the middle of the county. Then beside it the same sales are re-sorted by buyer type and split into two dense blocks that have nothing to do with each other: young families buying waterfront, and retirees buying behind a gate. Same eight miles, two completely different businesses.
 
 **Motion:** the dots physically travel from their map positions into the sorted groups. One continuous move, no cut.
 
-**Why:** this is the smartest screen in the piece. It admits the map is the wrong tool for this person and then shows the right one. A capability demo needs at least one moment of visible thinking, and this is it.
+**Why:** this is the smartest screen in the piece. The map does not merely fail to help here — it actively lies, by making two unrelated markets look like one. Showing the lie and then correcting it is a moment of visible thinking, which is what a capability demo needs at least once.
 
 ### 4. The Newcomer
 
@@ -97,9 +99,9 @@ Type and color come from the existing system — Libre Caslon Display and Libre 
 
 Almost all of this can be generated. The list is short on purpose.
 
-**Blocking — needed before the map can be drawn:**
+**Received:**
 
-1. A reference map of San Joaquin County showing Tracy, Mountain House, Lathrop, River Islands, Manteca, Stockton, and Woodbridge or Lodi, plus I-5, I-205, I-580 and the Delta waterways. A screenshot or a printed map is fine. This is a tracing reference, not artwork.
+1. County reference map — `docs/reference/san-joaquin-county-basemap.png`. Covers the county boundary, the Delta, the San Joaquin and Sacramento rivers, I-5, I-205, I-580, highways 4/88/99, and all the towns needed. This is the tracing source for the drawn basemap.
 
 **Optional — genuinely improves the result:**
 
@@ -118,7 +120,7 @@ Headshots for the other three profiles. They are archetypes, not people, and giv
 - Real addresses or parcel data
 - Mobile-first optimization beyond not breaking; this is a demo shown on a laptop
 
-## Open questions
+## Settled
 
-- Does the piece carry Joel's byline, or is it presented anonymously as work?
-- Is it shown in person on a laptop, or sent as a link?
+- **Byline:** the piece carries Joel's name.
+- **Delivery:** unanswered, so it is built to survive being sent as a link — it has to hold up with nobody talking over it. That is the stricter of the two cases and it covers both.
