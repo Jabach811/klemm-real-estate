@@ -1,9 +1,10 @@
 # Local tooling
 .claude/
+.superpowers/
 
 # Working files, not part of the site
 mocks/
 04eliteagentwebsites.md
 05synthesisandrankings.md
 research/visual-direction/
-cities/tracy/assets/klemm windmill hero animation.mp4
+home/assets/klemm windmill hero animation.mp4

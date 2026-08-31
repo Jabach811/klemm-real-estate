@@ -164,6 +164,17 @@ nav a, .menu button { white-space: nowrap; }
   .drop { left: 50%; transform: translateX(-50%); }
   .menu.open .drop { transform: translateX(-50%); }
 }
+@media (max-width: 640px) {
+  /* Anchor dropdowns to the sticky header so a closed (hidden) panel can
+     never hang past the screen edge and cause sideways scrolling. */
+  .menu { position: static; }
+  .drop, .menu.open .drop, .drop-news {
+    left: var(--pad);
+    right: var(--pad);
+    min-width: 0;
+    transform: none;
+  }
+}
 
 /* ---------- hero ---------- */
 .hero {
@@ -292,7 +303,7 @@ nav a, .menu button { white-space: nowrap; }
     inset 0 1px 3px rgba(0, 0, 0, 0.22);
 }
 
-@media (max-width: 640px) { .hero .btn { white-space: normal; text-align: center; } }
+@media (max-width: 640px) { .btn { white-space: normal; text-align: center; } }
 
 /* load-in stagger */
 .hero .reveal-load { opacity: 0; transform: translateY(18px); animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
@@ -697,4 +708,15 @@ footer {
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .hero .reveal-load { opacity: 1; transform: none; animation: none; transition: none; }
+}
+
+/* Ultra-wide screens: grow the side padding so content centers at a fixed
+   width while section backgrounds still run edge to edge. .stat and .door
+   use --pad as internal cell padding, so they get a fixed pad and their
+   grids absorb the remaining gutter instead. Keep this at the end of the
+   file so it wins over the base rules above. */
+@media (min-width: 1664px) {
+  :root { --pad: calc((100vw - 1520px) / 2); }
+  .stat, .door { padding-left: 72px; padding-right: 72px; }
+  .stats, .doors { padding-left: calc(var(--pad) - 72px); padding-right: calc(var(--pad) - 72px); }
 }
