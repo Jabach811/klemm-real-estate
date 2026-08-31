@@ -135,10 +135,16 @@ function toPng(c) {
   ]);
 }
 
-export function renderMap({ pinSets = [], scale = 1 }) {
+// zoom > 1 crops to a window of the map centred on cx,cy, the way the Anchor
+// screen's street zoom does. Dot radii are given in output pixels, so they stay
+// the same size on screen however far in you go.
+export function renderMap({ pinSets = [], scale = 1, zoom = 1, cx = MAP_W / 2, cy = MAP_H / 2 }) {
   const s = scale * SS;
   const c = canvas(Math.round(MAP_W * s), Math.round(MAP_H * s), hex('#F6F1E8'));
-  const sc = (pts) => pts.map(([x, y]) => [x * s, y * s]);
+  const k = s * zoom;
+  const ox = (MAP_W * s) / 2 - cx * k;
+  const oy = (MAP_H * s) / 2 - cy * k;
+  const sc = (pts) => pts.map(([x, y]) => [x * k + ox, y * k + oy]);
   fillPolygon(c, sc(COUNTY), hex('#F3EDE2'));
   for (const w of WATER) {
     fillPolygon(c, sc(w), hex('#c7dcea'));
@@ -147,17 +153,18 @@ export function renderMap({ pinSets = [], scale = 1 }) {
   strokePolygon(c, sc(COUNTY), hex('#aaa293'), 1.4 * s);
   for (const set of pinSets) {
     const rgb = hex(set.color);
-    for (const p of set.points) disc(c, p[0] * s, p[1] * s, set.r * s, rgb, set.alpha);
+    for (const p of set.points) disc(c, p[0] * k + ox, p[1] * k + oy, set.r * s, rgb, set.alpha);
   }
   for (const key of Object.keys(CITIES)) {
     const ci = CITIES[key];
-    disc(c, ci.x * s, ci.y * s, 3 * s, hex('#1B1712'), 1);
+    disc(c, ci.x * k + ox, ci.y * k + oy, 3 * s, hex('#1B1712'), 1);
   }
   return toPng(downscale(c, SS));
 }
 
 const here = dirname(fileURLToPath(import.meta.url));
 const profile = process.argv[2] || 'anchor';
+const zoom = Number(process.argv[4] || 1);
 const out = process.argv[3] || join(here, '..', 'docs', 'reference', `preview-${profile}.png`);
 const data = generateAll(20260830);
 const COLORS = { anchor: '#a64a2a', drift: '#2f5d8a', specialist: '#6b8f3a', newcomer: '#8a2f6b' };
@@ -165,5 +172,11 @@ const sets =
   profile === 'all'
     ? Object.keys(data).map((k) => ({ points: data[k].map((s) => [s[2], s[3]]), color: COLORS[k], r: 1.5, alpha: 0.5 }))
     : [{ points: data[profile].map((s) => [s[2], s[3]]), color: COLORS[profile] || '#a64a2a', r: 1.5, alpha: 0.5 }];
-writeFileSync(out, renderMap({ pinSets: sets, scale: 0.72 }));
+writeFileSync(out, renderMap({
+  pinSets: sets,
+  scale: 0.72,
+  zoom,
+  cx: CITIES.tracy.x,
+  cy: CITIES.tracy.y,
+}));
 console.log(`wrote ${out}`);

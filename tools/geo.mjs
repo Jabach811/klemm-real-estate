@@ -21,14 +21,20 @@ export const MAP_H = 667;
 // spread is the standard deviation, in map units, used when scattering sales
 // around the centroid. founded is the first year a sale may exist there.
 export const CITIES = {
-  tracy:         { label: 'Tracy',                  x: 248, y: 464, spread: 15, founded: 1870 },
-  mountainHouse: { label: 'Mountain House',         x: 238, y: 412, spread:  7, founded: 2001 },
-  lathrop:       { label: 'Lathrop',                x: 471, y: 401, spread:  9, founded: 1887 },
-  riverIslands:  { label: 'River Islands',          x: 440, y: 424, spread:  6, founded: 2014 },
-  manteca:       { label: 'Manteca',                x: 526, y: 441, spread: 12, founded: 1918 },
-  delWebb:       { label: 'Del Webb at Woodbridge', x: 516, y: 428, spread:  3, founded: 2015 },
-  stockton:      { label: 'Stockton',               x: 479, y: 249, spread: 24, founded: 1850 },
+  tracy:         { label: 'Tracy',                  x: 248, y: 464, spread: 15, angle:  0.05, founded: 1870 },
+  mountainHouse: { label: 'Mountain House',         x: 238, y: 412, spread:  7, angle:  0.62, founded: 2001 },
+  lathrop:       { label: 'Lathrop',                x: 471, y: 401, spread:  9, angle: -0.22, founded: 1887 },
+  riverIslands:  { label: 'River Islands',          x: 440, y: 424, spread:  6, angle:  0.38, founded: 2014 },
+  manteca:       { label: 'Manteca',                x: 526, y: 441, spread: 12, angle:  0.12, founded: 1918 },
+  delWebb:       { label: 'Del Webb at Woodbridge', x: 516, y: 428, spread:  3, angle:  0.85, founded: 2015 },
+  stockton:      { label: 'Stockton',               x: 479, y: 249, spread: 24, angle: -0.18, founded: 1850 },
 };
+
+// Roughly 380 feet, which is a normal block depth around here. Sales are pulled
+// onto the nearest line of this pitch so that zooming in shows houses sitting
+// along streets instead of floating in a cloud. Each town gets its own angle
+// because their grids genuinely do not line up with each other.
+const STREET_PITCH = 1.15;
 
 export const CITY_KEYS = Object.keys(CITIES);
 
@@ -58,10 +64,18 @@ function gaussian(rng) {
 // inside, then fall back to the centroid. The flat western edge this produces
 // on Tracy's cloud is not an artefact — the city really does stop at the line.
 export function scatter(city, rng) {
+  const cos = Math.cos(city.angle);
+  const sin = Math.sin(city.angle);
   for (let tries = 0; tries < 24; tries++) {
-    const x = clamp(Math.round(city.x + gaussian(rng) * city.spread), 0, MAP_W);
-    const y = clamp(Math.round(city.y + gaussian(rng) * city.spread), 0, MAP_H);
+    const dx = gaussian(rng) * city.spread;
+    const dy = gaussian(rng) * city.spread;
+    const along = dx * cos + dy * sin;
+    const across = Math.round((-dx * sin + dy * cos) / STREET_PITCH) * STREET_PITCH;
+    const x = clamp(round1(city.x + along * cos - across * sin), 0, MAP_W);
+    const y = clamp(round1(city.y + along * sin + across * cos), 0, MAP_H);
     if (pointInPolygon(x, y, COUNTY)) return { x, y };
   }
   return { x: city.x, y: city.y };
 }
+
+const round1 = (v) => Math.round(v * 10) / 10;

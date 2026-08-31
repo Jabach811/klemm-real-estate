@@ -120,11 +120,16 @@ test('the Newcomer starts in 2020 and accelerates', () => {
   assert.ok(count(2026) > count(2020) * 1.8, `2026 (${count(2026)}) barely beat 2020 (${count(2020)})`);
 });
 
+// Positions carry one decimal on purpose. Whole numbers put every sale on a
+// one-unit lattice, which is invisible county-wide but shows up as an obvious
+// pegboard the moment the Anchor screen zooms to street level.
 test('records are compact six-number arrays', () => {
   for (const key of Object.keys(PROFILES)) {
     for (const s of data[key]) {
       assert.strictEqual(s.length, 6);
-      assert.ok(s.every((n) => Number.isInteger(n)), `${key} has a non-integer field`);
+      assert.ok(s.every((n) => typeof n === 'number' && Number.isFinite(n)), `${key} has a bad field`);
+      for (const i of [0, 1, 4, 5]) assert.ok(Number.isInteger(s[i]), `${key} field ${i} is not an index`);
+      for (const i of [2, 3]) assert.strictEqual(s[i], Math.round(s[i] * 10) / 10, `${key} coord too precise`);
     }
   }
 });

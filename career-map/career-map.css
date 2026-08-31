@@ -1,0 +1,125 @@
+:root {
+  --paper: #F6F1E8;
+  --paper-deep: #EFE8DB;
+  --land: #F3EDE2;
+  --ink: #1B1712;
+  --ink-soft: #5F574B;
+  --line: #aaa293;
+  --rust: #a64a2a;
+  --water: #c7dcea;
+  --serif: "Libre Caslon Display", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.screen {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 28px 96px;
+}
+
+.screen h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 36px;
+}
+
+.caption {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 16px 0 0;
+}
+
+.map-frame {
+  position: relative;
+  aspect-ratio: 1000 / 667;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.map-frame svg,
+.map-frame canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.basemap { --map-zoom: 1; }
+.layer-land path { fill: var(--land); }
+.layer-water path {
+  fill: var(--water);
+  stroke: var(--water);
+  stroke-width: calc(1.4px / var(--map-zoom));
+}
+.layer-border path {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: calc(1.4px / var(--map-zoom));
+}
+.layer-labels {
+  transition: opacity 400ms ease;
+}
+/* Past a few times magnification the whole frame is one town, so a marker
+   pinned to its centre stops meaning anything and just sits in the way. */
+.basemap.close-in .layer-labels { opacity: 0; }
+
+.layer-labels circle {
+  fill: var(--ink);
+  r: calc(3.5px / var(--map-zoom));
+}
+.layer-labels text {
+  fill: var(--ink);
+  font-family: var(--sans);
+  font-size: calc(17px / var(--map-zoom));
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: var(--land);
+  stroke-width: calc(4px / var(--map-zoom));
+}
+
+.readout {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.readout-year {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.readout-count {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}

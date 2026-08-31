@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Map</title>
+<link rel="stylesheet" href="career-map.css">
+</head>
+<body>
+
+<section class="screen" id="screen-anchor">
+  <h2>The Anchor</h2>
+  <p class="lede">Thirty-eight years in one county, and nearly four thousand sales. Eighty-five
+    percent of them inside the same town. Watch it fill in.</p>
+  <div class="map-frame" id="anchor-map"></div>
+  <p class="caption">Every dot is one sale, drawn in the order it happened. Where a street comes
+    up again and again, the ink darkens. The last move pulls in on Tracy, close enough to count
+    the houses on a single block.</p>
+</section>
+
+<script src="data/sales.js"></script>
+<script src="js/basemap.js"></script>
+<script src="js/screen-anchor.js"></script>
+<script>
+  CareerMapAnchor.mount(document.getElementById('anchor-map'));
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    CareerMapAnchor.finish();
+  } else {
+    CareerMapAnchor.play();
+  }
+</script>
+</body>
+</html>
