@@ -7,6 +7,13 @@
 // The space is 1000 x 667, matching the 3:2 reference at
 // docs/reference/san-joaquin-county-basemap.png. Y increases downward, so
 // north is a LOWER y.
+//
+// Centroids were read off the reference's own markers and labels. The scale
+// works out to roughly 16 map units per mile, which is what sets each spread:
+// a spread is the city's rough radius in miles times 16, divided by three, so
+// that three standard deviations lands near the edge of the built-up area.
+
+import { COUNTY, pointInPolygon } from './basemap-data.mjs';
 
 export const MAP_W = 1000;
 export const MAP_H = 667;
@@ -14,13 +21,13 @@ export const MAP_H = 667;
 // spread is the standard deviation, in map units, used when scattering sales
 // around the centroid. founded is the first year a sale may exist there.
 export const CITIES = {
-  tracy:         { label: 'Tracy',                  x: 238, y: 456, spread: 34, founded: 1870 },
-  mountainHouse: { label: 'Mountain House',         x: 267, y: 404, spread: 16, founded: 2001 },
-  lathrop:       { label: 'Lathrop',                x: 470, y: 400, spread: 20, founded: 1887 },
-  riverIslands:  { label: 'River Islands',          x: 449, y: 425, spread: 14, founded: 2014 },
-  manteca:       { label: 'Manteca',                x: 537, y: 430, spread: 28, founded: 1918 },
-  delWebb:       { label: 'Del Webb at Woodbridge', x: 525, y: 418, spread:  8, founded: 2015 },
-  stockton:      { label: 'Stockton',               x: 501, y: 234, spread: 44, founded: 1850 },
+  tracy:         { label: 'Tracy',                  x: 248, y: 464, spread: 15, founded: 1870 },
+  mountainHouse: { label: 'Mountain House',         x: 238, y: 412, spread:  7, founded: 2001 },
+  lathrop:       { label: 'Lathrop',                x: 471, y: 401, spread:  9, founded: 1887 },
+  riverIslands:  { label: 'River Islands',          x: 440, y: 424, spread:  6, founded: 2014 },
+  manteca:       { label: 'Manteca',                x: 526, y: 441, spread: 12, founded: 1918 },
+  delWebb:       { label: 'Del Webb at Woodbridge', x: 516, y: 428, spread:  3, founded: 2015 },
+  stockton:      { label: 'Stockton',               x: 479, y: 249, spread: 24, founded: 1850 },
 };
 
 export const CITY_KEYS = Object.keys(CITIES);
@@ -46,9 +53,15 @@ function gaussian(rng) {
   return clamp(Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v), -3, 3);
 }
 
+// Tracy and Mountain House sit right up against the western county line, so a
+// plain gaussian would put sales in Alameda County. Redraw until the point is
+// inside, then fall back to the centroid. The flat western edge this produces
+// on Tracy's cloud is not an artefact — the city really does stop at the line.
 export function scatter(city, rng) {
-  return {
-    x: clamp(Math.round(city.x + gaussian(rng) * city.spread), 0, MAP_W),
-    y: clamp(Math.round(city.y + gaussian(rng) * city.spread), 0, MAP_H),
-  };
+  for (let tries = 0; tries < 24; tries++) {
+    const x = clamp(Math.round(city.x + gaussian(rng) * city.spread), 0, MAP_W);
+    const y = clamp(Math.round(city.y + gaussian(rng) * city.spread), 0, MAP_H);
+    if (pointInPolygon(x, y, COUNTY)) return { x, y };
+  }
+  return { x: city.x, y: city.y };
 }

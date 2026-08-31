@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert';
 import { generateAll, PROFILES, BASE_YEAR, TYPE } from './generate-sales.mjs';
 import { CITIES, CITY_KEYS, MAP_W, MAP_H } from './geo.mjs';
+import { COUNTY, pointInPolygon } from './basemap-data.mjs';
 
 const SEED = 20260830;
 const data = generateAll(SEED);
@@ -49,6 +50,14 @@ test('every position sits inside the viewbox', () => {
     for (const s of data[key]) {
       assert.ok(s[2] >= 0 && s[2] <= MAP_W, `${key} x ${s[2]}`);
       assert.ok(s[3] >= 0 && s[3] <= MAP_H, `${key} y ${s[3]}`);
+    }
+  }
+});
+
+test('not one sale lands outside San Joaquin County', () => {
+  for (const key of Object.keys(PROFILES)) {
+    for (const s of data[key]) {
+      assert.ok(pointInPolygon(s[2], s[3], COUNTY), `${key} sold at ${s[2]},${s[3]}`);
     }
   }
 });

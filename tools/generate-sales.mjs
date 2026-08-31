@@ -10,6 +10,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CITIES, CITY_KEYS, MAP_W, MAP_H, makeRng, scatter } from './geo.mjs';
+import { COUNTY, WATER, toPath } from './basemap-data.mjs';
 
 export const BASE_YEAR = 1988;
 
@@ -179,7 +180,9 @@ function emit(data) {
     '  },',
     '  profiles: {',
     profiles,
-    '  }',
+    '  },',
+    `  county: ${JSON.stringify(toPath(COUNTY))},`,
+    `  water: ${JSON.stringify(WATER.map(toPath))}`,
     '};',
     '',
     'window.CAREER_MAP_SALES = {',
