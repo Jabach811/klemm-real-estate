@@ -111,9 +111,9 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="../cities/river-islands/assets/River Islands Hero.png">
-      <source src="../cities/river-islands/assets/River Island Hero Animation.mp4" type="video/mp4">
-    </video>
+    <video src="../cities/river-islands/assets/hero-loop.mp4"
+           poster="../cities/river-islands/assets/hero-poster.jpg"
+           autoplay muted loop playsinline preload="auto"></video>
   </div>
   <span class="city-tag reveal-load">River Islands · Lathrop, California</span>
   <h1 class="reveal-load">Selling a home in River Islands? <strong>Hand Jack the keys.</strong> <span class="accent">He handles all&nbsp;of&nbsp;it.</span></h1>
@@ -317,16 +317,6 @@
     const img = new Image();
     img.src = v.poster;
     v.replaceWith(img);
-  }
-
-  const heroVideo = document.querySelector('.hero-media video');
-  if (heroVideo) {
-    const heroRate = 0.4;
-    const slow = () => { if (heroVideo.playbackRate !== heroRate) heroVideo.playbackRate = heroRate; };
-    slow();
-    heroVideo.addEventListener('loadedmetadata', slow);
-    heroVideo.addEventListener('play', slow);
-    heroVideo.addEventListener('ratechange', slow);
   }
 </script>
 
