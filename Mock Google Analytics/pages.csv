@@ -1,0 +1,17 @@
+# Mock GA4 export — Pages and screens report
+# Property: klemmrealestate.com  |  Date range: Jul 1 - Jul 31, 2026
+Page path,Views,Active users,Views per user,Average engagement time (seconds)
+/,214,166,1.29,47
+/cities/manteca/,88,71,1.24,96
+/cities/river-islands/,79,63,1.25,112
+/site/listings.html,74,52,1.42,68
+/cities/mountain-house/,58,49,1.18,84
+/site/sell.html,51,40,1.28,73
+/cities/lathrop/,47,39,1.21,79
+/site/about.html,43,38,1.13,41
+/site/reviews.html,39,31,1.26,88
+/cities/woodbridge/,36,30,1.20,101
+/site/buy.html,34,27,1.26,64
+/site/past-sales.html,28,22,1.27,57
+/site/contact.html,26,23,1.13,35
+/site/newsletters.html,11,9,1.22,44

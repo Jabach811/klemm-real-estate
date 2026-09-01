@@ -1,0 +1,12 @@
+# Mock GA4 export — Events report
+# Property: klemmrealestate.com  |  Date range: Jul 1 - Jul 31, 2026
+Event name,Event count,Total users
+page_view,828,301
+session_start,372,301
+first_visit,268,268
+user_engagement,514,244
+scroll,301,187
+click_phone,23,21
+click_email,11,10
+contact_form_submit,7,7
+click_zillow_listing,19,16

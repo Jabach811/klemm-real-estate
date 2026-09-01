@@ -1,0 +1,11 @@
+# Mock GA4 export — Traffic acquisition report
+# Property: klemmrealestate.com  |  Date range: Jul 1 - Jul 31, 2026
+Session source / medium,Sessions,Active users,Engaged sessions,Average engagement time per session (seconds)
+google / organic,182,151,124,71
+(direct) / (none),97,78,52,49
+m.facebook.com / referral,41,36,22,38
+bing / organic,19,16,12,66
+nextdoor.com / referral,14,12,9,58
+l.instagram.com / referral,9,8,4,31
+duckduckgo / organic,6,5,4,74
+zillow.com / referral,4,4,3,92
