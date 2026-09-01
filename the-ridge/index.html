@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06080b">
+  <meta name="description" content="The Ridge: an interactive study for Klemm Real Estate.">
+  <title>The Ridge — A Klemm Real Estate Study</title>
+  <link rel="stylesheet" href="ridge.css">
+</head>
+<body>
+  <main class="stage" aria-label="The Ridge interactive art experience">
+    <img class="terrain" src="assets/ridge-night.png" alt="An abstract dark ridge crossed by a thin copper line of light">
+    <div class="atmosphere" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <svg class="thread" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-30 534 C 208 477 365 509 538 549 S 847 650 1048 637 S 1328 584 1630 647"></path>
+    </svg>
+
+    <p class="origin">Klemm Real Estate<br><span>California · 2026</span></p>
+    <p class="axis" aria-hidden="true">WEST / EAST</p>
+
+    <div class="words">
+      <p class="prelude">Not a map. A threshold.</p>
+      <h1><span>The</span>Ridge</h1>
+      <p class="thought">The line between what someone knows<br>and what they are ready to call home.</p>
+    </div>
+
+    <div class="reveal" aria-live="polite">
+      <p class="reveal-mark">01 / CROSSING</p>
+      <p>Every buyer arrives carrying a story.<br>Jack knows how to hear the next chapter in it.</p>
+    </div>
+
+    <button class="crossing" type="button" aria-pressed="false">
+      <span class="crossing-dot" aria-hidden="true"></span>
+      <span class="crossing-label">Follow the line</span>
+    </button>
+
+    <p class="artifact-note">An original visual study for a different kind of real-estate conversation.</p>
+  </main>
+  <script src="ridge.js"></script>
+</body>
+</html>
