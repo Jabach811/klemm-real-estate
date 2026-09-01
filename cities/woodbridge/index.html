@@ -67,6 +67,20 @@
     .split-grid, .split-flip .split-grid { grid-template-columns: 1fr; }
     .split-flip .split-grid img { order: 0; }
   }
+
+  /* hero motion — poster underneath so the still paints first and covers reduced-motion.
+     34% keeps the fountain inside the crop; the shared 62% pushes it off the left edge. */
+  .hero-media {
+    background: url("../cities/woodbridge/assets/hero-poster.jpg") 34% 40% / cover no-repeat;
+  }
+  .hero-media video { object-position: 34% 40%; }
+  @media (max-width: 700px) {
+    .hero-media { background-position: 24% 40%; }
+    .hero-media video { object-position: 24% 40%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-media video { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -111,7 +125,9 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img src="../cities/woodbridge/assets/clubhouse-hero.png" alt="">
+    <video src="../cities/woodbridge/assets/hero-loop.mp4"
+           poster="../cities/woodbridge/assets/hero-poster.jpg"
+           autoplay muted loop playsinline preload="auto"></video>
   </div>
   <span class="city-tag reveal-load">Del Webb at Woodbridge · Manteca, California</span>
   <h1 class="reveal-load">Selling at Woodbridge? <strong>Hand Jack the keys.</strong> <span class="accent">He handles all&nbsp;of&nbsp;it.</span></h1>
