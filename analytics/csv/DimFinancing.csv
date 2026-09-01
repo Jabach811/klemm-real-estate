@@ -1,0 +1,7 @@
+FinancingKey,FinancingType,IsCash,TypicalDownPaymentPercent
+1,Conventional,No,20
+2,FHA,No,4
+3,VA,No,0
+4,Cash,Yes,100
+5,Jumbo,No,25
+6,Seller carryback,No,15

@@ -1,0 +1,10 @@
+LeadSourceKey,LeadSource,Channel,IsRelationshipDriven
+1,Repeat client,Sphere,Yes
+2,Referral from past client,Sphere,Yes
+3,Sphere of influence,Sphere,Yes
+4,Sign call,Organic,No
+5,Open house,Organic,No
+6,Online portal enquiry,Paid,No
+7,Builder relationship,Partner,Yes
+8,Relocation network,Partner,Yes
+9,Farming and mailers,Paid,No

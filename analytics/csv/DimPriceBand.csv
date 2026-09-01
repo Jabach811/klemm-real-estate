@@ -1,0 +1,6 @@
+PriceBandKey,BandLabel,MinPrice,MaxPrice
+1,Entry,0,250000
+2,Moderate,250000,450000
+3,Mid market,450000,650000
+4,Upper,650000,900000
+5,Premium,900000,99999999

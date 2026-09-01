@@ -1,0 +1,4 @@
+SideKey,Side,RepresentsSeller,RepresentsBuyer
+1,Listing side,Yes,No
+2,Buyer side,No,Yes
+3,Both sides,Yes,Yes

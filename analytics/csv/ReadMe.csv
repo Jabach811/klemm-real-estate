@@ -1,0 +1,13 @@
+Item,Detail
+What this is,"Invented real-estate career data, shaped as a star schema for modelling practice."
+Is any of it real,"No. No real sale, address, agent, client or price. The four agents are archetypes, not people."
+Grain of FactSales,One row per closed sale.
+Grain of FactAgentMonth,"One row per agent per calendar month, from their first year onward."
+Rows in FactSales,5980
+Rows in FactAgentMonth,1176
+Sales run,1988 to 2026
+DimDate runs,"1987 to 2026, so listings that started the year before still join"
+Mark as date table,"DimDate, on the Date column."
+Two date roles,FactSales has CloseDateKey and ListDateKey. Only one can be an active relationship to DimDate. Use USERELATIONSHIP for the other.
+Positions,"MapX and MapY are the drawn map’s own units, not latitude and longitude, so no sale sits on a real house. Community latitude and longitude are in DimCommunity for map visuals."
+Rebuild,"node tools/export-model-tables.mjs, then python tools/build-model-workbook.py"

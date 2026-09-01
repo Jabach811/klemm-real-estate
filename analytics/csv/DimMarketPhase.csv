@@ -1,0 +1,8 @@
+MarketPhaseKey,MarketPhase,StartYear,EndYear,WhatHappened
+1,Early market,1987,1996,"Steady, unremarkable. Prices creep."
+2,Run-up,1997,2004,Bay Area money starts commuting east. Volume and prices climb together.
+3,Peak,2005,2007,Everything sells. Multiple offers are normal.
+4,Crash,2008,2011,Prices fall by roughly half. Days on market triple.
+5,Recovery,2012,2019,"Slow, long climb back. Inventory stays thin."
+6,Pandemic surge,2020,2022,Remote work pushes demand outward. Homes sell over asking in days.
+7,Rate shock,2023,2026,Rates bite. Prices hold but volume and speed drop.

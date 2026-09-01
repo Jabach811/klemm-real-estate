@@ -1,0 +1,5 @@
+PropertyTypeKey,PropertyType,IsAttached,IsAgeRestricted
+1,Single family,No,No
+2,Condo or townhome,Yes,No
+3,55+,No,Yes
+4,Waterfront,No,No

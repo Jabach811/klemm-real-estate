@@ -1,0 +1,14 @@
+FromTable,FromColumn,ToTable,ToColumn,Cardinality,Note
+FactSales,AgentKey,DimAgent,AgentKey,Many to one,
+FactSales,CloseDateKey,DimDate,DateKey,Many to one,Make this the active one
+FactSales,ListDateKey,DimDate,DateKey,Many to one,Inactive. Activate with USERELATIONSHIP
+FactSales,CommunityKey,DimCommunity,CommunityKey,Many to one,
+FactSales,PropertyTypeKey,DimPropertyType,PropertyTypeKey,Many to one,
+FactSales,SideKey,DimSide,SideKey,Many to one,
+FactSales,LeadSourceKey,DimLeadSource,LeadSourceKey,Many to one,
+FactSales,FinancingKey,DimFinancing,FinancingKey,Many to one,
+FactSales,BuyerProfileKey,DimBuyerProfile,BuyerProfileKey,Many to one,
+FactSales,PriceBandKey,DimPriceBand,PriceBandKey,Many to one,
+FactAgentMonth,AgentKey,DimAgent,AgentKey,Many to one,
+FactAgentMonth,MonthStartDateKey,DimDate,DateKey,Many to one,First of the month
+DimDate,MarketPhaseKey,DimMarketPhase,MarketPhaseKey,Many to one,Snowflake. Flatten it if you prefer a pure star

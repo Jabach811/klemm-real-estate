@@ -1,0 +1,8 @@
+CommunityKey,Community,City,County,State,CommunityType,YearFounded,TypicalSquareFeet,CommuteToBayAreaMinutes,SchoolRating,TypicalMonthlyHOA,MapX,MapY,Latitude,Longitude
+1,Tracy,Tracy,San Joaquin,CA,Established city,1870,1850,72,7,0,248,464,37.7397,-121.4252
+2,Mountain House,Mountain House,San Joaquin,CA,Master-planned,2001,2450,62,9,0,238,412,37.783,-121.543
+3,Lathrop,Lathrop,San Joaquin,CA,Established city,1887,1900,85,6,45,471,401,37.8227,-121.2766
+4,River Islands,Lathrop,San Joaquin,CA,Waterfront master-planned,2014,2700,84,8,165,440,424,37.805,-121.33
+5,Manteca,Manteca,San Joaquin,CA,Established city,1918,1880,92,6,0,526,441,37.7974,-121.216
+6,Del Webb at Woodbridge,Manteca,San Joaquin,CA,Active adult 55+,2015,1720,92,5,235,516,428,37.786,-121.202
+7,Stockton,Stockton,San Joaquin,CA,Established city,1850,1720,105,4,0,479,249,37.9577,-121.2908

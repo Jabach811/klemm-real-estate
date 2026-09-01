@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Model — Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <h1>Four careers, one county</h1>
+  <p class="standfirst">Thirty-nine years of invented real estate in San Joaquin County, told through
+    four archetypes rather than four people. Every figure on this page is made up. The shapes are
+    not: the run-up, the crash, the long recovery and the pandemic spike all sit where they belong.</p>
+
+  <div class="controls">
+    <div>
+      <span class="control-label">Agent</span>
+      <div class="pills" id="agent-pills"></div>
+    </div>
+    <div>
+      <span class="control-label">Years</span>
+      <div class="years">
+        <input type="range" id="year-from" min="1988" max="2026" value="1988" aria-label="First year">
+        <input type="range" id="year-to" min="1988" max="2026" value="2026" aria-label="Last year">
+        <span class="year-readout" id="year-readout"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid">
+
+    <section class="panel full">
+      <h2>Sales and median price, year by year</h2>
+      <p id="scope"></p>
+      <div id="chart-year"></div>
+      <div class="legend">
+        <span><i style="background:#1B1712"></i>Sales closed</span>
+        <span><i style="background:#a64a2a"></i>Median sale price</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Where the business was</h2>
+      <p>Share of each year's sales by community. This is the view that shows a career moving.</p>
+      <div id="chart-community"></div>
+      <div class="legend" id="legend-community"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Where the leads came from</h2>
+      <p>Share of sales by how the client first arrived. The difference between a long career and a
+        new one shows up here before it shows up anywhere else.</p>
+      <div id="chart-lead"></div>
+    </section>
+
+    <section class="panel">
+      <h2>From conversation to closing</h2>
+      <p id="funnel-note"></p>
+      <div id="chart-funnel"></div>
+    </section>
+
+    <section class="panel">
+      <h2>How long a sale took</h2>
+      <p>Median days on market, by phase of the market.</p>
+      <div id="chart-dom"></div>
+    </section>
+
+    <section class="panel full">
+      <h2>Price mix by community</h2>
+      <p>Each row reads across to 100 percent. Darker means more of that community's sales landed in
+        that band.</p>
+      <div id="matrix"></div>
+    </section>
+
+  </div>
+
+  <p class="footnote">Invented data, built for modelling practice. No real sale, address, agent,
+    client or price appears anywhere in it. The same numbers are in
+    <code>klemm-career-model.xlsx</code> as a star schema, and as CSVs in <code>csv/</code>.</p>
+
+</div>
+
+<script src="data/model.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
