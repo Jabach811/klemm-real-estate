@@ -1,0 +1,296 @@
+{
+  "methodology": {
+    "recordClass": "modeled",
+    "scope": "Illustrative 1986–2025 transaction model for Jack Klemm dashboard exploration.",
+    "priceBasis": "Every modeled year is calibrated to the official annual FHFA San Joaquin County HPI (2000=100); individual records, attributes, volumes, and community mix are modeled—not Jack’s actual transaction history.",
+    "source": {
+      "publisher": "U.S. Federal Housing Finance Agency via FRED",
+      "series": "ATNHPIUS06077A",
+      "title": "All-Transactions House Price Index for San Joaquin County, CA",
+      "retrieved": "2026-08-31",
+      "url": "https://fred.stlouisfed.org/series/ATNHPIUS06077A"
+    }
+  },
+  "years": [
+    {
+      "year": 1986,
+      "hpi": 54.93,
+      "sales": 31,
+      "modeledMedianPrice": 87000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1987,
+      "hpi": 58.42,
+      "sales": 34,
+      "modeledMedianPrice": 94000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1988,
+      "hpi": 65.66,
+      "sales": 37,
+      "modeledMedianPrice": 102000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1989,
+      "hpi": 76.78,
+      "sales": 40,
+      "modeledMedianPrice": 130000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1990,
+      "hpi": 84.73,
+      "sales": 43,
+      "modeledMedianPrice": 136000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1991,
+      "hpi": 85.92,
+      "sales": 46,
+      "modeledMedianPrice": 144000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1992,
+      "hpi": 85.05,
+      "sales": 49,
+      "modeledMedianPrice": 138000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1993,
+      "hpi": 82.85,
+      "sales": 52,
+      "modeledMedianPrice": 135000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1994,
+      "hpi": 80.74,
+      "sales": 49,
+      "modeledMedianPrice": 133000,
+      "era": "Foundation"
+    },
+    {
+      "year": 1995,
+      "hpi": 78.31,
+      "sales": 52,
+      "modeledMedianPrice": 122000,
+      "era": "Expansion"
+    },
+    {
+      "year": 1996,
+      "hpi": 76.97,
+      "sales": 55,
+      "modeledMedianPrice": 125000,
+      "era": "Expansion"
+    },
+    {
+      "year": 1997,
+      "hpi": 77.09,
+      "sales": 58,
+      "modeledMedianPrice": 129000,
+      "era": "Expansion"
+    },
+    {
+      "year": 1998,
+      "hpi": 81.4,
+      "sales": 61,
+      "modeledMedianPrice": 131000,
+      "era": "Expansion"
+    },
+    {
+      "year": 1999,
+      "hpi": 86.79,
+      "sales": 64,
+      "modeledMedianPrice": 139000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2000,
+      "hpi": 100,
+      "sales": 67,
+      "modeledMedianPrice": 164000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2001,
+      "hpi": 118.99,
+      "sales": 70,
+      "modeledMedianPrice": 185000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2002,
+      "hpi": 128.47,
+      "sales": 77,
+      "modeledMedianPrice": 208000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2003,
+      "hpi": 139.01,
+      "sales": 84,
+      "modeledMedianPrice": 214000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2004,
+      "hpi": 166.09,
+      "sales": 91,
+      "modeledMedianPrice": 262000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2005,
+      "hpi": 215.59,
+      "sales": 98,
+      "modeledMedianPrice": 352000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2006,
+      "hpi": 233.76,
+      "sales": 105,
+      "modeledMedianPrice": 369000,
+      "era": "Expansion"
+    },
+    {
+      "year": 2007,
+      "hpi": 207.19,
+      "sales": 84,
+      "modeledMedianPrice": 332000,
+      "era": "Correction"
+    },
+    {
+      "year": 2008,
+      "hpi": 134.1,
+      "sales": 70,
+      "modeledMedianPrice": 214000,
+      "era": "Correction"
+    },
+    {
+      "year": 2009,
+      "hpi": 105.08,
+      "sales": 53,
+      "modeledMedianPrice": 170000,
+      "era": "Correction"
+    },
+    {
+      "year": 2010,
+      "hpi": 101.81,
+      "sales": 49,
+      "modeledMedianPrice": 168000,
+      "era": "Correction"
+    },
+    {
+      "year": 2011,
+      "hpi": 94.85,
+      "sales": 51,
+      "modeledMedianPrice": 151000,
+      "era": "Correction"
+    },
+    {
+      "year": 2012,
+      "hpi": 95.63,
+      "sales": 57,
+      "modeledMedianPrice": 154000,
+      "era": "Correction"
+    },
+    {
+      "year": 2013,
+      "hpi": 114.48,
+      "sales": 72,
+      "modeledMedianPrice": 192000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2014,
+      "hpi": 138.34,
+      "sales": 76,
+      "modeledMedianPrice": 236000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2015,
+      "hpi": 147.92,
+      "sales": 80,
+      "modeledMedianPrice": 249000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2016,
+      "hpi": 162,
+      "sales": 84,
+      "modeledMedianPrice": 275000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2017,
+      "hpi": 176.47,
+      "sales": 88,
+      "modeledMedianPrice": 295000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2018,
+      "hpi": 190.94,
+      "sales": 92,
+      "modeledMedianPrice": 322000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2019,
+      "hpi": 199.21,
+      "sales": 96,
+      "modeledMedianPrice": 337000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2020,
+      "hpi": 205.95,
+      "sales": 112,
+      "modeledMedianPrice": 353000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2021,
+      "hpi": 242.99,
+      "sales": 126,
+      "modeledMedianPrice": 399000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2022,
+      "hpi": 280.42,
+      "sales": 117,
+      "modeledMedianPrice": 471000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2023,
+      "hpi": 276.5,
+      "sales": 93,
+      "modeledMedianPrice": 459000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2024,
+      "hpi": 288.12,
+      "sales": 88,
+      "modeledMedianPrice": 455000,
+      "era": "Rebuild"
+    },
+    {
+      "year": 2025,
+      "hpi": 285.59,
+      "sales": 86,
+      "modeledMedianPrice": 484000,
+      "era": "Rebuild"
+    }
+  ]
+}

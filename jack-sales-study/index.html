@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A forty-year, HPI-anchored modeled real-estate study for Jack Klemm.">
+    <title>The Long View — Jack Klemm</title>
+    <link rel="stylesheet" href="study.css">
+  </head>
+  <body>
+    <main>
+      <header class="masthead wrap">
+        <a class="monogram" href="#top" aria-label="Return to top">JK</a>
+        <div class="masthead-note">SAN JOAQUIN COUNTY<br>1986—2025</div>
+        <div class="status"><span></span> HPI-ANCHORED STUDY</div>
+      </header>
+
+      <section id="top" class="hero wrap">
+        <p class="eyebrow">JACK KLEMM / LOCAL MARKET STUDY</p>
+        <div class="hero-copy">
+          <h1>The<br><i>Long View.</i></h1>
+          <p>Forty years of local market motion, rendered as a transparent, interactive sales-study concept.</p>
+        </div>
+        <div class="hero-foot">
+          <span>01 / MARKET MEMORY</span><span>SCROLL TO EXPLORE ↓</span>
+        </div>
+      </section>
+
+      <section class="disclosure wrap" aria-label="Data disclosure">
+        <strong>READ THIS FIRST</strong>
+        <p>County HPI values are factual. Every individual transaction, volume, price, and community mix below is <b>modeled</b> for dashboard exploration—not Jack’s actual sales history.</p>
+      </section>
+
+      <section class="controls-wrap wrap" aria-label="Study filters">
+        <div class="controls-top">
+          <p class="eyebrow">02 / SET THE WINDOW</p>
+          <p id="range-label" class="range-label">1986 — 2025</p>
+        </div>
+        <div class="year-controls">
+          <label>FROM <input id="from-year" type="range" min="1986" max="2025" value="1986" aria-label="Start year"></label>
+          <label>TO <input id="to-year" type="range" min="1986" max="2025" value="2025" aria-label="End year"></label>
+        </div>
+        <div id="city-filters" class="city-filters" aria-label="Filter modeled records by community"></div>
+      </section>
+
+      <section class="metrics wrap" aria-label="Modeled study summary">
+        <div><span>MODELED RECORDS</span><strong id="metric-records">—</strong></div>
+        <div><span>MODELED VOLUME</span><strong id="metric-volume">—</strong></div>
+        <div><span>MEDIAN MODEL PRICE</span><strong id="metric-median">—</strong></div>
+        <div><span>HPI MOVEMENT</span><strong id="metric-hpi">—</strong></div>
+      </section>
+
+      <section class="story-panel wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">03 / THE PRICE SPINE</p><h2>Every climb<br>has a contour.</h2></div>
+          <p class="section-copy">The county’s annual all-transactions house-price index is the factual spine. It makes the boom, correction, and recovery immediately legible.</p>
+        </div>
+        <div id="trend" class="chart trend" role="img" aria-label="Annual San Joaquin County house price index chart"></div>
+        <div class="chart-legend"><span><i class="line-key"></i> FHFA county HPI</span><span><i class="dot-key"></i> selected window</span><span id="trend-caption">1986 start</span></div>
+      </section>
+
+      <section class="grid wrap">
+        <article class="volume-panel">
+          <p class="eyebrow">04 / PACE OF WORK</p>
+          <h2>Activity, by year.</h2>
+          <div id="volume" class="chart volume" role="img" aria-label="Modeled record count by year"></div>
+        </article>
+        <article class="mix-panel">
+          <p class="eyebrow">05 / LOCAL GRAVITY</p>
+          <h2>Where the study lands.</h2>
+          <div id="city-mix" class="city-mix"></div>
+        </article>
+      </section>
+
+      <section class="ledger wrap">
+        <div class="section-head ledger-head">
+          <div><p class="eyebrow">06 / UNDER THE HOOD</p><h2>The modeled ledger.</h2></div>
+          <p class="section-copy">A sample of the filtered records. No street addresses or personal data are included.</p>
+        </div>
+        <div class="ledger-labels"><span>DATE / PLACE</span><span>HOME PROFILE</span><span>MODEL PRICE</span></div>
+        <div id="ledger-rows" class="ledger-rows"></div>
+      </section>
+
+      <section class="method wrap">
+        <p class="eyebrow">07 / PROVENANCE</p>
+        <div><h2>Built to invite a better conversation.</h2><p>The factual market anchor is the U.S. Federal Housing Finance Agency’s annual All-Transactions House Price Index for San Joaquin County, published through FRED. Individual records are deterministic illustrative model data, designed to be replaced with a real MLS/exported ledger before any performance claim.</p></div>
+        <a href="https://fred.stlouisfed.org/series/ATNHPIUS06077A" target="_blank" rel="noreferrer">VIEW THE PUBLIC HPI SOURCE ↗</a>
+      </section>
+    </main>
+    <p id="filter-status" class="sr-only" aria-live="polite"></p>
+    <script src="data/study-data.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
