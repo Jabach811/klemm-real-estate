@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Sites — Jack Klemm | Klemm Real Estate</title>
+<meta name="description" content="Every market Jack Klemm serves, in one place. Tracy, Manteca, Mountain House, Lathrop, River Islands, and Del Webb at Woodbridge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #171717;
+  --body: #60646c;
+  --muted: #999999;
+  --hairline: #f0f0f3;
+  --hairline-strong: #dcdee0;
+  --canvas: #ffffff;
+  --surface-strong: #f0f0f3;
+  --sky-light: #cfe7ff;
+  --sky-mid: #a8c8e8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--body);
+  background: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+.nav {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wordmark {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+.wordmark span { font-weight: 400; color: var(--body); }
+.nav-cta {
+  font-size: 14px;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: background 150ms ease;
+}
+.nav-cta:hover { background: #1a1a1a; }
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 112px 24px 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% 20% -20%;
+  background:
+    radial-gradient(ellipse 45% 40% at 38% 18%, rgba(207, 231, 255, 0.9) 0%, rgba(255,255,255,0) 70%),
+    radial-gradient(ellipse 50% 45% at 64% 26%, rgba(168, 200, 232, 0.55) 0%, rgba(255,255,255,0) 72%),
+    radial-gradient(ellipse 75% 60% at 50% 15%, rgba(207, 231, 255, 0.45) 0%, rgba(255,255,255,0) 78%);
+  pointer-events: none;
+  animation: sky-drift 24s ease-in-out infinite alternate;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(560px, 80%);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(220,222,224,0) 0%, var(--hairline-strong) 50%, rgba(220,222,224,0) 100%);
+}
+@keyframes sky-drift {
+  from { transform: translateX(-2.5%); }
+  to { transform: translateX(2.5%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+}
+.hero > * { position: relative; }
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0;
+  margin-top: 48px;
+}
+.stat {
+  padding: 0 32px;
+  text-align: center;
+}
+.stat + .stat { border-left: 1px solid var(--hairline-strong); }
+.stat b {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.stat span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 9999px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+.hero p {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* Featured card */
+.featured { padding: 24px 0 0; }
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--canvas);
+  transition: box-shadow 200ms ease;
+}
+.featured-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.featured-media { min-height: 320px; }
+.featured-media img { width: 100%; height: 100%; object-fit: cover; }
+.featured-body {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--surface-strong);
+  border-radius: 9999px;
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+.featured-body h2 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.84px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.featured-body p { font-size: 15px; }
+.visit {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.visit svg { transition: transform 200ms ease; }
+a:hover .visit svg, .card:hover .visit svg { transform: translateX(3px); }
+
+/* City grid */
+.grid-section { padding: 80px 0 96px; }
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+.section-head h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.section-head span { font-size: 13px; color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  border: 1px solid var(--hairline-strong);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--canvas);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 200ms ease;
+}
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+.card-media { aspect-ratio: 16 / 10; overflow: hidden; }
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card:hover .card-media img { transform: scale(1.03); }
+.card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.card-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.card-body p { font-size: 14px; flex: 1; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 48px 0 64px;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.foot-name { color: var(--ink); font-weight: 600; }
+.foot a:hover { color: var(--ink); }
+.foot-meta { font-size: 13px; color: var(--muted); margin-top: 32px; }
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-media { min-height: 220px; }
+}
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding: 64px 24px 48px; }
+  .hero-stats { margin-top: 36px; }
+  .stat { padding: 0 16px; }
+  .stat b { font-size: 22px; }
+  .featured-body { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a>
+    <a class="nav-cta" href="contact.html">Contact Jack</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="kicker reveal">Site Directory</div>
+  <h1 class="reveal" style="--i:1">Six markets. One broker.</h1>
+  <p class="reveal" style="--i:2">Jack Klemm has been selling homes across San Joaquin County since 1988. Each market he serves has its own site — they all start here.</p>
+  <div class="hero-stats reveal" style="--i:3">
+    <div class="stat"><b>38</b><span>Years</span></div>
+    <div class="stat"><b>4,000</b><span>Homes Sold</span></div>
+    <div class="stat"><b>6</b><span>Markets</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="featured">
+    <a class="featured-card reveal" href="../home/index.html">
+      <div class="featured-media">
+        <img src="../home/assets/tracy-altamont-windmills-hero.png" alt="Windmills on the Altamont Pass outside Tracy, California" loading="eager">
+      </div>
+      <div class="featured-body">
+        <span class="tag">Jack's Home Base</span>
+        <h2>Tracy, California</h2>
+        <p>The main site. Thirty-eight years in Tracy, nearly four thousand homes sold — pricing, repairs, staging, and escrow handled by one person, start to close.</p>
+        <span class="visit">Visit the site
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+    </a>
+  </section>
+
+  <section class="grid-section">
+    <div class="section-head reveal">
+      <h2>City sites</h2>
+      <span>San Joaquin County</span>
+    </div>
+    <div class="grid">
+
+      <a class="card reveal" href="../cities/manteca/index.html" style="--i:0">
+        <div class="card-media"><img src="../cities/manteca/assets/manteca-water-tower-hero.png" alt="The Manteca water tower at dusk" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Manteca</h3>
+          <p>Established streets, new construction, and lakefront estates — from downtown to Oakwood Shores.</p>
+          <span class="visit">Visit the site
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="../cities/mountain-house/index.html" style="--i:1">
+        <div class="card-media"><img src="../cities/mountain-house/assets/mountain-house-oasis-blue-hour-aerial.png" alt="Aerial view of Mountain House at blue hour" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Mountain House</h3>
+          <p>California's newest city. Jack was selling it before it was one.</p>
+          <span class="visit">Visit the site
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="../cities/lathrop/index.html" style="--i:2">
+        <div class="card-media"><img src="../cities/lathrop/assets/lathrop-levee-water-hero.png" alt="The San Joaquin River levee at Lathrop" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Lathrop</h3>
+          <p>From the original town grid to Mossdale Landing — a city growing along the river.</p>
+          <span class="visit">Visit the site
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="../cities/river-islands/index.html" style="--i:3">
+        <div class="card-media"><img src="../cities/river-islands/assets/river-islands-lakefront-hero.png" alt="Lakefront homes at River Islands" loading="lazy"></div>
+        <div class="card-body">
+          <h3>River Islands</h3>
+          <p>Lathrop's master-planned waterfront community — lakes, levees, and new neighborhoods.</p>
+          <span class="visit">Visit the site
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="../cities/woodbridge/index.html" style="--i:4">
+        <div class="card-media"><img src="../cities/woodbridge/assets/clubhouse-hero.png" alt="The clubhouse at Del Webb at Woodbridge" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Del Webb at Woodbridge</h3>
+          <p>Manteca's 55+ resort community — clubhouse living, bocce courts, and lake views.</p>
+          <span class="visit">Visit the site
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
+      </div>
+      <div>
+        <a href="mailto:jack@klemmre.com">jack@klemmre.com</a><br>
+        <a href="tel:+12093211094">(209) 321-1094</a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/JackKlemmRE">Facebook</a><br>
+        <a href="https://www.zillow.com/profile/JackCKlemm">Zillow</a>
+      </div>
+    </div>
+    <div class="foot-meta">© 2026 Klemm Real Estate · DRE #01004092</div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

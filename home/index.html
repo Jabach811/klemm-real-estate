@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="../site/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jack Klemm — Klemm Real Estate | Tracy, CA</title>
-<meta name="description" content="38 years selling homes in Tracy, Mountain House, Manteca, and Lathrop. Nearly 4,000 homes sold. Jack Klemm handles repairs, staging, and marketing — you pay nothing until closing. 5.0★ across 123 Zillow reviews.">
+<meta name="description" content="38 years selling homes in Tracy. Nearly 4,000 sold. Jack Klemm handles repairs, staging, photography, and escrow — one broker, start to close.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jack Klemm — Klemm Real Estate | Tracy, CA">
+<meta property="og:description" content="38 years selling homes in Tracy. Nearly 4,000 sold. Jack Klemm handles repairs, staging, photography, and escrow — one broker, start to close.">
+<meta property="og:url" content="https://klemmre.com/">
+<meta property="og:image" content="https://klemmre.com/home/assets/Klemm%20windmill%20hero.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,11 +20,38 @@
 <body>
 
 <header>
-  <a class="wordmark" href="#">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="sell.html" class="nav-hide">Sell</a>
-    <a href="buy.html" class="nav-hide">Buy</a>
-    <a href="reviews.html" class="nav-hide">Reviews</a>
+    <a href="../home/index.html" class="nav-hide active">Home</a>
+    <a href="about.html" class="nav-hide">About</a>
+    <a href="listings.html" class="nav-hide">Featured Listings</a>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
+      <div class="drop">
+        <a href="sell.html#start">I Want a FREE CMV</a>
+        <a href="sell.html">I Want a FREE Show-Ready Consultation</a>
+        <a href="sell.html">I Want to Sell My Property</a>
+      </div>
+    </div>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false">Buyers<i>▾</i></button>
+      <div class="drop">
+        <a href="buy.html">Find Me a Home</a>
+        <a href="buy.html">Find Me an Investment Property</a>
+      </div>
+    </div>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false">Newsletters<i>▾</i></button>
+      <div class="drop drop-news">
+        <a href="newsletters.html#signup">Delivery Preference &amp; Sign&nbsp;Up</a>
+        <span class="drop-year">2026</span>
+        <div class="drop-months">
+          <a href="newsletters.html#y2026">Jun</a><a href="newsletters.html#y2026">May</a><a href="newsletters.html#y2026">Apr</a><a href="newsletters.html#y2026">Mar</a><a href="newsletters.html#y2026">Feb</a><a href="newsletters.html#y2026">Jan</a>
+        </div>
+        <a href="newsletters.html#archive" class="drop-archive">2025 &amp; earlier →</a>
+      </div>
+    </div>
+    <a href="past-sales.html" class="nav-hide">Past Sales</a>
     <a href="contact.html" class="nav-hide">Contact</a>
     <a class="nav-phone" href="tel:+12093211094">209.321.1094</a>
   </nav>
@@ -25,8 +59,8 @@
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="Klemm windmill hero.png">
-      <source src="klemm-hero-loop.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="../home/assets/Klemm windmill hero.png">
+      <source src="../home/assets/klemm-hero-loop.mp4" type="video/mp4">
     </video>
   </div>
   <h1 class="reveal-load">Thirty-eight years selling homes in Tracy. <strong>Nearly four thousand sold.</strong> <span class="accent">One agent who handles all&nbsp;of&nbsp;it.</span></h1>
@@ -35,7 +69,7 @@
     <em>5.0 on Zillow across 123 client reviews</em>
   </div>
   <div class="hero-sub reveal-load">
-    <p>Repairs, cleaning, staging, photography, pricing, escrow — Jack Klemm coordinates every step himself, and you don't pay a dollar of it until your home closes.</p>
+    <p>Repair bids, cleaning, staging, photography, virtual tours, inspections, escrow — Jack Klemm coordinates every step himself, so you're never the general contractor of your own sale.</p>
     <a class="btn" href="sell.html#start">Start with a free home valuation</a>
   </div>
 </section>
@@ -51,10 +85,10 @@
   <div class="showready-head reveal">
     <span class="eyebrow">The Show-Ready Sale</span>
     <h2>You hand Jack the keys. He hands you back a sold sign.</h2>
-    <p>Most agents list your house as-is and hope. Jack gets it ready first — and fronts the work so you're never writing checks to contractors while trying to move your life.</p>
+    <p>Most agents list your house as-is and hope. Jack gets it ready first — lining up the bids, the stagers, and the photographers so you're not managing contractors while trying to move your life.</p>
   </div>
   <div class="showready-media reveal">
-    <img src="staging-detail.jpg" alt="A warm, staged kitchen ready for listing photography">
+    <img src="../shared/listing-prep/staging-detail.jpg" alt="A warm, staged kitchen ready for listing photography">
     <div class="showready-media-copy">
       <span class="eyebrow">Before the first showing</span>
       <p>A home that feels cared for earns attention before a buyer has even walked through the door.</p>
@@ -69,17 +103,17 @@
     <div class="step">
       <i>02</i>
       <h3>He runs the work</h3>
-      <p>His contractors, cleaners, and stagers get the house show-ready. You don't schedule anyone.</p>
+      <p>Jack gets the bids, then his contractors, cleaners, and stagers make the house show-ready. You don't schedule anyone.</p>
     </div>
     <div class="step">
       <i>03</i>
       <h3>Model-home marketing</h3>
-      <p>Professional photography and pricing built on three decades of Tracy market data.</p>
+      <p>Professional photography, virtual tours, and pricing built on three decades of Tracy market data.</p>
     </div>
     <div class="step">
       <i>04</i>
-      <h3>Settle at closing</h3>
-      <p>Costs come out of sale proceeds when escrow closes. Nothing upfront, ever.</p>
+      <h3>Escrow to sold</h3>
+      <p>Offers, negotiation, inspections, paperwork — Jack walks the sale all the way to closing day.</p>
     </div>
   </div>
   <p class="fineprint reveal"><b>Recent result:</b> a Tracy listing sold over asking with a signed contract in under a week — sellers had already moved to Florida and never came back for a single showing.</p>
@@ -106,7 +140,7 @@
 
 <section class="about">
   <div class="about-grid">
-    <img class="reveal" src="Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
+    <img class="reveal" src="../shared/jack/Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate">
     <div class="about-copy reveal">
       <span class="eyebrow">Tracy's broker since 1988</span>
       <h2>The agent who answers his own phone.</h2>
@@ -122,11 +156,11 @@
       <span class="eyebrow">Where Jack works</span>
       <p>Five communities, one specialist. Jack has lived and sold here for nearly four decades — he knows what your street sold for, not just your ZIP code.</p>
       <div class="area-photo-frame" aria-hidden="true">
-        <img class="on" src="Tracy City Scape 1.jpg" alt="">
-        <img src="Mountain House City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Manteca City Scape 1.jpg" alt="" loading="lazy">
-        <img src="Lathrop City Scape 1.jpg" alt="" loading="lazy">
-        <img src="River Islands City Scape 1.jpg" alt="" loading="lazy">
+        <img class="on" src="../home/assets/Tracy City Scape 1.jpg" alt="">
+        <img src="../cities/mountain-house/assets/Mountain House City Scape 1.jpg" alt="" loading="lazy">
+        <img src="../cities/manteca/assets/Manteca City Scape 1.jpg" alt="" loading="lazy">
+        <img src="../cities/lathrop/assets/Lathrop City Scape 1.jpg" alt="" loading="lazy">
+        <img src="../cities/river-islands/assets/River Islands City Scape 1.jpg" alt="" loading="lazy">
       </div>
     </div>
     <ul class="area-list reveal">
@@ -199,12 +233,45 @@
     li.addEventListener('click', show);
   });
 
+  document.querySelectorAll('.menu > button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.parentElement;
+      const wasOpen = menu.classList.contains('open');
+      document.querySelectorAll('.menu.open').forEach(m => {
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+      menu.classList.toggle('open', !wasOpen);
+      btn.setAttribute('aria-expanded', String(!wasOpen));
+    });
+  });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+  document.addEventListener('click', e => {
+    if (e.target.closest('.menu')) return;
+    document.querySelectorAll('.menu.open').forEach(m => {
+      m.classList.remove('open');
+      m.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+  });
+
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const v = document.querySelector('.hero-media video');
     const img = new Image();
     img.src = v.poster;
     v.replaceWith(img);
   }
+
+  try { sessionStorage.setItem('klemm-city-home', location.pathname + location.search); } catch (e) {}
 </script>
 
 </body>

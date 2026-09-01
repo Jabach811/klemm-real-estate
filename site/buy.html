@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buy With Jack — Klemm Real Estate | Tracy, CA</title>
-<meta name="description" content="Tell Jack Klemm what you're looking for in Tracy, Mountain House, Manteca, Lathrop, or River Islands. 38 years of local relationships means he often knows what's coming before it lists.">
+<meta name="description" content="Tell Jack Klemm what you're looking for in Tracy, Mountain House, Manteca, or Lathrop. 38 years of relationships — he often knows what's coming before it lists.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Buy With Jack — Klemm Real Estate | Tracy, CA">
+<meta property="og:description" content="Tell Jack Klemm what you're looking for in Tracy, Mountain House, Manteca, or Lathrop. 38 years of relationships — he often knows what's coming before it lists.">
+<meta property="og:url" content="https://klemmre.com/buy.html">
+<meta property="og:image" content="https://klemmre.com/home/assets/Klemm%20windmill%20hero.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,7 +33,7 @@
   .buy-hero h1 .accent { color: var(--brick); font-style: italic; font-weight: 400; }
   .buy-hero .hero-sub p { color: var(--ink-soft); }
 
-  .process { padding: clamp(72px, 11vh, 140px) var(--pad); max-width: 1360px; }
+  .process { padding: clamp(72px, 11vh, 140px) var(--pad); max-width: calc(1216px + 2 * var(--pad)); margin: 0 auto; }
   .process-head h2 {
     font-family: var(--serif);
     font-weight: 400;
@@ -141,11 +147,38 @@
 <body>
 
 <header>
-  <a class="wordmark" href="index.html">Klemm <span>Real Estate</span></a>
+  <a class="wordmark" data-home href="../home/index.html">Klemm <span>Real Estate</span></a>
   <nav>
-    <a href="sell.html" class="nav-hide">Sell</a>
-    <a href="buy.html" class="nav-hide active">Buy</a>
-    <a href="reviews.html" class="nav-hide">Reviews</a>
+    <a href="../home/index.html" class="nav-hide" data-home>Home</a>
+    <a href="about.html" class="nav-hide">About</a>
+    <a href="listings.html" class="nav-hide">Featured Listings</a>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
+      <div class="drop">
+        <a href="sell.html#start">I Want a FREE CMV</a>
+        <a href="sell.html">I Want a FREE Show-Ready Consultation</a>
+        <a href="sell.html">I Want to Sell My Property</a>
+      </div>
+    </div>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false" class="active">Buyers<i>▾</i></button>
+      <div class="drop">
+        <a href="#start">Find Me a Home</a>
+        <a href="#start">Find Me an Investment Property</a>
+      </div>
+    </div>
+    <div class="menu nav-hide">
+      <button type="button" aria-expanded="false">Newsletters<i>▾</i></button>
+      <div class="drop drop-news">
+        <a href="newsletters.html#signup">Delivery Preference &amp; Sign&nbsp;Up</a>
+        <span class="drop-year">2026</span>
+        <div class="drop-months">
+          <a href="newsletters.html#y2026">Jun</a><a href="newsletters.html#y2026">May</a><a href="newsletters.html#y2026">Apr</a><a href="newsletters.html#y2026">Mar</a><a href="newsletters.html#y2026">Feb</a><a href="newsletters.html#y2026">Jan</a>
+        </div>
+        <a href="newsletters.html#archive" class="drop-archive">2025 &amp; earlier →</a>
+      </div>
+    </div>
+    <a href="past-sales.html" class="nav-hide">Past Sales</a>
     <a href="contact.html" class="nav-hide">Contact</a>
     <a class="nav-phone" href="tel:+12093211094">209.321.1094</a>
   </nav>
@@ -199,7 +232,7 @@
   </ol>
   </div>
   <div class="process-photo reveal">
-    <img src="buy-street.jpg" alt="The front of a two-story stucco home at golden hour, seen from the sidewalk" loading="lazy">
+    <img src="../shared/listing-prep/buy-street.jpg" alt="The front of a two-story stucco home at golden hour, seen from the sidewalk" loading="lazy">
   </div>
   </div>
 </section>
@@ -212,7 +245,7 @@
   </div>
 </section>
 
-<img class="band-photo" src="Altamont Scape 1.jpg" alt="Windmills on the golden Altamont hills that Tracy commuters cross every morning" loading="lazy">
+<img class="band-photo" src="../home/assets/Altamont Scape 1.jpg" alt="Windmills on the golden Altamont hills that Tracy commuters cross every morning" loading="lazy">
 
 <section class="start" id="start">
   <span class="eyebrow">Start here</span>
@@ -244,6 +277,40 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.menu > button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const menu = btn.parentElement;
+      const wasOpen = menu.classList.contains('open');
+      document.querySelectorAll('.menu.open').forEach(m => {
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+      menu.classList.toggle('open', !wasOpen);
+      btn.setAttribute('aria-expanded', String(!wasOpen));
+    });
+  });
+  document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+      const f = document.activeElement;
+      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
+      document.querySelectorAll('.menu.open').forEach(m => {
+        if (m === menu) return;
+        m.classList.remove('open');
+        m.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+  document.addEventListener('click', e => {
+    if (e.target.closest('.menu')) return;
+    document.querySelectorAll('.menu.open').forEach(m => {
+      m.classList.remove('open');
+      m.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
+  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
 </body>

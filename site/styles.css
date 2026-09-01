@@ -70,7 +70,73 @@ nav a {
 nav a:hover { border-bottom-color: var(--brick); }
 nav a.active { border-bottom-color: var(--brick); }
 .nav-phone { color: var(--brick); font-weight: 600; }
-@media (max-width: 640px) {
+
+/* dropdown menus */
+nav { flex-wrap: nowrap; gap: clamp(14px, 1.8vw, 30px); }
+nav a, .menu button { white-space: nowrap; }
+.menu { position: relative; }
+.menu button {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0 0 2px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.menu button i { font-style: normal; font-size: 9px; margin-left: 5px; color: var(--ink-soft); }
+.menu:hover button, .menu:focus-within button, .menu.open button, .menu button.active { border-bottom-color: var(--brick); }
+.drop {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 230px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 14px 40px rgba(27, 23, 18, 0.14);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 20;
+}
+.drop::before { content: ""; position: absolute; top: -15px; left: 0; right: 0; height: 15px; }
+.menu:hover .drop, .menu:focus-within .drop, .menu.open .drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.drop a {
+  display: block;
+  padding: 9px 22px;
+  font-size: 13px;
+  border-bottom: 0;
+  white-space: normal;
+}
+.drop a:hover { color: var(--brick); }
+.drop-news { min-width: 250px; }
+.drop-year {
+  display: block;
+  padding: 12px 22px 4px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brick);
+  border-top: 1px solid var(--hairline);
+  margin-top: 8px;
+}
+.drop-months { display: flex; flex-wrap: wrap; padding: 2px 16px 6px; }
+.drop-months a { padding: 6px; font-size: 13px; }
+.drop-archive { color: var(--ink-soft); font-size: 12.5px !important; border-top: 1px solid var(--hairline); margin-top: 6px; padding-top: 12px !important; }
+
+@media (max-width: 1080px) {
   header {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -84,6 +150,30 @@ nav a.active { border-bottom-color: var(--brick); }
   .nav-phone { order: 2; margin-left: auto; }
   header::after { content: ""; order: 3; flex-basis: 100%; height: 0; }
   .nav-hide { order: 4; padding: 3px 0; }
+  .menu button { padding: 3px 0; }
+  .drop {
+    position: absolute;
+    left: 0;
+    transform: none;
+    top: calc(100% + 8px);
+  }
+  .menu:hover .drop { opacity: 0; visibility: hidden; }
+  .menu.open .drop, .menu:hover.open .drop { opacity: 1; visibility: visible; transform: none; }
+}
+@media (max-width: 1080px) and (min-width: 641px) {
+  .drop { left: 50%; transform: translateX(-50%); }
+  .menu.open .drop { transform: translateX(-50%); }
+}
+@media (max-width: 640px) {
+  /* Anchor dropdowns to the sticky header so a closed (hidden) panel can
+     never hang past the screen edge and cause sideways scrolling. */
+  .menu { position: static; }
+  .drop, .menu.open .drop, .drop-news {
+    left: var(--pad);
+    right: var(--pad);
+    min-width: 0;
+    transform: none;
+  }
 }
 
 /* ---------- hero ---------- */
@@ -212,6 +302,8 @@ nav a.active { border-bottom-color: var(--brick); }
     inset 0 0 0 1px var(--ink),
     inset 0 1px 3px rgba(0, 0, 0, 0.22);
 }
+
+@media (max-width: 640px) { .btn { white-space: normal; text-align: center; } }
 
 /* load-in stagger */
 .hero .reveal-load { opacity: 0; transform: translateY(18px); animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
@@ -525,9 +617,106 @@ footer {
   color: var(--ink-soft);
 }
 
+/* ---------- city tag (satellite heroes) ---------- */
+.city-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(251, 248, 242, 0.9);
+  border: 1px solid rgba(251, 248, 242, 0.45);
+  border-radius: 999px;
+  padding: 7px 16px;
+  align-self: flex-start;
+  margin-bottom: 22px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- listing cards ---------- */
+.soldhere { padding: clamp(72px, 11vh, 140px) var(--pad); }
+.soldhere-head { max-width: 900px; margin-bottom: clamp(36px, 5vh, 60px); }
+.soldhere-head h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(30px, 4.2vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-top: 16px;
+  max-width: 22ch;
+}
+.soldhere-head p { margin-top: 22px; max-width: 58ch; font-size: 16px; color: var(--ink-soft); }
+.listings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+}
+.listing { background: var(--paper); }
+.listing-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+.listing-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.listing-copy { padding: 24px 26px 30px; }
+.listing-copy b {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(26px, 2.6vw, 34px);
+  letter-spacing: -0.01em;
+}
+.listing-copy span { display: block; margin-top: 6px; font-size: 14px; }
+.listing-copy small {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+@media (max-width: 860px) { .listings { grid-template-columns: 1fr; } }
+
+/* asset placeholder treatment — mock only */
+.asset-slot {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 14px, rgba(160, 61, 34, 0.05) 14px 15px),
+    var(--paper-deep);
+  border: 0;
+  outline: 1px dashed rgba(160, 61, 34, 0.45);
+  outline-offset: -10px;
+}
+.asset-slot i {
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brick);
+}
+.asset-slot p { font-family: var(--serif-text); font-size: 15px; line-height: 1.45; color: var(--ink-soft); max-width: 30ch; }
+
 /* scroll reveal */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .hero .reveal-load { opacity: 1; transform: none; animation: none; transition: none; }
+}
+
+/* Ultra-wide screens: grow the side padding so content centers at a fixed
+   width while section backgrounds still run edge to edge. .stat and .door
+   use --pad as internal cell padding, so they get a fixed pad and their
+   grids absorb the remaining gutter instead. Keep this at the end of the
+   file so it wins over the base rules above. */
+@media (min-width: 1664px) {
+  :root { --pad: calc((100vw - 1520px) / 2); }
+  .stat, .door { padding-left: 72px; padding-right: 72px; }
+  .stats, .doors { padding-left: calc(var(--pad) - 72px); padding-right: calc(var(--pad) - 72px); }
 }

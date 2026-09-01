@@ -1,9 +1,13 @@
 # Local tooling
 .claude/
+.superpowers/
 
 # Working files, not part of the site
 mocks/
 04eliteagentwebsites.md
 05synthesisandrankings.md
-font view.png
-klemm windmill hero animation.mp4
+research/visual-direction/
+home/assets/klemm windmill hero animation.mp4
+
+# Source video masters, kept locally only
+archive/masters/
