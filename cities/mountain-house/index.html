@@ -76,7 +76,7 @@
   <nav>
     <a href="../cities/mountain-house/index.html" class="nav-hide active">Home</a>
     <a href="#about" class="nav-hide">About</a>
-    <a href="#listings" class="nav-hide">Featured Listings</a>
+    <a href="#tours" class="nav-hide">Video Tours</a>
     <div class="menu nav-hide">
       <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
       <div class="drop">
@@ -192,44 +192,42 @@
   </div>
 </section>
 
-<section class="soldhere" id="listings">
-  <div class="soldhere-head reveal">
-    <span class="eyebrow">On the market with Jack, right now</span>
-    <h2>Mountain House homes he's selling this season.</h2>
-    <p>Not a national portal feed — these are Jack's own listings, prepared and marketed the same way yours would be.</p>
+<section class="tours" id="tours">
+  <div class="tours-head reveal">
+    <span class="eyebrow">Video tours</span>
+    <h2>Walk through the Mountain House homes Jack has listed.</h2>
+    <p>Every home Jack lists gets its own video tour. These are the three most recent in Mountain House &mdash; they play right here.</p>
   </div>
-  <div class="listings reveal">
-    <div class="listing">
-      <div class="listing-photo">
-        <img src="../cities/mountain-house/assets/295 Ryan Ave, Mountain House, CA .jpg" alt="295 Ryan Avenue, Mountain House">
+  <div class="tour-grid reveal">
+    <div class="tour">
+      <div class="tour-frame" data-video="MYBUkNzegsI">
+        <img src="https://i.ytimg.com/vi/MYBUkNzegsI/hqdefault.jpg" alt="Video tour of 493 Lafayette Ct, Mountain House" loading="lazy">
       </div>
-      <div class="listing-copy">
-        <b>$998,500</b>
-        <span>295 Ryan Avenue, Mountain House</span>
-        <small>5 bed &middot; 3 bath &middot; 3,706 sq ft</small>
-      </div>
-    </div>
-    <div class="listing">
-      <div class="listing-photo">
-        <img src="../cities/mountain-house/assets/122 W Riverside Pl, Mountain house.jpg" alt="122 W Riverside Place, Mountain House">
-      </div>
-      <div class="listing-copy">
-        <b>$715,000</b>
-        <span>122 W Riverside Place, Mountain House</span>
-        <small>3 bed &middot; 2.5 bath &middot; 1,603 sq ft</small>
+      <div class="tour-copy">
+        <span>493 Lafayette Ct, Mountain House</span>
+        <small>1 month ago</small>
       </div>
     </div>
-    <div class="listing">
-      <div class="listing-photo">
-        <img src="../cities/mountain-house/assets/357 w tuscan lane mountain house.jpg" alt="357 W Tuscan Lane, Mountain House">
+    <div class="tour">
+      <div class="tour-frame" data-video="mFX933YMFzI">
+        <img src="https://i.ytimg.com/vi/mFX933YMFzI/hqdefault.jpg" alt="Video tour of 436 Chase St, Mountain House" loading="lazy">
       </div>
-      <div class="listing-copy">
-        <b>$&mdash;</b>
-        <span>357 W Tuscan Lane, Mountain House</span>
-        <small>3 bed &middot; 2 bath &middot; 2,074 sq ft</small>
+      <div class="tour-copy">
+        <span>436 Chase St, Mountain House</span>
+        <small>2 months ago</small>
+      </div>
+    </div>
+    <div class="tour">
+      <div class="tour-frame" data-video="ORvxBIFjkKQ">
+        <img src="https://i.ytimg.com/vi/ORvxBIFjkKQ/hqdefault.jpg" alt="Video tour of 292 W St Francis Ave, Mountain House" loading="lazy">
+      </div>
+      <div class="tour-copy">
+        <span>292 W St Francis Ave, Mountain House</span>
+        <small>6 months ago</small>
       </div>
     </div>
   </div>
+  <p class="tours-more reveal"><a href="../cities/mountain-house/tours.html">All 53 Mountain House video tours &rarr;</a></p>
 </section>
 
 <section class="showready" id="sell" style="padding-top:0">
@@ -393,6 +391,8 @@
 
   try { sessionStorage.setItem('klemm-city-home', location.pathname + location.search); } catch (e) {}
 </script>
+
+<script src="../shared/tours.js"></script>
 
 </body>
 </html>
