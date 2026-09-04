@@ -1,0 +1,164 @@
+{
+ "total": 838,
+ "byCity": {
+  "Manteca": 206,
+  "Tracy": 496,
+  "Stockton": 5,
+  "River Islands": 3,
+  "Mountain House": 53,
+  "Patterson": 2,
+  "Lathrop": 48,
+  "Unknown": 7,
+  "Oakdale": 2,
+  "Modesto": 3,
+  "Brentwood": 2,
+  "Livermore": 2,
+  "Discovery Bay": 1,
+  "Ripon": 5,
+  "Lodi": 1,
+  "Salida": 2
+ },
+ "byTitleStyle": {
+  "remark + address": 49,
+  "other": 3,
+  "address-only": 786
+ },
+ "totalViews": 29172,
+ "medianViews": 17,
+ "under10Views": 268,
+ "over100Views": 46,
+ "postedLast12Months": 176,
+ "postedLast12MonthsMedianViews": 21,
+ "top20": [
+  {
+   "views": 2000,
+   "age": "5 years ago",
+   "title": "2700 Annette Ct. Tracy CA",
+   "id": "WhpnR5h-m8g"
+  },
+  {
+   "views": 1200,
+   "age": "5 years ago",
+   "title": "1295 Como Dr. Manteca, CA",
+   "id": "n-IEoIn14kA"
+  },
+  {
+   "views": 772,
+   "age": "5 years ago",
+   "title": "Live at Ellis, Tracy, CA",
+   "id": "ID4gA0JEgy4"
+  },
+  {
+   "views": 737,
+   "age": "5 years ago",
+   "title": "3996 Castellina Way Manteca, CA",
+   "id": "f_zjVAymVGY"
+  },
+  {
+   "views": 458,
+   "age": "5 years ago",
+   "title": "2834 Redbridge Rd. Tracy, CA",
+   "id": "FUgtmM5DHoM"
+  },
+  {
+   "views": 453,
+   "age": "3 years ago",
+   "title": "23343 Los Padres Dr Tracy CA",
+   "id": "IO-O4wToa0M"
+  },
+  {
+   "views": 326,
+   "age": "5 years ago",
+   "title": "2611 Maple Grove Ave. Manteca, CA",
+   "id": "W2jvzRIZlXI"
+  },
+  {
+   "views": 290,
+   "age": "2 years ago",
+   "title": "7684 Erb Way Tracy CA",
+   "id": "_4_v1RPmwP4"
+  },
+  {
+   "views": 264,
+   "age": "3 years ago",
+   "title": "3977 Castellina Way Manteca CA",
+   "id": "YSD4M3-TWlo"
+  },
+  {
+   "views": 231,
+   "age": "4 years ago",
+   "title": "842 S Amor St Mountain House CA",
+   "id": "qU_wa0t8lFg"
+  },
+  {
+   "views": 181,
+   "age": "5 years ago",
+   "title": "27828 S. Traina Ct., Tracy CA",
+   "id": "L8TKwVAS2wo"
+  },
+  {
+   "views": 177,
+   "age": "2 years ago",
+   "title": "2203 Basque Dr Tracy CA",
+   "id": "avx6vvIN8p0"
+  },
+  {
+   "views": 174,
+   "age": "4 years ago",
+   "title": "771 Monte Casa St Manteca CA",
+   "id": "6-kLVzgGSpo"
+  },
+  {
+   "views": 172,
+   "age": "5 years ago",
+   "title": "1841 Oregano Way Tracy, CA",
+   "id": "6x3kjp2tyLI"
+  },
+  {
+   "views": 165,
+   "age": "5 years ago",
+   "title": "878 Trinity Ct. Tracy, CA",
+   "id": "X1z6ixEhNM0"
+  },
+  {
+   "views": 159,
+   "age": "1 year ago",
+   "title": "1682 Star Tulip St Manteca CA",
+   "id": "KwxYbdmh65o"
+  },
+  {
+   "views": 156,
+   "age": "2 years ago",
+   "title": "8563 Fairoaks Rd Tracy CA",
+   "id": "MXSnD_vmF98"
+  },
+  {
+   "views": 149,
+   "age": "1 year ago",
+   "title": "2490 David Waite Dr Tracy CA",
+   "id": "qDUOeQ-H9Tg"
+  },
+  {
+   "views": 146,
+   "age": "4 years ago",
+   "title": "1812 Schantz Way Tracy CA",
+   "id": "PXRQi4fvWUw"
+  },
+  {
+   "views": 145,
+   "age": "4 years ago",
+   "title": "34779 Brichetto Ct. Tracy, CA",
+   "id": "4z2-gl7L0i4"
+  }
+ ],
+ "unknownCity": [
+  "2004 London Ave Promo",
+  "2170 Bentley Ln Promo",
+  "1981 Lugano Way Promo",
+  "1928 Deodar Ave Antioch CA",
+  "2689 Garazi Ct video",
+  "426 Vineyard Pl. Pleasanton, CA",
+  "3501 Crowley Ct"
+ ],
+ "noAddressParsed": 5
+}

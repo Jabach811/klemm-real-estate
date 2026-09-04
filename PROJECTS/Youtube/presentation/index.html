@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Klemm Channel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F6F1E8;
+  --paper-deep: #EFE8DB;
+  --ink: #1B1712;
+  --ink-soft: #5F574B;
+  --brick: #A03D22;
+  --hairline: #DCD2C0;
+  --gray: #B8AE9E;
+  --serif: "Libre Caslon Display", Georgia, serif;
+  --serif-text: "Libre Caslon Text", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+  --pad: clamp(20px, 5vw, 72px);
+  --measure: 62ch;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--brick); color: var(--paper); }
+
+header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 22px var(--pad);
+  border-bottom: 1px solid var(--hairline);
+}
+.wordmark { font-family: var(--serif-text); font-weight: 700; font-size: 19px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.wordmark span { color: var(--brick); }
+header .date { font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 0 var(--pad); }
+section { padding: clamp(56px, 9vw, 120px) 0; border-bottom: 1px solid var(--hairline); }
+section:last-of-type { border-bottom: 0; }
+
+.eyebrow { font-size: 11.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brick); margin-bottom: 18px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6.5vw, 76px); line-height: 1.05; letter-spacing: -0.01em; max-width: 18ch; }
+h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4.2vw, 46px); line-height: 1.12; letter-spacing: -0.01em; max-width: 22ch; margin-bottom: 28px; }
+h3 { font-family: var(--serif-text); font-weight: 400; font-size: 24px; line-height: 1.25; margin-bottom: 12px; }
+p { max-width: var(--measure); }
+p + p { margin-top: 1em; }
+.lede { font-family: var(--serif-text); font-size: clamp(19px, 2.2vw, 23px); line-height: 1.5; color: var(--ink); max-width: 30em; margin-top: 28px; }
+.note { color: var(--ink-soft); font-size: 15px; }
+strong { font-weight: 600; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px 40px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--hairline); }
+.stat .n { font-family: var(--serif); font-size: clamp(40px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em; }
+.stat .l { margin-top: 10px; font-size: 14px; color: var(--ink-soft); line-height: 1.4; }
+
+figure { margin: 40px 0 0; }
+figure + figure { margin-top: 56px; }
+figcaption { font-size: 14px; color: var(--ink-soft); margin-bottom: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+figcaption b { color: var(--ink); font-weight: 600; }
+.chart { position: relative; width: 100%; overflow-x: auto; }
+.chart svg { display: block; width: 100%; min-width: 640px; height: auto; overflow: visible; }
+.chart text { font-family: var(--sans); font-size: 12.5px; fill: var(--ink-soft); }
+.chart .val { fill: var(--ink); font-weight: 500; }
+.chart .grid { stroke: var(--hairline); stroke-width: 1; }
+.chart .base { stroke: var(--ink-soft); stroke-width: 1; }
+.chart .mark { fill: var(--brick); }
+.chart .mark.dim { fill: var(--gray); }
+.chart .hit { fill: transparent; }
+.chart .grp:hover .mark { fill: #7E2F19; }
+.chart .grp:hover .mark.dim { fill: #9C927F; }
+.tip {
+  position: absolute; pointer-events: none; opacity: 0; transition: opacity .12s;
+  background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1.4;
+  padding: 8px 11px; border-radius: 4px; white-space: nowrap; transform: translate(-50%, calc(-100% - 10px));
+  z-index: 3;
+}
+.tip b { font-weight: 600; display: block; }
+.tip.on { opacity: 1; }
+.key { display: flex; gap: 20px; font-size: 13px; color: var(--ink-soft); }
+.key i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: -1px; margin-right: 6px; background: var(--brick); }
+.key i.dim { background: var(--gray); }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+@media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
+.list { list-style: none; }
+.list li { padding: 12px 0; border-top: 1px solid var(--hairline); display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: baseline; }
+.list li:last-child { border-bottom: 1px solid var(--hairline); }
+.list .x { font-family: var(--serif-text); color: var(--brick); }
+.list small { display: block; color: var(--ink-soft); font-size: 14px; margin-top: 2px; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+@media (max-width: 720px) { .compare { grid-template-columns: 1fr; } }
+.card { background: var(--paper-deep); padding: 24px 26px; }
+.card .tag { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+.card .t { font-family: var(--serif-text); font-size: 18px; line-height: 1.35; }
+.card .d { margin-top: 14px; font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; white-space: pre-line; }
+.card .d a { color: var(--brick); }
+
+.layer { display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 40px 0; border-top: 1px solid var(--hairline); }
+.layer:last-of-type { border-bottom: 1px solid var(--hairline); }
+.layer .num { font-family: var(--serif); font-size: 44px; line-height: 1; color: var(--brick); }
+.layer h3 { margin-bottom: 8px; }
+.layer .when { font-size: 13.5px; color: var(--ink-soft); letter-spacing: 0.02em; margin-bottom: 18px; }
+.layer ul { margin: 0 0 20px 1.1em; max-width: var(--measure); }
+.layer li { margin: 6px 0; }
+.layer .gets { max-width: var(--measure); padding: 16px 20px; border-left: 2px solid var(--brick); }
+.layer .gets b { font-weight: 600; }
+@media (max-width: 600px) { .layer { grid-template-columns: 1fr; gap: 8px; } }
+
+.measures { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 40px; }
+.measure { padding-top: 18px; border-top: 1px solid var(--hairline); }
+.measure .what { font-family: var(--serif-text); font-size: 19px; line-height: 1.3; }
+.measure .now { margin-top: 14px; font-size: 14px; color: var(--ink-soft); }
+.measure .now b { display: block; font-family: var(--serif); font-size: 34px; color: var(--ink); font-weight: 400; line-height: 1.1; margin-bottom: 4px; }
+
+.close h2 { max-width: 26ch; }
+.close .lede { margin-top: 24px; }
+footer { padding: 32px var(--pad) 56px; font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="#">Klemm <span>Real Estate</span></a>
+  <div class="date">YouTube review, September 2026</div>
+</header>
+
+<main>
+
+<section id="open">
+  <div class="eyebrow">Where the channel stands</div>
+  <h1>You built the asset. It just isn't plugged in.</h1>
+  <p class="lede">Five years, 838 listing videos, never a month off. Almost no agent gets that far. But nothing was ever set up around the videos, so YouTube doesn't know who to show them to, and viewers have nowhere to go next. This is what's there, what it's doing, and what it would take to make it work.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">838</div><div class="l">videos, one per listing, since 2021</div></div>
+    <div class="stat"><div class="n">29,172</div><div class="l">total views across all of them</div></div>
+    <div class="stat"><div class="n">17</div><div class="l">views for the typical video</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">playlists, tags, end screens, or links to a listing</div></div>
+  </div>
+</section>
+
+<section id="effort">
+  <div class="eyebrow">What the numbers say</div>
+  <h2>More videos are going up. Each one reaches about the same twenty people.</h2>
+  <p>The pace has picked back up: 176 videos in the last twelve months. But views per video haven't followed. The best year for reach was 2024, when fewer videos went up. Volume isn't the problem and more volume won't be the fix.</p>
+  <figure>
+    <figcaption><b>Videos posted per year</b><span>2026 is January through early September</span></figcaption>
+    <div class="chart" id="c-count"></div>
+  </figure>
+  <figure>
+    <figcaption><b>Typical views per video, by year posted</b><span>Median: half the videos did better, half worse</span></figcaption>
+    <div class="chart" id="c-median"></div>
+  </figure>
+</section>
+
+<section id="tail">
+  <div class="eyebrow">How views are spread</div>
+  <h2>Two out of three videos never reached thirty people.</h2>
+  <p>268 videos are under ten views. That's the seller, a couple of friends, and Jack checking the upload. Only 46 videos, about one in eighteen, ever cracked a hundred. The channel isn't reaching strangers, and strangers are the whole point.</p>
+  <figure>
+    <figcaption><b>Number of videos by how many views they got</b></figcaption>
+    <div class="chart" id="c-dist"></div>
+  </figure>
+</section>
+
+<section id="proof">
+  <div class="eyebrow">What already worked</div>
+  <h2>The channel has already run the experiment. The results are in.</h2>
+  <p>Every one of the top five is from 2021, and four of them are four-to-five minute walkthroughs. They got twenty to a hundred times the views of today's 1:39 slideshows. The third most watched video Jack ever posted isn't a listing at all. It's a one-minute look at the Ellis neighborhood in Tracy. He made exactly one of those, and it beat 835 listing videos.</p>
+  <figure>
+    <figcaption><b>Top five videos, all time</b><span class="key"><span><i></i>Listing walkthrough</span><span><i class="dim"></i>Not a listing</span></span></figcaption>
+    <div class="chart" id="c-top"></div>
+  </figure>
+  <p class="note" style="margin-top:28px">Next to Jack's most popular video, YouTube recommends "Why Tracy CA is INCREDIBLE" and "Tracy Hills FULL TOUR," both from other agents. That's the lane. Nobody local owns it well yet.</p>
+</section>
+
+<section id="where">
+  <div class="eyebrow">Where the videos are</div>
+  <h2>Six in ten are Tracy. Mountain House is the growth story with the fewest videos.</h2>
+  <figure>
+    <figcaption><b>Videos by city</b></figcaption>
+    <div class="chart" id="c-city"></div>
+  </figure>
+</section>
+
+<section id="missing">
+  <div class="eyebrow">Why it isn't reaching anyone</div>
+  <h2>The videos are fine. Everything around them is empty.</h2>
+  <p>YouTube decides who sees a video from the words and settings around it: the title, the description, the tags, the playlists, the channel keywords. Almost none of that exists here. Next to a Klemm tour, YouTube currently recommends wallpaper and screensaver videos. It genuinely has no idea what the channel is about.</p>
+  <div class="two">
+    <div>
+      <h3>The channel</h3>
+      <ul class="list">
+        <li><span class="x">&times;</span><span>No banner image<small>The channel header is blank.</small></span></li>
+        <li><span class="x">&times;</span><span>Default handle, @jackklemm3607<small>Not a name anyone would type or remember.</small></span></li>
+        <li><span class="x">&times;</span><span>No playlists<small>838 videos with no way to browse by city or sold vs. for sale.</small></span></li>
+        <li><span class="x">&times;</span><span>No channel keywords<small>The hidden words YouTube uses to figure out what a channel is about.</small></span></li>
+        <li><span class="x">&times;</span><span>No trailer or featured video</span></li>
+        <li><span class="x">&times;</span><span>One link<small>klemmre.com only. None of the city sites, no phone.</small></span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Every video</h3>
+      <ul class="list">
+        <li><span class="x">&times;</span><span>No link to the listing or the website<small>Phone and email are there, but nothing to click.</small></span></li>
+        <li><span class="x">&times;</span><span>No tags</span></li>
+        <li><span class="x">&times;</span><span>No end screen<small>The clickable "watch this next" panel in the last 20 seconds.</small></span></li>
+        <li><span class="x">&times;</span><span>Comments turned off</span></li>
+        <li><span class="x">&times;</span><span>Titles don't say what people search<small>Old ones are bare addresses. New ones are MLS remarks, with typos.</small></span></li>
+        <li><span class="x">&times;</span><span>Category set to People &amp; Blogs</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="titles">
+  <div class="eyebrow">One example</div>
+  <h2>What a buyer types is the city and "home for sale." Lead with that.</h2>
+  <div class="compare">
+    <div class="card">
+      <div class="tag">Today</div>
+      <div class="t">Dynamite 1-story with new LVP flooring, freshly paint at 2086 Shenandoah St Tracy CA.</div>
+      <div class="d">Jack Klemm
+Klemm Real Estate
+(209) 321-1094
+jack@klemmre.com
+DRE #01004092</div>
+    </div>
+    <div class="card">
+      <div class="tag">Proposed</div>
+      <div class="t">Tracy home for sale: 2086 Shenandoah St | Single story, new floors and paint</div>
+      <div class="d">See photos, price and details: <a href="#">klemmre.com/listings/2086-shenandoah-st</a>
+
+Single-story home with new LVP flooring and fresh paint throughout...
+
+Jack Klemm, Broker | Klemm Real Estate, Inc.
+Call or text (209) 321-1094 | jack@klemmre.com | DRE #01004092
+More homes in Tracy: (playlist link)</div>
+    </div>
+  </div>
+  <p class="note" style="margin-top:24px">The first line of a description is the only part people see without clicking "more." Right now that line is never a link. Every future video gets this format automatically once upload defaults are set. It costs nothing per video.</p>
+</section>
+
+<section id="plan">
+  <div class="eyebrow">The fix</div>
+  <h2>Three layers. The first two need no new video at all.</h2>
+
+  <div class="layer">
+    <div class="num">1</div>
+    <div>
+      <h3>Fix the room</h3>
+      <div class="when">Settings and copy in YouTube Studio. About a day. Nothing to film.</div>
+      <ul>
+        <li>Banner, a real handle (@klemmrealestate), About text, links to all four sites, channel keywords, a featured video.</li>
+        <li>Playlists by city, so 838 videos become a browsable catalog instead of a pile.</li>
+        <li>One bulk edit adds a contact-and-link block to every old description at once.</li>
+        <li>Retitle the 49 recent videos so they lead with the city and "home for sale."</li>
+        <li>End screens on the 46 videos that actually get traffic.</li>
+        <li>Upload defaults, so every future video comes out right without anyone thinking about it.</li>
+      </ul>
+      <div class="gets"><b>What this gets you:</b> YouTube finally knows what the channel is about and who to show it to. Anyone who lands on one video can find the rest, and every video has a way to reach you.</div>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="num">2</div>
+    <div>
+      <h3>Wire it into the new website</h3>
+      <div class="when">Part of the site build already underway.</div>
+      <ul>
+        <li>Every listing page plays its own tour. Every city page shows that city's recent tours.</li>
+        <li>The Sell page says "every home I list gets its own video tour" and proves it. That's a real advantage over other agents, and it has never once been used as a selling point.</li>
+        <li>Every video description links back to its listing page.</li>
+        <li>klemmre.com becomes the channel's official connected website.</li>
+      </ul>
+      <div class="gets"><b>What this gets you:</b> Measurement, for the first time. YouTube Studio shows clicks from videos to the site. The site shows who arrived from YouTube and what they did next. Right now there is no way to know whether a single view has ever turned into a phone call.</div>
+    </div>
+  </div>
+
+  <div class="layer">
+    <div class="num">3</div>
+    <div>
+      <h3>Get more out of what's already shot</h3>
+      <div class="when">Ongoing, in post. Joel edits. Jack keeps doing what he does now.</div>
+      <ul>
+        <li>Titles, descriptions, tags and a consistent thumbnail on every new upload. City and price on the thumbnail, every time.</li>
+        <li>Neighborhood compilations cut from the 838 slideshows already on the channel: "Homes we've sold in Tracy Hills," "River Islands, five years of sales." No new footage.</li>
+        <li>Monthly market update per city, built from the newsletter Jack already writes. He records five minutes of voice on his phone. Joel lays it over charts and photos.</li>
+        <li>A listing video template so each new upload comes out the same in minutes: intro card, captions, end screen.</li>
+        <li>Later, if the above is running: 30-second vertical cuts of each slideshow as Shorts.</li>
+      </ul>
+      <div class="gets"><b>What this gets you:</b> The kind of video that already proved it works here. Area content catches people searching "moving to Tracy" or "Mountain House homes." Those people become buyers and sellers. Listing videos never will; they're for the people already looking at that house.</div>
+    </div>
+  </div>
+</section>
+
+<section id="measure">
+  <div class="eyebrow">How we'll know</div>
+  <h2>Don't watch subscribers. Watch these three.</h2>
+  <p>74 subscribers is normal for a listing channel. Nobody subscribes to tours of houses they aren't buying. These three numbers are the ones that move when the work is done, and all three show up in YouTube Studio once the site is connected.</p>
+  <div class="measures">
+    <div class="measure"><div class="what">Views per listing video in its first 30 days</div><div class="now"><b>21</b>today</div></div>
+    <div class="measure"><div class="what">Clicks from YouTube to klemmre.com</div><div class="now"><b>0</b>today, because there are no links</div></div>
+    <div class="measure"><div class="what">Share of views that come from YouTube search</div><div class="now"><b>Unknown</b>today. If titles work, this climbs.</div></div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="eyebrow">The short version</div>
+  <h2>Five years of work is sitting in an empty room. Let's turn the lights on.</h2>
+  <p class="lede">The first layer is a day of settings. The second is already part of the site build. The third is Jack doing what he already does, plus an edit pass. And for the first time, you'll be able to see what all of it is doing for you.</p>
+</section>
+
+</main>
+
+<footer>
+  <span>Prepared by Joel Abacherli for Jack Klemm</span>
+  <span>Numbers from a full read of the channel on September 2, 2026</span>
+</footer>
+
+<script>
+(function () {
+  const fmt = n => n.toLocaleString('en-US');
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function tipFor(wrap) {
+    const t = document.createElement('div'); t.className = 'tip'; wrap.appendChild(t);
+    return {
+      show(html, x, y) { t.innerHTML = html; t.style.left = x + 'px'; t.style.top = y + 'px'; t.classList.add('on'); },
+      hide() { t.classList.remove('on'); }
+    };
+  }
+  function niceMax(v) {
+    const p = Math.pow(10, Math.floor(Math.log10(v)));
+    for (const m of [1, 1.5, 2, 3, 4, 5, 6, 8, 10]) if (m * p >= v) return m * p;
+  }
+  function roundTop(x, y, w, h, r) {
+    r = Math.min(r, h / 2, w / 2);
+    return 'M' + x + ',' + (y + h) + ' V' + (y + r) + ' Q' + x + ',' + y + ' ' + (x + r) + ',' + y +
+      ' H' + (x + w - r) + ' Q' + (x + w) + ',' + y + ' ' + (x + w) + ',' + (y + r) + ' V' + (y + h) + ' Z';
+  }
+  function roundRight(x, y, w, h, r) {
+    r = Math.min(r, h / 2, w / 2);
+    return 'M' + x + ',' + y + ' H' + (x + w - r) + ' Q' + (x + w) + ',' + y + ' ' + (x + w) + ',' + (y + r) +
+      ' V' + (y + h - r) + ' Q' + (x + w) + ',' + (y + h) + ' ' + (x + w - r) + ',' + (y + h) + ' H' + x + ' Z';
+  }
+  function hover(g, wrap, tip, html) {
+    g.addEventListener('mousemove', e => {
+      const b = wrap.getBoundingClientRect();
+      tip.show(html, e.clientX - b.left, e.clientY - b.top);
+    });
+    g.addEventListener('mouseleave', tip.hide);
+  }
+
+  function columns(id, rows, h) {
+    const wrap = document.getElementById(id);
+    const W = 1000, H = h, pl = 44, pr = 8, pt = 24, pb = 30;
+    const svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H }, wrap);
+    const max = niceMax(Math.max.apply(null, rows.map(r => r.value)));
+    const iw = W - pl - pr, ih = H - pt - pb, ticks = 4;
+    for (let i = 0; i <= ticks; i++) {
+      const y = pt + ih - (ih * i / ticks);
+      el('line', { x1: pl, x2: W - pr, y1: y, y2: y, 'class': i === 0 ? 'base' : 'grid' }, svg);
+      el('text', { x: pl - 10, y: y + 4, 'text-anchor': 'end' }, svg).textContent = fmt(Math.round(max * i / ticks));
+    }
+    const band = iw / rows.length, bw = Math.min(band * 0.55, 56);
+    const tip = tipFor(wrap);
+    rows.forEach((r, i) => {
+      const x = pl + band * i + (band - bw) / 2;
+      const bh = ih * r.value / max, y = pt + ih - bh;
+      const g = el('g', { 'class': 'grp' }, svg);
+      el('path', { 'class': 'mark' + (r.dim ? ' dim' : ''), d: roundTop(x, y, bw, bh, 4) }, g);
+      el('text', { x: x + bw / 2, y: y - 8, 'text-anchor': 'middle', 'class': 'val' }, g).textContent = fmt(r.value);
+      el('text', { x: x + bw / 2, y: H - 8, 'text-anchor': 'middle' }, svg).textContent = r.label;
+      el('rect', { 'class': 'hit', x: pl + band * i, y: pt, width: band, height: ih }, g);
+      hover(g, wrap, tip, r.tip);
+    });
+  }
+
+  function bars(id, rows, pl) {
+    const wrap = document.getElementById(id);
+    const rowH = 46, W = 1000, pr = 70, pt = 4, pb = 4;
+    const H = pt + pb + rowH * rows.length;
+    const svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H }, wrap);
+    const max = Math.max.apply(null, rows.map(r => r.value));
+    const iw = W - pl - pr, bh = 22;
+    el('line', { x1: pl, x2: pl, y1: pt, y2: H - pb, 'class': 'base' }, svg);
+    const tip = tipFor(wrap);
+    rows.forEach((r, i) => {
+      const y = pt + rowH * i + (rowH - bh) / 2;
+      const w = Math.max(iw * r.value / max, 2);
+      const g = el('g', { 'class': 'grp' }, svg);
+      el('path', { 'class': 'mark' + (r.dim ? ' dim' : ''), d: roundRight(pl, y, w, bh, 4) }, g);
+      el('text', { x: pl + w + 10, y: y + bh / 2 + 4, 'class': 'val' }, g).textContent = fmt(r.value);
+      el('text', { x: pl - 14, y: y + bh / 2 + (r.sub ? -2 : 4), 'text-anchor': 'end', 'class': 'val' }, svg).textContent = r.label;
+      if (r.sub) el('text', { x: pl - 14, y: y + bh / 2 + 13, 'text-anchor': 'end' }, svg).textContent = r.sub;
+      el('rect', { 'class': 'hit', x: 0, y: pt + rowH * i, width: W, height: rowH }, g);
+      hover(g, wrap, tip, r.tip);
+    });
+  }
+
+  const years = [
+    { label: '2021', value: 366, med: 6, total: 10585 },
+    { label: '2022', value: 143, med: 24, total: 5065 },
+    { label: '2023', value: 67, med: 29, total: 3249 },
+    { label: '2024', value: 86, med: 54, total: 5371 },
+    { label: '2025', value: 95, med: 27, total: 3319 },
+    { label: '2026 so far', value: 81, med: 14, total: 1583 }
+  ];
+  columns('c-count', years.map(y => ({ label: y.label, value: y.value, tip: '<b>' + y.label + '</b>' + y.value + ' videos posted<br>' + fmt(y.total) + ' total views' })), 300);
+  columns('c-median', years.map(y => ({ label: y.label, value: y.med, tip: '<b>' + y.label + '</b>Typical video: ' + y.med + ' views<br>' + y.value + ' videos posted' })), 260);
+
+  const dist = [
+    ['0 to 9', 268], ['10 to 19', 196], ['20 to 29', 108], ['30 to 49', 125],
+    ['50 to 99', 95], ['100 to 199', 36], ['200 to 499', 6], ['500 or more', 4]
+  ];
+  columns('c-dist', dist.map((d, i) => ({ label: d[0], value: d[1], dim: i > 2, tip: '<b>' + d[0] + ' views</b>' + d[1] + ' videos' })), 300);
+
+  bars('c-top', [
+    { label: '2700 Annette Ct, Tracy', sub: '4:44, posted 2021', value: 2000, tip: '<b>2700 Annette Ct, Tracy</b>2,000 views. 4:44 walkthrough, 2021' },
+    { label: '1295 Como Dr, Manteca', sub: '4:14, posted 2021', value: 1200, tip: '<b>1295 Como Dr, Manteca</b>1,200 views. 4:14 walkthrough, 2021' },
+    { label: 'Live at Ellis, Tracy', sub: '1:10, posted 2021. Not a listing.', value: 772, dim: true, tip: '<b>Live at Ellis, Tracy</b>772 views. The only neighborhood video on the channel.' },
+    { label: '3996 Castellina Way, Manteca', sub: '4:10, posted 2021', value: 737, tip: '<b>3996 Castellina Way, Manteca</b>737 views. 4:10 walkthrough, 2021' },
+    { label: '2834 Redbridge Rd, Tracy', sub: '4:20, posted 2021', value: 458, tip: '<b>2834 Redbridge Rd, Tracy</b>458 views. 4:20 walkthrough, 2021' },
+    { label: 'A typical 2026 slideshow', sub: '1:39', value: 14, dim: true, tip: '<b>Typical 2026 video</b>14 views. 1:39 photo slideshow.' }
+  ], 290);
+
+  bars('c-city', [
+    { label: 'Tracy', value: 496, tip: '<b>Tracy</b>496 videos' },
+    { label: 'Manteca', value: 206, tip: '<b>Manteca</b>206 videos' },
+    { label: 'Mountain House', value: 53, tip: '<b>Mountain House</b>53 videos' },
+    { label: 'Lathrop and River Islands', value: 51, tip: '<b>Lathrop and River Islands</b>48 Lathrop, 3 River Islands' },
+    { label: 'Everywhere else', value: 32, dim: true, tip: '<b>Everywhere else</b>Stockton, Ripon, Salida, Modesto, Oakdale and a few more, under 6 each' }
+  ], 250);
+})();
+</script>
+</body>
+</html>

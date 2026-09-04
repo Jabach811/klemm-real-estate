@@ -12,3 +12,5 @@ home/assets/klemm windmill hero animation.mp4
 archive/masters/
 klemm-hero-release.tar.gz
 .release-staging/
+# Word lock files
+~$*
