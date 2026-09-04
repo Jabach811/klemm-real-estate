@@ -134,49 +134,14 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
-<header>
-  <a class="wordmark" data-home href="../home/index.html">Klemm <span>Real Estate</span></a>
-  <nav>
-    <a href="../home/index.html" class="nav-hide" data-home>Home</a>
-    <a href="about.html" class="nav-hide">About</a>
-    <a href="listings.html" class="nav-hide">Featured Listings</a>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
-      <div class="drop">
-        <a href="sell.html#start">I Want a FREE CMV</a>
-        <a href="sell.html">I Want a FREE Show-Ready Consultation</a>
-        <a href="sell.html">I Want to Sell My Property</a>
-      </div>
-    </div>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Buyers<i>▾</i></button>
-      <div class="drop">
-        <a href="buy.html">Find Me a Home</a>
-        <a href="buy.html">Find Me an Investment Property</a>
-      </div>
-    </div>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Newsletters<i>▾</i></button>
-      <div class="drop drop-news">
-        <a href="newsletters.html#signup">Delivery Preference &amp; Sign&nbsp;Up</a>
-        <span class="drop-year">2026</span>
-        <div class="drop-months">
-          <a href="newsletters.html#y2026">Jun</a><a href="newsletters.html#y2026">May</a><a href="newsletters.html#y2026">Apr</a><a href="newsletters.html#y2026">Mar</a><a href="newsletters.html#y2026">Feb</a><a href="newsletters.html#y2026">Jan</a>
-        </div>
-        <a href="newsletters.html#archive" class="drop-archive">2025 &amp; earlier →</a>
-      </div>
-    </div>
-    <a href="past-sales.html" class="nav-hide">Past Sales</a>
-    <a href="contact.html" class="nav-hide active">Contact</a>
-    <a class="nav-phone" href="tel:+12093211094">209.321.1094</a>
-  </nav>
-</header>
+<a class="skip-link" href="contact.html#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a><a class="header-phone" href="tel:+12093211094" aria-label="Call Jack at 209.321.1094"><span class="phone-full">209.321.1094</span><span class="phone-short">Call</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">＋</span></button><nav id="primary-nav" aria-label="Main navigation"><a href="../home/index.html">Home</a><a href="sites.html">Communities</a><a href="sell.html">Sell</a><a href="buy.html">Buy</a><a href="listings.html">Listings &amp; tours</a><a href="newsletters.html">Newsletters</a><a href="contact.html" aria-current="page">Contact</a></nav></header>
+<main id="main" tabindex="-1">
 
 <section class="contact-hero">
   <span class="eyebrow">Contact</span>
-  <h1>No front desk. No team inbox. <strong>Just Jack</strong> — <span class="accent">and he picks up.</span></h1>
+  <h1>A local question. <strong>A direct conversation.</strong> <span class="accent">Start with Jack.</span></h1>
   <p>Whether you're selling, buying, or just wondering what your house is worth, it starts with one call or text. You'll be talking to the broker himself, not an assistant.</p>
 </section>
 
@@ -192,7 +157,7 @@
     <h2>Email</h2>
     <div>
       <a class="big" href="mailto:jack@klemmre.com">jack@klemmre.com</a>
-      <p>Clients say he answers email at all hours — one review mentions an offer forwarded at 4 in the morning.</p>
+      <p>Share a little about your plans and the best way to reach you.</p>
     </div>
   </div>
   <div class="way reveal">
@@ -206,20 +171,8 @@
 
 <section class="write" id="message">
   <span class="eyebrow">Or send a message</span>
-  <h2>Write it down. He'll call you back.</h2>
-  <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <label>Your name
-      <input type="text" name="name" autocomplete="name" required>
-    </label>
-    <label>Phone or email
-      <input type="text" name="reply_to" autocomplete="tel" required>
-    </label>
-    <label>What can Jack help with?
-      <textarea name="message" rows="5" placeholder="Selling, buying, or just curious what your house is worth — a sentence or two is plenty." required></textarea>
-    </label>
-    <button class="btn" type="submit">Send to Jack</button>
-    <p class="form-note" hidden></p>
-  </form>
+  <h2>Start with a few words.</h2>
+  <div class="contact-actions reveal"><p>Tell Jack your name, the community or property you have in mind, and whether you are buying or selling.</p><div class="action-row"><a class="btn" href="mailto:jack@klemmre.com?subject=Let%27s%20talk%20real%20estate">Email Jack</a><a class="btn ghost" href="sms:+12093211094">Text Jack</a></div><p class="small-note">Opens your email or messaging app. You can also write to <a href="mailto:jack@klemmre.com">jack@klemmre.com</a> or call <a href="tel:+12093211094">209.321.1094</a>.</p></div>
 </section>
 
 <section class="answers">
@@ -230,7 +183,9 @@
   </div>
 </section>
 
+</main>
 <footer>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">
@@ -251,65 +206,8 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  document.querySelectorAll('.menu > button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const menu = btn.parentElement;
-      const wasOpen = menu.classList.contains('open');
-      document.querySelectorAll('.menu.open').forEach(m => {
-        m.classList.remove('open');
-        m.querySelector('button').setAttribute('aria-expanded', 'false');
-      });
-      menu.classList.toggle('open', !wasOpen);
-      btn.setAttribute('aria-expanded', String(!wasOpen));
-    });
-  });
-  document.querySelectorAll('.menu').forEach(menu => {
-    menu.addEventListener('mouseenter', () => {
-      const f = document.activeElement;
-      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
-      document.querySelectorAll('.menu.open').forEach(m => {
-        if (m === menu) return;
-        m.classList.remove('open');
-        m.querySelector('button').setAttribute('aria-expanded', 'false');
-      });
-    });
-  });
-  document.addEventListener('click', e => {
-    if (e.target.closest('.menu')) return;
-    document.querySelectorAll('.menu.open').forEach(m => {
-      m.classList.remove('open');
-      m.querySelector('button').setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  const form = document.querySelector('.contact-form');
-  const note = form.querySelector('.form-note');
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const btn = form.querySelector('button');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (!res.ok) throw new Error();
-      form.querySelectorAll('label, button').forEach(el => el.hidden = true);
-      note.textContent = "Sent. Jack will get back to you — usually the same day.";
-      note.hidden = false;
-    } catch {
-      btn.disabled = false;
-      btn.textContent = 'Send to Jack';
-      note.textContent = "That didn't go through — just call or text 209.321.1094 instead.";
-      note.hidden = false;
-    }
-  });
-
-  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
-  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
+<script src="../shared/site.js" defer></script>
 </body>
 </html>
