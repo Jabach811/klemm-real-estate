@@ -138,49 +138,14 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
-<header>
-  <a class="wordmark" data-home href="../home/index.html">Klemm <span>Real Estate</span></a>
-  <nav>
-    <a href="../home/index.html" class="nav-hide" data-home>Home</a>
-    <a href="about.html" class="nav-hide">About</a>
-    <a href="listings.html" class="nav-hide">Featured Listings</a>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Sellers<i>▾</i></button>
-      <div class="drop">
-        <a href="sell.html#start">I Want a FREE CMV</a>
-        <a href="sell.html">I Want a FREE Show-Ready Consultation</a>
-        <a href="sell.html">I Want to Sell My Property</a>
-      </div>
-    </div>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Buyers<i>▾</i></button>
-      <div class="drop">
-        <a href="buy.html">Find Me a Home</a>
-        <a href="buy.html">Find Me an Investment Property</a>
-      </div>
-    </div>
-    <div class="menu nav-hide">
-      <button type="button" aria-expanded="false">Newsletters<i>▾</i></button>
-      <div class="drop drop-news">
-        <a href="newsletters.html#signup">Delivery Preference &amp; Sign&nbsp;Up</a>
-        <span class="drop-year">2026</span>
-        <div class="drop-months">
-          <a href="newsletters.html#y2026">Jun</a><a href="newsletters.html#y2026">May</a><a href="newsletters.html#y2026">Apr</a><a href="newsletters.html#y2026">Mar</a><a href="newsletters.html#y2026">Feb</a><a href="newsletters.html#y2026">Jan</a>
-        </div>
-        <a href="newsletters.html#archive" class="drop-archive">2025 &amp; earlier →</a>
-      </div>
-    </div>
-    <a href="past-sales.html" class="nav-hide">Past Sales</a>
-    <a href="contact.html" class="nav-hide">Contact</a>
-    <a class="nav-phone" href="tel:+12093211094">209.321.1094</a>
-  </nav>
-</header>
+<a class="skip-link" href="reviews.html#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a><a class="header-phone" href="tel:+12093211094" aria-label="Call Jack at 209.321.1094"><span class="phone-full">209.321.1094</span><span class="phone-short">Call</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">＋</span></button><nav id="primary-nav" aria-label="Main navigation"><a href="../home/index.html">Home</a><a href="sites.html">Communities</a><a href="sell.html">Sell</a><a href="buy.html">Buy</a><a href="listings.html">Listings &amp; tours</a><a href="newsletters.html">Newsletters</a><a href="contact.html">Contact</a></nav></header>
+<main id="main" tabindex="-1">
 
 <section class="reviews-hero">
   <span class="eyebrow">Reviews</span>
-  <h1>Five stars. <strong>One hundred twenty-three times.</strong> <span class="accent">Zero exceptions.</span></h1>
+  <h1>Five stars. <strong>One hundred twenty-three times.</strong> <span class="accent">In their own words.</span></h1>
   <div class="rating-line">
     <span class="stars">★★★★★</span>
     <span><b>5.0</b> average across <b>123 reviews</b> on Zillow — every word below is quoted from one of them.</span>
@@ -271,7 +236,9 @@
   </div>
 </section>
 
+</main>
 <footer>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">
@@ -292,40 +259,8 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  document.querySelectorAll('.menu > button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const menu = btn.parentElement;
-      const wasOpen = menu.classList.contains('open');
-      document.querySelectorAll('.menu.open').forEach(m => {
-        m.classList.remove('open');
-        m.querySelector('button').setAttribute('aria-expanded', 'false');
-      });
-      menu.classList.toggle('open', !wasOpen);
-      btn.setAttribute('aria-expanded', String(!wasOpen));
-    });
-  });
-  document.querySelectorAll('.menu').forEach(menu => {
-    menu.addEventListener('mouseenter', () => {
-      const f = document.activeElement;
-      if (f && f.closest('.menu') && f.closest('.menu') !== menu) f.blur();
-      document.querySelectorAll('.menu.open').forEach(m => {
-        if (m === menu) return;
-        m.classList.remove('open');
-        m.querySelector('button').setAttribute('aria-expanded', 'false');
-      });
-    });
-  });
-  document.addEventListener('click', e => {
-    if (e.target.closest('.menu')) return;
-    document.querySelectorAll('.menu.open').forEach(m => {
-      m.classList.remove('open');
-      m.querySelector('button').setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  const cityHome = (() => { try { return sessionStorage.getItem('klemm-city-home'); } catch (e) { return null; } })();
-  if (cityHome) document.querySelectorAll('[data-home]').forEach(a => a.setAttribute('href', cityHome));
 </script>
 
+<script src="../shared/site.js" defer></script>
 </body>
 </html>

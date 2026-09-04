@@ -1,8 +1,12 @@
 // Builds the "Video tours" strip on each city page and that city's tours.html
 // from the YouTube inventory. Run: node tools/build-tours.mjs
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+process.chdir(root);
 
-const INVENTORY = "C:/Dev/Joel's Workspaces/Personal/Work/Jack Klemm Real Estate/Klemm/PROJECTS/Youtube/data/inventory.json";
+const INVENTORY = path.join(root, 'PROJECTS', 'Youtube', 'data', 'inventory.json');
 const inv = JSON.parse(fs.readFileSync(INVENTORY, 'utf8'));
 const newest = (a, b) => +a.ageYears - +b.ageYears || +b.views - +a.views;
 
@@ -23,15 +27,12 @@ const CITIES = [
     insertBefore: '<section class="showready"' },
 ];
 
-const tile = (v, city) => `    <div class="tour">
-      <div class="tour-frame" data-video="${v.id}">
-        <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="Video tour of ${v.address}, ${v.city}" loading="lazy">
-      </div>
-      <div class="tour-copy">
-        <span>${v.address}, ${v.city}</span>
-        <small>${v.age}</small>
-      </div>
-    </div>`;
+const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const tile = v => {
+ if (!/^[A-Za-z0-9_-]{11}$/.test(v.id)) throw new Error('Invalid YouTube video id');
+ const address=escape(`${v.address}, ${v.city}`);
+ return `<div class="tour"><button class="tour-frame" type="button" data-video="${v.id}" aria-label="Play video tour of ${address}"><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="Video tour of ${address}" loading="lazy" decoding="async"></button><a class="tour-fallback" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">Watch on YouTube ↗</a><div class="tour-copy"><span>${address}</span><small>Video tour · marketing archive</small></div></div>`;
+};
 
 for (const c of CITIES) {
   const rows = inv.filter(c.pick).sort(newest);
@@ -44,7 +45,7 @@ for (const c of CITIES) {
   <div class="tours-head reveal">
     <span class="eyebrow">Video tours</span>
     <h2>Walk through the ${c.name} homes Jack has listed.</h2>
-    <p>Every home Jack lists gets its own video tour. These are the three most recent in ${c.name} &mdash; they play right here.</p>
+    <p>Explore selected tours from Jack’s marketing archive in ${c.name} — they play right here. Ask Jack about current availability.</p>
   </div>
   <div class="tour-grid reveal">
 ${rows.slice(0, 3).map(tile).join('\n')}
@@ -68,57 +69,14 @@ ${rows.slice(0, 3).map(tile).join('\n')}
 
   if (c.allLink) continue;
 
-  const header = page.slice(page.indexOf('<header>'), page.indexOf('</header>') + 9)
-    .replace('href="#tours" class="nav-hide"', `href="../cities/${c.slug}/tours.html" class="nav-hide active"`)
-    .replace('class="nav-hide active">Home', 'class="nav-hide">Home')
-    .replace(/href="#(about|sell|buy|reviews)"/g, `href="../cities/${c.slug}/index.html#$1"`);
-  const footer = page.slice(page.indexOf('<footer>'), page.indexOf('</footer>') + 9);
-  const menuScript = page.slice(page.indexOf("document.querySelectorAll('.menu > button')"), page.indexOf("if (matchMedia("));
-  const fonts = page.match(/<link rel="preconnect"[\s\S]*?styles\.css">/)[0];
-  const ogImage = page.match(/<meta property="og:image" content="([^"]+)">/)[1];
-  const title = `${pageName} Home Video Tours — Jack Klemm | Klemm Real Estate`;
-  const desc = `Video tours of ${rows.length} ${pageName} homes listed and sold by Jack Klemm, Klemm Real Estate. Every home Jack lists gets its own tour.`;
-
-  fs.writeFileSync(`cities/${c.slug}/tours.html`, `<!DOCTYPE html>
-<html lang="en">
-<head>
-<base href="../../site/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title}</title>
-<meta name="description" content="${desc}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${desc}">
-<meta property="og:url" content="https://klemmre.com/cities/${c.slug}/tours.html">
-<meta property="og:image" content="${ogImage}">
-${fonts}
-</head>
-<body>
-
-${header}
-
-<section class="tours-hero">
-  <span class="eyebrow">${pageName} &middot; Video tours</span>
-  <h1>Every home Jack lists here gets a video tour. All ${rows.length} of them.</h1>
-  <p>Homes for sale and homes already sold, newest first. Each one plays right on this page. Selling in ${c.name}? Yours gets the same treatment &mdash; call or text <a href="tel:+12093211094" style="color:inherit">209.321.1094</a>.</p>
-</section>
-
-<section class="tours-all">
-  <div class="tour-grid">
-${rows.map(tile).join('\n')}
-  </div>
-</section>
-
-${footer}
-
-<script>
-  ${menuScript.trim()}
-</script>
-<script src="../shared/tours.js"></script>
-
-</body>
-</html>
-`);
-  console.log(`${c.slug}: strip + tours.html (${rows.length} videos)`);
+  // Update content inside the approved page, preserving shared chrome and scripts.
+  const toursPath=`cities/${c.slug}/tours.html`;
+  let tours=fs.readFileSync(toursPath,'utf8');
+  const section=/<section class="tours-all">[\s\S]*?<\/section>/;
+  if(!section.test(tours))throw new Error('Missing tour archive section: '+toursPath);
+  tours=tours.replace(section,`<section class="tours-all"><div class="tour-grid">${rows.map(tile).join('\n')}</div></section>`);
+  tours=tours.replace(/<h1>[\s\S]*?<\/h1>/,`<h1>${escape(pageName)}, one home at a time. ${rows.length} video tours.</h1>`);
+  tours=tours.replace(/(<meta (?:name="description"|property="og:description") content=")[^"]*/g,`$1Explore ${rows.length} video tours from Jack Klemm’s marketing archive in ${escape(pageName)}. Ask Jack about current availability.`);
+  fs.writeFileSync(toursPath,tours);
+  console.log(`${c.slug}: refreshed ${rows.length} tours; preserved page design`);
 }
