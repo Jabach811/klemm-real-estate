@@ -11,3 +11,7 @@ home/assets/klemm windmill hero animation.mp4
 
 # Source video masters, kept locally only
 archive/masters/
+
+# Local build/staging artifacts
+.release-staging/
+archive/releases/
