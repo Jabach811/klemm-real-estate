@@ -286,15 +286,45 @@
   <span class="eyebrow">Start here</span>
   <h2>The walk-through is free, and so is the number.</h2>
   <p>Call or text Jack and he'll come see your house — in Tracy, Mountain House, Manteca, Lathrop, or River Islands. You'll get an honest valuation and a show-ready plan for your exact home. What you do with it is up to you.</p>
-  <div class="start-actions">
-    <a class="btn" href="tel:+12093211094">Call or text 209.321.1094</a>
-    <a class="btn ghost" href="mailto:jack@klemmre.com?subject=Free%20home%20valuation">Email Jack</a>
+  <form class="contact-form" action="https://formspree.io/f/xljepwaz" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Sell With Jack">
+      <input type="hidden" name="Page" value="Sell With Jack">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+  <label>Property address<input type="text" name="address" autocomplete="street-address" required></label>
+  <span class="field-label">Community
+    <div class="select">
+      <select name="community" data-placeholder="Choose a community" aria-label="Community">
+        <option value="">Choose a community</option>
+        <option>Tracy</option>
+        <option>Mountain House</option>
+        <option>Manteca</option>
+        <option>Lathrop</option>
+        <option>River Islands</option>
+        <option>Woodbridge</option>
+        <option>Somewhere else</option>
+      </select>
+    </div>
+  </span>
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+  <fieldset>
+    <legend>Timing</legend>
+    <div class="choices">
+      <label><input type="radio" name="timing" value="Soon">Soon</label>
+      <label><input type="radio" name="timing" value="This year">This year</label>
+      <label><input type="radio" name="timing" value="Just curious">Just curious</label>
+    </div>
+  </fieldset>
+  <div class="form-actions">
+    <button class="btn" type="submit">Request a valuation</button>
+    <p>No obligation. Jack will call to set up a visit.</p>
   </div>
+</form>
 </section>
 
 </main>
 <footer>
-  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">
@@ -339,5 +369,6 @@
 </script>
 
 <script src="../shared/site.js" defer></script>
+<script src="../shared/forms.js" defer></script>
 </body>
 </html>

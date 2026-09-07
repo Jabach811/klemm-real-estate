@@ -172,7 +172,27 @@
 <section class="write" id="message">
   <span class="eyebrow">Or send a message</span>
   <h2>Start with a few words.</h2>
-  <div class="contact-actions reveal"><p>Tell Jack your name, the community or property you have in mind, and whether you are buying or selling.</p><div class="action-row"><a class="btn" href="mailto:jack@klemmre.com?subject=Let%27s%20talk%20real%20estate">Email Jack</a><a class="btn ghost" href="sms:+12093211094">Text Jack</a></div><p class="small-note">Opens your email or messaging app. You can also write to <a href="mailto:jack@klemmre.com">jack@klemmre.com</a> or call <a href="tel:+12093211094">209.321.1094</a>.</p></div>
+  <form class="contact-form" action="https://formspree.io/f/xljepwaz" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Contact">
+      <input type="hidden" name="Page" value="Contact">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+  <label>Email<input type="email" name="email" autocomplete="email"></label>
+  <fieldset>
+    <legend>Regarding</legend>
+    <div class="choices">
+      <label><input type="radio" name="regarding" value="Selling">Selling</label>
+      <label><input type="radio" name="regarding" value="Buying">Buying</label>
+      <label><input type="radio" name="regarding" value="Just curious">Just curious</label>
+    </div>
+  </fieldset>
+  <label>Message<textarea name="message" rows="5"></textarea></label>
+  <div class="form-actions">
+    <button class="btn" type="submit">Send to Jack</button>
+    <p>You can also call <a href="tel:+12093211094">209.321.1094</a>.</p>
+  </div>
+</form>
 </section>
 
 <section class="answers">
@@ -185,7 +205,7 @@
 
 </main>
 <footer>
-  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">

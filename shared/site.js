@@ -42,4 +42,24 @@
   more.addEventListener('click',()=>{const visible=cards.filter(c=>!c.hidden).length;limit+=12;render();const next=cards.filter(c=>!c.hidden)[visible];next?.querySelector('.tour-frame')?.focus();});
   render();
  });
+ document.querySelectorAll('form.contact-form[action^="https://formspree.io/"]').forEach(form=>{
+  const button=form.querySelector('button[type=submit]');if(!button)return;
+  const done=document.createElement('div');done.className='form-done';done.tabIndex=-1;done.setAttribute('role','status');done.hidden=true;
+  done.innerHTML='<p>'+(form.dataset.done||'Got it. Jack will call you back himself, usually the same day.')+'</p><p class="form-done-alt">In a hurry? <a href="tel:+12093211094">209.321.1094</a>.</p>';
+  form.after(done);
+  form.addEventListener('submit',async event=>{
+   event.preventDefault();
+   const label=button.textContent;button.disabled=true;button.textContent='Sending…';
+   try{
+    const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(!response.ok)throw new Error(response.status);
+    form.hidden=true;done.hidden=false;done.focus();
+   }catch{
+    button.disabled=false;button.textContent=label;
+    let error=form.querySelector('.form-error');
+    if(!error){error=document.createElement('p');error.className='form-error';error.setAttribute('role','alert');form.querySelector('.form-actions').append(error);}
+    error.textContent='That didn’t send. Call Jack at 209.321.1094 and he’ll take it down directly.';
+   }
+  });
+ });
 })();

@@ -230,15 +230,30 @@
   <span class="eyebrow">Your turn</span>
   <h2>The next review could be yours.</h2>
   <p>Every one of these started the same way: a phone call and a free walk-through. Call or text Jack and see what your home is worth.</p>
-  <div class="start-actions">
-    <a class="btn" href="tel:+12093211094">Call or text 209.321.1094</a>
-    <a class="btn ghost" href="sell.html">See how the sale works</a>
-  </div>
+  <form class="contact-form" action="https://formspree.io/f/xljepwaz" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Reviews">
+      <input type="hidden" name="Page" value="Reviews">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+      <label>Name<input type="text" name="name" autocomplete="name" required></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+      <fieldset>
+        <legend>I’m thinking about</legend>
+        <div class="choices">
+          <label><input type="radio" name="regarding" value="Selling">Selling</label>
+          <label><input type="radio" name="regarding" value="Buying">Buying</label>
+          <label><input type="radio" name="regarding" value="Just curious">Just curious</label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn" type="submit">Send to Jack</button>
+        <p>Or call <a href="tel:+12093211094">209.321.1094</a>.</p>
+      </div>
+    </form>
 </section>
 
 </main>
 <footer>
-  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">

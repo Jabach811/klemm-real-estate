@@ -216,15 +216,58 @@
   <span class="eyebrow">Start here</span>
   <h2>The search starts with a conversation.</h2>
   <p>Call or text Jack and tell him what you're looking for. If he thinks you should wait, he'll say so — after 3,900 homes, he doesn't need to talk you into anything.</p>
-  <div class="start-actions">
-    <a class="btn" href="tel:+12093211094">Call or text 209.321.1094</a>
-    <a class="btn ghost" href="mailto:jack@klemmre.com?subject=Home%20search">Email Jack</a>
+  <form class="contact-form" action="https://formspree.io/f/xljepwaz" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Buy With Jack">
+      <input type="hidden" name="Page" value="Buy With Jack">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+  <fieldset>
+    <legend>Where</legend>
+    <div class="choices">
+      <label><input type="checkbox" name="where" value="Tracy">Tracy</label>
+      <label><input type="checkbox" name="where" value="Mountain House">Mountain House</label>
+      <label><input type="checkbox" name="where" value="Manteca">Manteca</label>
+      <label><input type="checkbox" name="where" value="Lathrop">Lathrop</label>
+      <label><input type="checkbox" name="where" value="River Islands">River Islands</label>
+    </div>
+  </fieldset>
+  <span class="field-label">Price range
+    <div class="select">
+      <select name="budget" data-placeholder="Choose a range" aria-label="Price range">
+        <option value="">Choose a range</option>
+        <option value="Under 500k">Under $500,000</option>
+        <option value="500k to 700k">$500,000 – $700,000</option>
+        <option value="700k to 900k">$700,000 – $900,000</option>
+        <option value="900k to 1.2m">$900,000 – $1.2 million</option>
+        <option value="Over 1.2m">Over $1.2 million</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+  </span>
+  <span class="field-label">Bedrooms
+    <div class="select">
+      <select name="bedrooms" data-placeholder="Choose" aria-label="Bedrooms">
+        <option value="">Choose</option>
+        <option>2 or more</option>
+        <option>3 or more</option>
+        <option>4 or more</option>
+        <option>5 or more</option>
+        <option>Doesn’t matter</option>
+      </select>
+    </div>
+  </span>
+  <label>Must-haves<textarea name="musthaves" rows="5" placeholder="Single story, big yard, near the ACE train…"></textarea></label>
+  <div class="form-actions">
+    <button class="btn" type="submit">Start my search</button>
+    <p>Jack watches the market daily and calls you first.</p>
   </div>
+</form>
 </section>
 
 </main>
 <footer>
-  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sites.html">All communities</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
   <div class="foot-grid">
     <div class="foot-name">Jack Klemm<br>Klemm Real Estate</div>
     <div class="foot-contact">
@@ -248,5 +291,6 @@
 </script>
 
 <script src="../shared/site.js" defer></script>
+<script src="../shared/forms.js" defer></script>
 </body>
 </html>
