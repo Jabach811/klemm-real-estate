@@ -5,6 +5,8 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const out=path.join(root,'dist','client');
 const origin=(process.env.SITE_ORIGIN || 'https://klemm-real-estate-tracy.jabach0811.chatgpt.site').replace(/\/$/,'');
 if(new URL(origin).protocol!=='https:')throw new Error('SITE_ORIGIN must use HTTPS');
+const keyPlaceholder='REPLACE_WITH_YOUR_YOUTUBE_API_KEY';
+const youtubeKey=process.env.YOUTUBE_API_KEY;
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
 const pages=['home','site','cities'].flatMap(p=>walk(path.join(root,p))).filter(p=>p.endsWith('.html'));
 const aliases=new Map([['home/index.html','index.html'],['cities/manteca/index.html','mantecare.html'],['cities/mountain-house/index.html','mountainhousere.html'],['cities/lathrop/index.html','lathropre.html'],['cities/river-islands/index.html','riverislandsre.html'],['cities/woodbridge/index.html','woodbridgere.html']]);
@@ -56,6 +58,9 @@ for(const asset of assets){
    const value=(a??b??c).trim();if(value.startsWith('data:')||value.startsWith('#'))return match;
    return 'url("'+rewrite(value,localOrigin+'/'+asset)+'")';
   });write(route(asset),css);
+ }else if(asset.endsWith('.js')&&fs.readFileSync(file,'utf8').includes(keyPlaceholder)){
+  if(!youtubeKey)throw new Error(asset+' still holds the placeholder key. Set YOUTUBE_API_KEY before building.');
+  write(route(asset),fs.readFileSync(file,'utf8').replaceAll(keyPlaceholder,youtubeKey));
  }else write(route(asset),fs.readFileSync(file));
 }
 write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+routes.map(r=>'<url><loc>'+origin+'/'+r+'</loc></url>').join('')+'</urlset>');

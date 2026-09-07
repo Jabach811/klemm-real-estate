@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://klemm-real-estate-tracy.jabach0811.chatgpt.site/sitemap.xml
