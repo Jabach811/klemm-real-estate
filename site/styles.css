@@ -750,3 +750,97 @@ footer {
 
 .phone-short { display:none; }
 @media(max-width:380px) { .phone-full { display:none; } .phone-short { display:inline; } .header-phone { display:flex; align-items:center; min-height:44px; font-size:13px; } }
+
+/* ---------- footer brand line ---------- */
+.foot-brand {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- contact form ---------- */
+
+.contact-form { margin-top: clamp(32px, 5vh, 52px); max-width: 580px; }
+.contact-form label,
+.contact-form .field-label {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form .select-btn {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 16px;
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--ink);
+  background: #FFFFFF;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus,
+.contact-form .select-btn:focus { outline: none; border-color: var(--ink); }
+.contact-form textarea { resize: vertical; }
+/* submit row */
+.contact-form .form-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+.contact-form .form-actions p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+
+/* ---------- home closing note ---------- */
+.home-note { padding: clamp(72px, 11vh, 140px) var(--pad); border-top: 1px solid var(--hairline); }
+.home-note-inner { max-width: 1360px; margin: 0 auto; }
+.home-note h2 {
+  margin-top: 14px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  max-width: 18ch;
+}
+.home-note > .home-note-inner > p { margin-top: 18px; max-width: 46ch; color: var(--ink-soft); font-size: 16.5px; }
+
+
+/* ---------- communities: intro + mosaic ---------- */
+.community-intro { display:grid; grid-template-columns:minmax(0,7fr) minmax(280px,5fr); gap:32px clamp(40px,6vw,80px); align-items:end; padding-top:clamp(64px,10vw,120px); }
+.community-intro h1 { letter-spacing:-0.015em; }
+.community-intro-aside p { margin-top:0; max-width:40ch; font-size:17px; }
+.community-intro-aside .community-roll { margin-top:24px; font-family:var(--serif-text); color:var(--ink); line-height:1.7; }
+.mosaic { display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:clamp(260px,26vw,340px); gap:1px; background:var(--hairline); border-bottom:1px solid var(--hairline); }
+.mosaic-card { position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:clamp(22px,2.6vw,36px); color:#FBF8F2; text-decoration:none; overflow:hidden; background:var(--ink); isolation:isolate; }
+.mosaic-lead { grid-column:span 2; grid-row:span 2; padding:clamp(28px,3.5vw,48px); }
+.mosaic-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; transition:transform .7s cubic-bezier(.2,.7,.2,1); }
+.mosaic-card img.focus-left { object-position:left center; }
+.mosaic-card:hover img { transform:scale(1.03); }
+.mosaic-card::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(to top, rgba(20,15,10,.82), rgba(20,15,10,.15) 55%, rgba(20,15,10,0) 75%); }
+.mosaic-copy .eyebrow { color:#F4C87A; }
+.mosaic-copy h2 { font:400 clamp(28px,3vw,38px)/1.1 var(--serif); letter-spacing:-0.01em; margin-top:8px; color:#FBF8F2; }
+.mosaic-lead .mosaic-copy h2 { font-size:clamp(40px,5vw,64px); margin-top:12px; }
+.mosaic-copy p { margin-top:10px; font-size:15px; line-height:1.55; color:#FBF8F2; max-width:46ch; text-shadow:0 1px 3px rgba(18,13,9,.5); }
+.mosaic-lead .mosaic-copy p { font-size:16.5px; }
+.mosaic-copy .card-arrow { color:#F4C87A; margin-top:14px; font-weight:500; }
+.mosaic-card:hover .card-arrow { text-decoration:underline; text-underline-offset:4px; }
+.mosaic-card:focus-visible { outline-offset:-6px; z-index:1; }
+@media(max-width:900px) {
+ .community-intro { grid-template-columns:1fr; align-items:start; }
+ .mosaic { grid-template-columns:1fr 1fr; grid-auto-rows:clamp(240px,40vw,320px); }
+ .mosaic-lead { grid-column:span 2; grid-row:span 1; }
+}
+@media(max-width:560px) {
+ .mosaic { grid-template-columns:1fr; grid-auto-rows:clamp(260px,70vw,340px); }
+ .mosaic-lead { grid-column:span 1; }
+}
