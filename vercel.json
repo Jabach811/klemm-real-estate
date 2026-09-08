@@ -1,0 +1,11 @@
+{
+  "framework": null,
+  "buildCommand": "node tools/build-site.mjs",
+  "outputDirectory": "dist/client",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.+?)/?", "dest": "/$1.html", "check": true },
+    { "src": "/(.+?)/?", "dest": "/$1/index.html", "check": true },
+    { "src": "^/(.*?)(?:\\.html)?(?:/index\\.html)?$", "status": 308, "headers": { "Location": "https://pages.klemmre.com/$1" } }
+  ]
+}

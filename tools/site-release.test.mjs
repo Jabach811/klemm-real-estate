@@ -12,7 +12,22 @@ test('Customer pages contain no unconnected forms or draft content', () => {
 test('The newsletter archive links to real published issues', () => {
  const html = fs.readFileSync('site/newsletters.html','utf8');
  assert.ok(html.includes('https://www.klemmre.com/august-2026/'));
- assert.ok(!html.includes('formspree'));
+ assert.ok(html.includes('data-done="You’re on the list.'));
+});
+test('Current contact forms submit to the configured endpoint on every page', () => {
+ for (const file of pages) {
+  const html = fs.readFileSync(file, 'utf8');
+  const forms = [...html.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/g)];
+  assert.ok(forms.length > 0, file + ': contact form missing');
+  for (const [form] of forms) {
+   assert.match(form, /action="https:\/\/formspree.io\/f\/xljepwaz"/, file);
+   assert.match(form, /method="post"/, file);
+   assert.match(form, /name="_subject"/, file);
+   assert.match(form, /type="submit"/, file);
+  }
+  assert.ok(html.includes('shared/site.js'), file + ': submission handling missing');
+  assert.ok(!html.includes('window.location.href = \'mailto:'), file + ': old email form remains');
+ }
 });
 test('Every customer page offers accessible navigation and direct contact', () => {
  for (const file of pages) {

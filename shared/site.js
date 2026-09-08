@@ -42,20 +42,45 @@
   more.addEventListener('click',()=>{const visible=cards.filter(c=>!c.hidden).length;limit+=12;render();const next=cards.filter(c=>!c.hidden)[visible];next?.querySelector('.tour-frame')?.focus();});
   render();
  });
+ const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
  document.querySelectorAll('form.contact-form[action^="https://formspree.io/"]').forEach(form=>{
   const button=form.querySelector('button[type=submit]');if(!button)return;
+  const swap=document.createElement('div');swap.className='form-swap';
+  form.before(swap);swap.append(form);
   const done=document.createElement('div');done.className='form-done';done.tabIndex=-1;done.setAttribute('role','status');done.hidden=true;
   done.innerHTML='<p>'+(form.dataset.done||'Got it. Jack will call you back himself, usually the same day.')+'</p><p class="form-done-alt">In a hurry? <a href="tel:+12093211094">209.321.1094</a>.</p>';
-  form.after(done);
+  swap.append(done);
+  const reveal=()=>{
+   if(reduceMotion.matches){form.hidden=true;done.hidden=false;done.classList.add('is-in');done.focus({preventScroll:true});return;}
+   const start=swap.offsetHeight;
+   swap.style.height=start+'px';swap.classList.add('is-swapping');
+   form.classList.add('is-leaving');
+   done.hidden=false;
+   const end=done.offsetHeight;
+   requestAnimationFrame(()=>{swap.style.height=end+'px';done.classList.add('is-in');});
+   const settle=()=>{swap.removeEventListener('transitionend',onEnd);swap.classList.remove('is-swapping');swap.style.height='';form.hidden=true;form.classList.remove('is-leaving');
+    const box=done.getBoundingClientRect();
+    if(box.top<0||box.bottom>innerHeight)done.scrollIntoView({behavior:'smooth',block:'center'});
+    done.focus({preventScroll:true});};
+   const onEnd=e=>{if(e.target===swap&&e.propertyName==='height')settle();};
+   swap.addEventListener('transitionend',onEnd);
+   setTimeout(()=>{if(swap.classList.contains('is-swapping'))settle();},900);
+  };
   form.addEventListener('submit',async event=>{
    event.preventDefault();
-   const label=button.textContent;button.disabled=true;button.textContent='Sending…';
+   const label=button.textContent;
+   button.style.minWidth=button.offsetWidth+'px';
+   button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='Sending';button.classList.add('is-sending');
+   const started=Date.now();
    try{
     const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
     if(!response.ok)throw new Error(response.status);
-    form.hidden=true;done.hidden=false;done.focus();
+    await new Promise(r=>setTimeout(r,Math.max(0,450-(Date.now()-started))));
+    button.classList.remove('is-sending');button.textContent='Sent';button.classList.add('is-sent');
+    await new Promise(r=>setTimeout(r,reduceMotion.matches?0:420));
+    reveal();
    }catch{
-    button.disabled=false;button.textContent=label;
+    button.disabled=false;button.removeAttribute('aria-busy');button.classList.remove('is-sending');button.textContent=label;button.style.minWidth='';
     let error=form.querySelector('.form-error');
     if(!error){error=document.createElement('p');error.className='form-error';error.setAttribute('role','alert');form.querySelector('.form-actions').append(error);}
     error.textContent='That didn’t send. Call Jack at 209.321.1094 and he’ll take it down directly.';

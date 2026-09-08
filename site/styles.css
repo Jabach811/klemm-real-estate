@@ -862,3 +862,48 @@ footer {
 .form-done .form-done-alt { margin-top: 10px; font-family: var(--sans); font-size: 15px; color: var(--ink-soft); letter-spacing: 0; }
 .form-done-alt a, .contact-form .form-actions p a { color: var(--brick); text-underline-offset: 4px; }
 .form-error { margin-top: 10px; color: var(--brick); font-size: 14.5px; }
+
+/* Form -> confirmation: one continuous motion, not two snaps. */
+.form-swap { position: relative; }
+.form-swap.is-swapping { overflow: hidden; transition: height 480ms cubic-bezier(.22,.61,.24,1); }
+.form-swap .contact-form.is-leaving {
+  position: absolute; left: 0; right: 0; top: 0;
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity 200ms ease, transform 260ms cubic-bezier(.22,.61,.24,1);
+}
+.form-done { opacity: 0; transform: translateY(10px); }
+.form-done.is-in {
+  opacity: 1; transform: none;
+  transition: opacity 340ms ease 140ms, transform 420ms cubic-bezier(.22,.61,.24,1) 140ms;
+}
+.contact-form .btn.is-sending::after {
+  content: '…'; display: inline-block; width: 1em; text-align: left;
+  animation: form-dots 1.1s steps(4, end) infinite;
+}
+@keyframes form-dots { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0 0 0); } }
+.contact-form .btn.is-sent { transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  .form-swap.is-swapping, .form-swap .contact-form.is-leaving, .form-done.is-in { transition: none; }
+  .contact-form .btn.is-sending::after { animation: none; }
+
+
+/* brighter city heroes (Lathrop, Manteca, River Islands, Woodbridge) */
+.hero-bright {
+  --hero-lift: brightness(1.12) saturate(1.14) contrast(1.03);
+  --hero-scrim-near: 0.66;
+  --hero-scrim-mid: 0.34;
+}
+.hero-bright .hero-media video,
+.hero-bright .hero-media img { filter: var(--hero-lift); }
+.hero-bright .hero-media::after {
+  background:
+    radial-gradient(150% 110% at 16% 104%,
+      rgba(18,13,9,var(--hero-scrim-near)) 0%,
+      rgba(18,13,9,var(--hero-scrim-mid)) 46%,
+      rgba(18,13,9,0) 80%),
+    linear-gradient(to top, rgba(18,13,9,.50) 0%, rgba(18,13,9,.15) 40%, rgba(18,13,9,0) 66%);
+}
+.hero-bright .hero h1 { text-shadow: 0 1px 2px rgba(18,13,9,.42), 0 3px 30px rgba(18,13,9,.55); }
+.hero-bright .hero-sub p { text-shadow: 0 1px 3px rgba(18,13,9,.6); }
+.hero-bright .city-tag { text-shadow: 0 1px 3px rgba(18,13,9,.55); }
+.hero-bright .hero-kicker { text-shadow: 0 1px 4px rgba(18,13,9,.7), 0 2px 18px rgba(18,13,9,.5); }
