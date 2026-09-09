@@ -33,16 +33,6 @@ test('Contact forms retain the Resend API route on every source page', () => {
  }
  assert.ok(contactPageCount > 0, 'no customer contact forms found');
 });
-test('Built GPT Sites pages send forms to the Resend endpoint', () => {
- const built = walk('dist/client').filter(file => file.endsWith('.html'));
- assert.ok(built.length > 0, 'build emitted no customer pages');
- for (const file of built) {
-  const html = fs.readFileSync(file, 'utf8');
-  for (const [form] of [...html.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/g)].filter(([form]) => form.includes('contact-form'))) {
-   assert.match(form, /action="https:\/\/klemm-real-estate-efkto1r1b-c-d-solutions\.vercel\.app\/api\/contact"/, file);
-  }
- }
-});
 test('Full GPT Sites build excludes the broken duplicate newsletter route', () => {
  execFileSync(process.execPath, ['tools/build-site.mjs'], {
   env: { ...process.env, LIVE_INTERIOR_PAGES: 'all', YOUTUBE_API_KEY: 'test-key' },
@@ -50,6 +40,16 @@ test('Full GPT Sites build excludes the broken duplicate newsletter route', () =
  });
  assert.ok(fs.existsSync('dist/client/newsletters.html'));
  assert.equal(fs.existsSync('dist/client/newsletters/newsletters.html'), false);
+});
+test('Built GPT Sites pages send forms to the Resend endpoint', () => {
+ const built = walk('dist/client').filter(file => file.endsWith('.html'));
+ assert.ok(built.length > 0, 'build emitted no customer pages');
+ for (const file of built) {
+  const html = fs.readFileSync(file, 'utf8');
+  for (const [form] of [...html.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/g)].filter(([form]) => form.includes('contact-form'))) {
+   assert.match(form, /action="https:\/\/release-two-pages\.vercel\.app\/api\/contact"/, file);
+  }
+ }
 });
 test('Every customer page offers accessible navigation and direct contact', () => {
  for (const file of pages) {

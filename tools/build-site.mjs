@@ -5,7 +5,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const out=path.join(root,'dist','client');
 const origin=(process.env.SITE_ORIGIN || 'https://klemm-real-estate-tracy.jabach0811.chatgpt.site').replace(/\/$/,'');
 if(new URL(origin).protocol!=='https:')throw new Error('SITE_ORIGIN must use HTTPS');
-const formEndpoint=new URL(process.env.FORM_ENDPOINT || 'https://klemm-real-estate-efkto1r1b-c-d-solutions.vercel.app/api/contact');
+const formEndpoint=new URL(process.env.FORM_ENDPOINT || 'https://release-two-pages.vercel.app/api/contact');
 if(formEndpoint.protocol!=='https:' || formEndpoint.pathname!=='/api/contact')throw new Error('FORM_ENDPOINT must be an HTTPS /api/contact URL');
 const keyPlaceholder='REPLACE_WITH_YOUR_YOUTUBE_API_KEY';
 const youtubeKey=process.env.YOUTUBE_API_KEY;
