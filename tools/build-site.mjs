@@ -5,6 +5,8 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const out=path.join(root,'dist','client');
 const origin=(process.env.SITE_ORIGIN || 'https://klemm-real-estate-tracy.jabach0811.chatgpt.site').replace(/\/$/,'');
 if(new URL(origin).protocol!=='https:')throw new Error('SITE_ORIGIN must use HTTPS');
+const formEndpoint=new URL(process.env.FORM_ENDPOINT || 'https://klemm-real-estate-efkto1r1b-c-d-solutions.vercel.app/api/contact');
+if(formEndpoint.protocol!=='https:' || formEndpoint.pathname!=='/api/contact')throw new Error('FORM_ENDPOINT must be an HTTPS /api/contact URL');
 const keyPlaceholder='REPLACE_WITH_YOUR_YOUTUBE_API_KEY';
 const youtubeKey=process.env.YOUTUBE_API_KEY;
 fs.rmSync(out,{recursive:true,force:true});
@@ -13,7 +15,8 @@ const found=['home','site','cities'].flatMap(p=>walk(path.join(root,p))).filter(
 const aliases=new Map([['home/index.html','index.html'],['site/sites.html','communities.html'],['cities/manteca/index.html','mantecare.html'],['cities/mountain-house/index.html','mountainhousere.html'],['cities/lathrop/index.html','lathropre.html'],['cities/river-islands/index.html','riverislandsre.html'],['cities/woodbridge/index.html','woodbridgere.html']]);
 const route=source=>aliases.get(source)||(source.startsWith('site/')?source.slice(5):source);
 const live=(process.env.LIVE_INTERIOR_PAGES||'').split(',').map(v=>v.trim()).filter(Boolean);
-const published=file=>{const src=path.relative(root,file).replaceAll('\\','/');return !src.startsWith('site/')||live.includes('all')||live.includes(route(src).replace(/\.html$/,''));};
+const excludedDuplicates=new Set(['site/newsletters/newsletters.html']);
+const published=file=>{const src=path.relative(root,file).replaceAll('\\','/');return !excludedDuplicates.has(src)&&(!src.startsWith('site/')||live.includes('all')||live.includes(route(src).replace(/\.html$/,'')));};
 const pages=found.filter(published);
 const localOrigin='https://source.invalid';
 const assets=new Set(['site/assets/email-logo.png']);
@@ -40,6 +43,7 @@ for(const file of pages){
  const base=new URL(baseTag?.[1]||'',localOrigin+'/'+source).href;
  html=html.replace(/<base\s[^>]*>\s*/i,'');
  html=html.replace(/\b(href|src|poster)="([^"]+)"/g,(_,key,value)=>key+'="'+rewrite(value,base)+'"');
+ html=html.replaceAll('action="/api/contact"','action="'+formEndpoint.href+'"');
  html=html.replace(/url\(\s*(?:"([^"]*)"|'([^']*)'|([^)]*))\s*\)/g,(match,a,b,c)=>{
   const value=(a??b??c).trim();if(value.startsWith('data:')||value.startsWith('#'))return match;
   return 'url("'+rewrite(value,base)+'")';

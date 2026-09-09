@@ -2,6 +2,11 @@ const FROM = process.env.MAIL_FROM || 'Jack Klemm <notifications@klemmre.com>';
 const TO = process.env.MAIL_TO || 'jack@klemmre.com';
 const SITE = process.env.SITE_URL || 'https://www.klemmre.com';
 const LOGO = process.env.MAIL_LOGO || `${SITE}/assets/email-logo.png`;
+const FORM_ORIGINS = new Set([
+ 'https://klemm-real-estate-tracy.jabach0811.chatgpt.site',
+ 'https://klemm-real-estate-efkto1r1b-c-d-solutions.vercel.app',
+ SITE,
+]);
 
 const HIDDEN = new Set(['_gotcha', '_replyto', 'page', 'Page']);
 
@@ -74,7 +79,18 @@ async function send(key, payload) {
  if (!response.ok) throw new Error(`Resend ${response.status}: ${await response.text()}`);
 }
 
+function allowFormOrigin(req, res) {
+ const origin = String(req.headers?.origin || '').replace(/\/$/, '');
+ if (!FORM_ORIGINS.has(origin)) return false;
+ res.setHeader('Access-Control-Allow-Origin', origin);
+ res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+ res.setHeader('Vary', 'Origin');
+ return true;
+}
+
 export default async function handler(req, res) {
+ allowFormOrigin(req, res);
+ if (req.method === 'OPTIONS') return res.status(204).end();
  if (req.method !== 'POST') return res.status(405).json({ error: 'Use POST.' });
 
  const body = typeof req.body === 'string' ? Object.fromEntries(new URLSearchParams(req.body)) : req.body || {};
