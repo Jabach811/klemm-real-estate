@@ -1,0 +1,52 @@
+.jack-intro { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:32px; padding:42px 0 28px; }
+.jack-intro h1 { max-width:20ch; margin:14px 0 18px; font-size:clamp(38px,4.8vw,64px); line-height:1.06; font-weight:400; letter-spacing:-.015em; }
+.jack-intro h1 em { font-family:"Libre Caslon Text",Georgia,serif; font-size:.88em; font-weight:400; color:#A03D22; }
+.intro-copy { max-width:56ch; color:#5F574B; margin:0; }
+.intro-actions { display:flex; flex-direction:column; align-items:center; gap:14px; }
+.direct-call { font-size:14px; text-underline-offset:4px; }
+.page-links { display:flex; gap:28px; flex-wrap:wrap; border-top:1px solid #DCD2C0; border-bottom:1px solid #DCD2C0; padding:15px 0; font-size:14px; }
+.page-links a { text-decoration:none; }
+.page-links a:hover { color:#A03D22; }
+.jack-story { display:grid; grid-template-columns:minmax(240px,.82fr) minmax(0,1.18fr); gap:clamp(30px,5vw,68px); align-items:center; padding:42px 0; }
+.jack-portrait { margin:0; }
+.jack-portrait img { display:block; width:100%; height:auto; max-height:490px; object-fit:cover; object-position:center 30%; }
+.jack-portrait figcaption { font-size:13px; color:#5F574B; padding-top:10px; }
+.story-copy h2,.section-top h2,.contact-copy h2 { font-size:clamp(30px,3.2vw,44px); line-height:1.12; font-weight:400; margin:12px 0 20px; }
+.story-copy p { margin:0 0 18px; max-width:62ch; color:#5F574B; }
+.story-link { font-size:14px; font-weight:500; text-decoration:none; border-bottom:1px solid #A03D22; padding-bottom:3px; line-height:1.7; }
+.jack-reviews { padding:32px 0 36px; border-top:1px solid #DCD2C0; border-bottom:1px solid #DCD2C0; }
+.section-top { display:flex; justify-content:space-between; align-items:center; gap:24px; }
+.section-top h2 { margin-bottom:24px; }
+.section-top>.story-link { flex-shrink:0; }
+.review-grid { display:grid; grid-template-columns:1fr 1fr; gap:38px; }
+.review-grid figure { margin:0; padding:4px 0; }
+.review-grid figure+figure { border-left:1px solid #DCD2C0; padding-left:38px; }
+.review-grid blockquote { margin:0 0 20px; font-family:"Libre Caslon Text",Georgia,serif; font-size:clamp(18px,1.55vw,21px); line-height:1.65; }
+.review-grid blockquote em { color:#A03D22; }
+.review-grid figcaption { font-size:14px; font-weight:500; }
+.review-grid figcaption span { display:block; font-size:13px; color:#5F574B; font-weight:400; margin-top:3px; }
+.jack-contact { display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(30px,6vw,80px); padding:42px 0 52px; }
+.contact-copy>p { max-width:44ch; color:#5F574B; }
+.contact-details { margin:28px 0 0; }
+.contact-details>div { margin-bottom:22px; }
+.contact-details dt { color:#5F574B; font-size:12px; text-transform:uppercase; letter-spacing:.1em; margin-bottom:6px; }
+.contact-details dd { margin:0; }
+.contact-details dd>a { text-decoration:none; font-size:19px; }
+.contact-details dd .text-link { display:block; font-size:13px; margin-top:5px; color:#A03D22; }
+.contact-details dd p { margin:8px 0 0; font-size:13px; color:#5F574B; }
+.required-label { font-size:12px; font-weight:400; color:#5F574B; }
+.form-preview-note { font-size:13px; color:#5F574B; margin:0 0 18px; }
+.jack-contact .contact-form { align-self:start; }
+.jack-contact .contact-form > .field { margin-top:18px; }
+.jack-contact .contact-form > .btn { margin-top:24px; }
+@media(max-width:850px) { .jack-intro { grid-template-columns:1fr; gap:22px; } .intro-actions { flex-direction:row; justify-content:flex-start; flex-wrap:wrap; } .jack-story { gap:28px; } .section-top { display:block; } .section-top>.story-link { display:inline-block; margin-bottom:24px; } }
+@media(max-width:620px) { .jack-intro { padding-top:28px; } .jack-story,.jack-contact,.review-grid { grid-template-columns:1fr; } .jack-story { padding:28px 0; } .jack-portrait { max-width:380px; } .jack-portrait img { max-height:420px; } .review-grid { gap:22px; } .review-grid figure+figure { border-left:0; border-top:1px solid #DCD2C0; padding:22px 0 0; } .page-links { gap:20px; font-size:13px; } .jack-contact { gap:20px; padding:30px 0; } }
+/* Keep the taller portrait and the final story link on one desktop baseline. */
+@media (min-width:851px) {
+  .jack-story { align-items:stretch; padding-bottom:28px; }
+  .jack-portrait { display:grid; grid-template-rows:minmax(588px,1fr) auto; }
+  .jack-portrait img { height:100%; min-height:588px; max-height:none; }
+  .jack-portrait figcaption { line-height:21px; }
+  .story-copy { display:flex; flex-direction:column; padding-bottom:31px; }
+  .story-copy > .story-link { align-self:flex-start; margin-top:auto; }
+}

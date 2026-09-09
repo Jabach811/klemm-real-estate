@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Jack — Klemm Real Estate | Tracy, CA</title>
+<meta name="description" content="Jack Klemm has been Tracy's broker since 1988 — nearly 4,000 homes sold and a phone he answers himself. Read his story, then call, text, or send a note.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meet Jack — Klemm Real Estate | Tracy, CA">
+<meta property="og:description" content="Jack Klemm has been Tracy's broker since 1988 — nearly 4,000 homes sold and a phone he answers himself. Read his story, then call, text, or send a note.">
+<meta property="og:url" content="https://klemmre.com/meet-jack.html">
+<meta property="og:image" content="https://klemmre.com/shared/jack/Jack%20Portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .about-hero {
+    padding: clamp(72px, 12vh, 150px) var(--pad) clamp(56px, 9vh, 110px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .about-hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5.8vw, 80px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 18ch;
+    margin-top: 18px;
+  }
+  .about-hero h1 strong { font-weight: 700; }
+  .about-hero h1 .accent { color: var(--brick); font-style: italic; font-weight: 400; }
+  .about-hero p {
+    margin-top: 24px;
+    max-width: 52ch;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  .story { padding: clamp(72px, 11vh, 140px) var(--pad); }
+  .story-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 500px) 1fr;
+    gap: clamp(32px, 6vw, 90px);
+    align-items: start;
+  }
+  .story-grid img {
+    width: 100%;
+    display: block;
+    filter: sepia(0.12) saturate(0.92);
+  }
+  .story-copy h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 4vw, 54px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+    max-width: 20ch;
+  }
+  .story-copy p {
+    margin-top: 22px;
+    max-width: 58ch;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+  .story-photo-stack { display: grid; gap: 24px; }
+  @media (max-width: 760px) { .story-grid { grid-template-columns: minmax(0, 1fr); } }
+
+  .write { padding: clamp(72px, 11vh, 140px) var(--pad); border-top: 1px solid var(--hairline); }
+  .write h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(28px, 3.8vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+    max-width: 22ch;
+  }
+  .write .lede {
+    margin-top: 18px;
+    max-width: 52ch;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+  .write-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 580px) minmax(260px, 400px);
+    gap: clamp(40px, 7vw, 100px);
+    align-items: start;
+    margin-top: clamp(32px, 5vh, 52px);
+  }
+  .write-grid .contact-form { margin-top: 0; }
+  .reach { display: grid; gap: clamp(26px, 4vh, 38px); }
+  .reach-item { border-top: 1px solid var(--hairline); padding-top: 18px; }
+  .reach-item .eyebrow { display: block; color: var(--ink-soft); }
+  .reach-item .big {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(26px, 2.8vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .reach-item .big:hover { color: var(--brick); }
+  .reach-item p {
+    margin-top: 10px;
+    max-width: 38ch;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 900px) { .write-grid { grid-template-columns: minmax(0, 1fr); } }
+
+  .answers { background: var(--ink); color: var(--paper); padding: clamp(72px, 11vh, 140px) var(--pad); }
+  .answers-inner { max-width: 980px; margin: 0 auto; }
+  .answers blockquote {
+    font-family: var(--serif-text);
+    font-weight: 400;
+    font-size: clamp(26px, 3.6vw, 50px);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  .answers blockquote .hl { color: #E5A88F; font-style: italic; }
+  .answers cite {
+    display: block;
+    margin-top: 26px;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(246, 241, 232, 0.6);
+  }
+</style>
+</head>
+<body id="top">
+
+<a class="skip-link" href="meet-jack.html#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a><a class="header-phone" href="tel:+12093211094" aria-label="Call Jack at 209.321.1094"><span class="phone-full">209.321.1094</span><span class="phone-short">Call</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">＋</span></button><nav id="primary-nav" aria-label="Main navigation"><a href="../home/index.html">Home</a><a href="sites.html">Communities</a><a href="sell.html">Sell</a><a href="buy.html">Buy</a><a href="listings.html">Listings &amp; tours</a><a href="newsletters.html">Newsletters</a><a href="meet-jack.html" aria-current="page">Meet Jack</a></nav></header>
+<main id="main" tabindex="-1">
+
+<section class="about-hero">
+  <span class="eyebrow">About Jack</span>
+  <h1>Broker. Owner. <strong>The one who picks up the phone.</strong> <span class="accent">Since 1988.</span></h1>
+  <p>Here's the short version of thirty-eight years in Tracy — and three easy ways to reach him. You'll be talking to the broker himself, not an assistant.</p>
+</section>
+
+<section class="story">
+  <div class="story-grid">
+    <div class="story-photo-stack reveal">
+      <img src="../shared/jack/Jack Portrait.jpg" alt="Jack Klemm, broker and owner of Klemm Real Estate" decoding="async">
+    </div>
+    <div class="story-copy reveal">
+      <span class="eyebrow">Tracy's broker since 1988</span>
+      <h2>Thirty-eight years on the same streets.</h2>
+      <p>Jack Klemm started selling homes in Tracy in 1988, and he never left. Nearly four thousand closings later, he's watched this market through every boom and every slowdown — and he can tell you what your street sold for in any of those years, usually from memory.</p>
+      <p>Klemm Real Estate is his own independent brokerage: no franchise playbook, no team with his name on the door. When you call, you get Jack — the same person who walks your house, prices it, lines up the contractors and stagers, and negotiates your contract. Nothing gets handed off, because there's no one to hand it to.</p>
+      <p>His clients notice. Across 123 Zillow reviews he holds a perfect 5.0 — and the thing they mention most isn't the sold price. It's that he answered the phone.</p>
+      <p>Today Jack works five communities — Tracy, Mountain House, Manteca, Lathrop, and River Islands — and still writes his own monthly newsletter on what's selling and for how much.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quotes">
+  <div class="quote reveal">
+    <span class="eyebrow">What clients say</span>
+    <blockquote style="margin-top:20px">"Jack Klemm is <span class="hl">the consummate professional real estate broker</span> — the undisputed frontrunner of everything real estate related with whom I've had the privilege of working."</blockquote>
+    <cite>Mark W. · Sold in Lathrop</cite>
+  </div>
+  <div class="quote reveal">
+    <blockquote>"He can shoot back an email response faster than anyone! <span class="hl">I felt like I was his only client.</span>"</blockquote>
+    <cite>Martin Pedersen · Sold in Tracy</cite>
+  </div>
+  <div class="quotes-cta reveal">
+    <a href="reviews.html">Read all 123 reviews →</a>
+  </div>
+</section>
+
+<section class="write" id="contact">
+  <span class="eyebrow">Contact</span>
+  <h2>Two lines is enough to start.</h2>
+  <p class="lede">Leave your name and number and say roughly what you have in mind. Jack calls back himself, usually the same day.</p>
+  <div class="write-grid">
+    <form class="contact-form" id="message" action="/api/contact" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Meet Jack">
+      <input type="hidden" name="Page" value="Meet Jack">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+      <label>Name<input type="text" name="name" autocomplete="name" required></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>Message<textarea name="message" rows="5"></textarea></label>
+      <div class="form-actions">
+        <button class="btn" type="submit">Send to Jack</button>
+      </div>
+    </form>
+    <div class="reach reveal" aria-label="Ways to reach Jack">
+      <div class="reach-item">
+        <span class="eyebrow">Call or text</span>
+        <a class="big" href="tel:+12093211094">209.321.1094</a>
+        <p>The fastest way. Texts work great too — tell him your address and what you're thinking.</p>
+      </div>
+      <div class="reach-item">
+        <span class="eyebrow">Email</span>
+        <a class="big" href="mailto:jack@klemmre.com">jack@klemmre.com</a>
+        <p>Share a little about your plans and the best way to reach you.</p>
+      </div>
+      <div class="reach-item">
+        <span class="eyebrow">The office</span>
+        <a class="big" href="https://maps.google.com/?q=672+W+11th+St+Ste+216+Tracy+CA+95376" target="_blank" rel="noopener">672 W 11th St, Ste 216</a>
+        <p>Tracy, CA 95376 — downtown, a few blocks off Central Avenue. Call ahead so he's not out at a showing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="answers">
+  <div class="answers-inner reveal">
+    <span class="eyebrow" style="color: rgba(246,241,232,0.6)">From a 2018 seller</span>
+    <blockquote style="margin-top: 24px">"Out of all the Realtors I called, <span class="hl">Jack was the only one who answered my call</span> and returned my calls promptly."</blockquote>
+    <cite>Jessica · Sold in Tracy · 2018</cite>
+  </div>
+</section>
+
+<section class="doors" aria-label="Where to next">
+  <a class="door" href="sell.html">
+    <h3>Sell my home.</h3><span class="door-arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="door" href="buy.html">
+    <h3>Find me a home.</h3><span class="door-arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="door" href="listings.html">
+    <h3>Listings &amp; tours.</h3><span class="door-arrow" aria-hidden="true">→</span>
+  </a>
+</section>
+
+</main>
+<footer>
+  <div class="footer-links"><a href="meet-jack.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="foot-grid">
+    <div class="foot-name">Jack Klemm<span class="foot-brand">Klemm Real Estate</span></div>
+    <div class="foot-contact">
+      <a href="tel:+12093211094">209.321.1094</a><br>
+      <a href="mailto:jack@klemmre.com">jack@klemmre.com</a><br>
+      672 W 11th St, Ste 216, Tracy, CA 95376
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 Klemm Real Estate · DRE #01004092</span>
+    <span><a href="https://www.facebook.com/JackKlemmRE" style="color:inherit">Facebook</a> · <a href="https://www.zillow.com/profile/JackCKlemm" style="color:inherit">Zillow</a></span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+</script>
+
+<script src="../shared/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newsletters — Klemm Real Estate | Tracy, CA</title>
+<meta name="description" content="Jack Klemm's monthly real estate newsletter for Tracy, Mountain House, Manteca, Lathrop, and River Islands. Sign up for email or mail delivery, or read past issues.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Newsletters — Klemm Real Estate | Tracy, CA">
+<meta property="og:description" content="Jack Klemm's monthly real estate newsletter for Tracy, Mountain House, Manteca, Lathrop, and River Islands. Sign up for email or mail delivery, or read past issues.">
+<meta property="og:url" content="https://klemmre.com/newsletters.html">
+<meta property="og:image" content="https://klemmre.com/home/assets/Klemm%20windmill%20hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="prefetch" as="script" href="newsletters/archive-data.js">
+<style>
+  .news-hero {
+    padding: clamp(72px, 12vh, 150px) var(--pad) clamp(56px, 9vh, 110px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .news-hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5.8vw, 80px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 18ch;
+    margin-top: 18px;
+  }
+  .news-hero h1 strong { font-weight: 700; }
+  .news-hero h1 .accent { color: var(--brick); font-style: italic; font-weight: 400; }
+  .news-hero p {
+    margin-top: 24px;
+    max-width: 54ch;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  .signup { padding: clamp(56px, 9vh, 110px) var(--pad); border-bottom: 1px solid var(--hairline); }
+  .signup h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(28px, 3.8vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+    max-width: 22ch;
+  }
+  .signup-form { margin-top: clamp(32px, 5vh, 52px); max-width: 580px; }
+  .signup-form label {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .signup-form input[type="text"],
+  .signup-form input[type="email"] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 16px;
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+  }
+  .signup-form input:focus { outline: none; border-color: var(--ink); }
+  .pref-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+  .pref-row label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .pref-row label:has(input:checked) { border-color: var(--ink); background: var(--paper-deep); }
+  .pref-row input { accent-color: var(--brick); }
+  .form-note { margin-top: 18px; font-size: 15px; color: var(--brick); }
+
+  .issues { padding: clamp(56px, 9vh, 110px) var(--pad); max-width: calc(1016px + 2 * var(--pad)); margin: 0 auto; }
+  .issues-head h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(28px, 3.8vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+    max-width: 20ch;
+  }
+  .issues-head p { margin-top: 18px; max-width: 56ch; font-size: 15px; color: var(--ink-soft); }
+
+  .archive { margin-top: clamp(30px, 5vh, 46px); }
+
+  .archive-search label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .archive-search input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 0 16px;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.2;
+    color: var(--ink);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .archive-search input::placeholder { color: var(--ink-soft); opacity: 0.55; }
+  .archive-search input:focus { outline: none; border-bottom-color: var(--brick); }
+  @media (max-width: 560px) { .archive-search input { font-size: 18px; } }
+
+  .year-chips { display: flex; flex-wrap: wrap; gap: 7px 8px; margin-top: 22px; }
+  .year-chips button {
+    padding: 7px 14px;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+  .year-chips button:hover { color: var(--ink); border-color: var(--ink-soft); }
+  .year-chips button.on { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+
+  .archive-count { margin-top: 20px; font-size: 13px; color: var(--ink-soft); }
+
+  .archive-summary { margin-top: clamp(34px, 5vh, 56px); max-width: 46ch; }
+  .arch-sum h3 { font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+  .arch-sum ol { list-style: none; margin-top: 16px; border-top: 1px solid var(--ink); }
+  .arch-sum li { display: flex; align-items: baseline; gap: 14px; padding: 11px 2px; border-bottom: 1px solid var(--hairline); }
+  .arch-sum .b { font-family: var(--serif-text); font-size: 15.5px; line-height: 1.3; }
+  .arch-sum .n { margin-left: auto; font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .arch-sum .rest { margin-top: 14px; font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); }
+  .arch-sum li.mine .b, .arch-sum li.mine .n { color: var(--brick); }
+  .arch-sum li.mine .b { font-weight: 600; }
+  .res-group li.mine .by { color: var(--brick); }
+  .res-group li.mine .addr { font-weight: 600; }
+
+  .archive-results { margin-top: clamp(26px, 4vh, 42px); }
+  .res-group { margin-top: 38px; }
+  .res-group:first-child { margin-top: 0; }
+  .res-head { display: flex; align-items: baseline; gap: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+  .res-head h4 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 2.2vw, 27px); letter-spacing: -0.01em; }
+  .res-head a { margin-left: auto; font-size: 12px; color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .res-head a:hover { color: var(--brick); border-color: var(--brick); }
+  .res-group ul { list-style: none; }
+  .res-group li { display: flex; align-items: baseline; gap: 14px; padding: 13px 2px; border-bottom: 1px solid var(--hairline); }
+  .res-group .addr { font-family: var(--serif-text); font-size: 17px; line-height: 1.3; }
+  .res-group .by { margin-left: auto; padding-left: 12px; text-align: right; font-size: 11.5px; line-height: 1.4; color: var(--ink-soft); }
+  .res-group mark { background: transparent; color: var(--brick); font-weight: 700; }
+  .archive-note { margin-top: 26px; font-size: 13px; color: var(--ink-soft); }
+  .archive-empty { padding: 44px 0; font-family: var(--serif-text); font-size: 19px; line-height: 1.5; color: var(--ink-soft); max-width: 44ch; }
+
+  .year-block { margin-top: clamp(40px, 6.5vh, 76px); }
+  .year-head { padding-bottom: 18px; }
+  .year-head h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 46px);
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+
+  .month-grid {
+    --row: 64px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--row);
+    border-bottom: 1px solid var(--hairline);
+    /* Rules ride the grid, not the cells, so a partial last row still gets a full-width line. */
+    background-image: repeating-linear-gradient(var(--hairline) 0 1px, transparent 1px var(--row));
+  }
+  .month-grid a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    height: 100%;
+    padding: 21px 18px 0 6px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .month-grid a { transition: background 0.2s ease, color 0.2s ease; }
+  .month-grid a:hover { background: var(--paper-deep); color: var(--brick); }
+  .month-grid .m {
+    font-family: var(--serif-text);
+    font-weight: 700;
+    font-size: clamp(17px, 1.7vw, 21px);
+    line-height: 1.2;
+  }
+  .month-grid .c { margin-left: auto; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .month-grid a:hover .c { color: var(--brick); }
+  .month-grid .tag {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brick);
+    white-space: nowrap;
+  }
+  @media (max-width: 980px) { .month-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 680px) { .month-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .howitworks { background: var(--ink); color: var(--paper); padding: clamp(72px, 11vh, 140px) var(--pad); }
+  .howitworks-inner { max-width: 980px; margin: 0 auto; }
+  .howitworks .eyebrow { color: var(--paper-deep); opacity: 0.75; }
+  .howitworks h2 {
+    font-family: var(--serif-text);
+    font-weight: 400;
+    font-size: clamp(26px, 3.6vw, 50px);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    margin-top: 24px;
+  }
+  .howitworks h2 .hl { color: #E5A88F; font-style: italic; }
+  .howitworks p { margin-top: 24px; max-width: 62ch; font-size: 16px; color: rgba(246, 241, 232, 0.82); }
+</style>
+</head>
+<body id="top">
+
+<a class="skip-link" href="newsletters.html#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a><a class="header-phone" href="tel:+12093211094" aria-label="Call Jack at 209.321.1094"><span class="phone-full">209.321.1094</span><span class="phone-short">Call</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu <span aria-hidden="true">＋</span></button><nav id="primary-nav" aria-label="Main navigation"><a href="../home/index.html">Home</a><a href="sites.html">Communities</a><a href="sell.html">Sell</a><a href="buy.html">Buy</a><a href="listings.html">Listings &amp; tours</a><a href="newsletters.html" aria-current="page">Newsletters</a><a href="contact.html">Contact</a></nav></header>
+<main id="main" tabindex="-1">
+
+<section class="news-hero">
+  <span class="eyebrow">Newsletters</span>
+  <h1>One issue a month. <strong>Written by Jack.</strong> <span class="accent">Not a marketing company.</span></h1>
+  <p>What sold, for how much, and what it means for your house — across Tracy, Mountain House, Manteca, Lathrop, and River Islands. Jack has put one out every month for years, and he writes it himself.</p>
+</section>
+
+<section class="signup" id="signup">
+  <span class="eyebrow">Delivery preference &amp; sign up</span>
+  <h2>Get it by email, or in your actual mailbox.</h2>
+  <form class="contact-form" data-done="You’re on the list. The next newsletter comes straight from Jack." action="/api/contact" method="post">
+      <input type="hidden" name="_subject" value="Klemm site — Newsletters">
+      <input type="hidden" name="Page" value="Newsletters">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <fieldset>
+    <legend>Deliver by</legend>
+    <div class="choices">
+      <label><input type="checkbox" name="deliver" value="Email">Email</label>
+      <label><input type="checkbox" name="deliver" value="Print">Printed copy</label>
+    </div>
+  </fieldset>
+  <label>Email<input type="email" name="email" autocomplete="email"></label>
+  <label>Mailing address (for the printed copy)<input type="text" name="address" autocomplete="street-address"></label>
+  <div class="form-actions">
+    <button class="btn" type="submit">Sign me up</button>
+    <p>Jack keeps the list himself. Stop any time.</p>
+  </div>
+</form>
+</section>
+
+<section class="issues" aria-label="Newsletter archive">
+  <div class="issues-head">
+    <span class="eyebrow">Past issues</span>
+    <h2>Pick a month.</h2>
+    <p>Every issue by month, back to April 2013. No signup, no login.</p>
+  </div>
+
+  <!-- archive:start -->
+  <div class="archive" data-issues="161" data-sales="10941">
+  <form class="archive-search" role="search" onsubmit="return false">
+    <label for="archive-q">Search the archive</label>
+    <input id="archive-q" type="search" autocomplete="off" spellcheck="false" placeholder="Street, address, brokerage, or month">
+  </form>
+
+  <nav class="year-chips" aria-label="Filter by year">
+    <button type="button" class="on" data-year="">All years</button>
+    <button type="button" data-year="2026">2026</button>
+    <button type="button" data-year="2025">2025</button>
+    <button type="button" data-year="2024">2024</button>
+    <button type="button" data-year="2023">2023</button>
+    <button type="button" data-year="2022">2022</button>
+    <button type="button" data-year="2021">2021</button>
+    <button type="button" data-year="2020">2020</button>
+    <button type="button" data-year="2019">2019</button>
+    <button type="button" data-year="2018">2018</button>
+    <button type="button" data-year="2017">2017</button>
+    <button type="button" data-year="2016">2016</button>
+    <button type="button" data-year="2015">2015</button>
+    <button type="button" data-year="2014">2014</button>
+    <button type="button" data-year="2013">2013</button>
+  </nav>
+
+  <p class="archive-count" role="status" aria-live="polite">161 issues, 10,941 sales.</p>
+
+  <div class="archive-results" hidden></div>
+
+  <div class="archive-summary">
+    <div class="arch-sum" data-year="">
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">1,351</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">844</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">497</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">215</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">212</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">204</span></li>
+        <li><span class="b">At Home Real Estate Group</span><span class="n">169</span></li>
+        <li><span class="b">Intero Real Estate Services</span><span class="n">163</span></li>
+      </ol>
+      <p class="rest">1,644 other brokerages sold the remaining 7,280 since April 2013.</p>
+    </div>
+    <div class="arch-sum" data-year="2026" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">32</span></li>
+        <li><span class="b">Toll Brothers RE</span><span class="n">25</span></li>
+        <li><span class="b">Exp Realty</span><span class="n">21</span></li>
+        <li><span class="b">KW Central Valley</span><span class="n">16</span></li>
+        <li><span class="b">Intero RE</span><span class="n">14</span></li>
+        <li><span class="b">Century 21 Select RE</span><span class="n">12</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">12</span></li>
+        <li><span class="b">Keller Williams Central Valley</span><span class="n">12</span></li>
+      </ol>
+      <p class="rest">137 other brokerages sold the remaining 264 in 2026.</p>
+    </div>
+    <div class="arch-sum" data-year="2025" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">70</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">33</span></li>
+        <li><span class="b">Toll Brothers RE</span><span class="n">27</span></li>
+        <li><span class="b">Intero RE</span><span class="n">23</span></li>
+        <li><span class="b">Exp Realty</span><span class="n">22</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">17</span></li>
+        <li><span class="b">Realty One Group Zoom</span><span class="n">16</span></li>
+        <li><span class="b">California Advantage RE</span><span class="n">14</span></li>
+      </ol>
+      <p class="rest">185 other brokerages sold the remaining 397 in 2025.</p>
+    </div>
+    <div class="arch-sum" data-year="2024" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li><span class="b">Keller Williams Realty</span><span class="n">72</span></li>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">61</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">28</span></li>
+        <li><span class="b">Landsea RE</span><span class="n">20</span></li>
+        <li><span class="b">Coldwell Banker Realty</span><span class="n">19</span></li>
+        <li><span class="b">Exp Realty</span><span class="n">18</span></li>
+        <li><span class="b">Intero RE</span><span class="n">17</span></li>
+        <li><span class="b">Toll Brothers RE</span><span class="n">17</span></li>
+      </ol>
+      <p class="rest">183 other brokerages sold the remaining 405 in 2024.</p>
+    </div>
+    <div class="arch-sum" data-year="2023" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">60</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">32</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">26</span></li>
+        <li><span class="b">Landsea Real Estate CA</span><span class="n">21</span></li>
+        <li><span class="b">Compass</span><span class="n">17</span></li>
+        <li><span class="b">Coldwell Banker Realty</span><span class="n">13</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">13</span></li>
+        <li><span class="b">Realty ONE Group Zoom</span><span class="n">11</span></li>
+      </ol>
+      <p class="rest">214 other brokerages sold the remaining 389 in 2023.</p>
+    </div>
+    <div class="arch-sum" data-year="2022" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">106</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">76</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">41</span></li>
+        <li><span class="b">Coldwell Banker Realty</span><span class="n">22</span></li>
+        <li><span class="b">Intero Real Estate Services</span><span class="n">22</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">20</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices-Drysdale Properties</span><span class="n">18</span></li>
+        <li><span class="b">Compass</span><span class="n">18</span></li>
+      </ol>
+      <p class="rest">235 other brokerages sold the remaining 522 in 2022.</p>
+    </div>
+    <div class="arch-sum" data-year="2021" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">109</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">98</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">55</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices-Drysdale Properties</span><span class="n">25</span></li>
+        <li><span class="b">Compass</span><span class="n">24</span></li>
+        <li><span class="b">Century 21 MM</span><span class="n">23</span></li>
+        <li><span class="b">Coldwell Banker Realty</span><span class="n">23</span></li>
+        <li><span class="b">Intero Real Estate Services</span><span class="n">23</span></li>
+      </ol>
+      <p class="rest">276 other brokerages sold the remaining 649 in 2021.</p>
+    </div>
+    <div class="arch-sum" data-year="2020" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">98</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">72</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">60</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices-Drysdale Properties</span><span class="n">37</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">26</span></li>
+        <li><span class="b">Century 21 MM</span><span class="n">25</span></li>
+        <li><span class="b">Intero Real Estate Services</span><span class="n">19</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">18</span></li>
+      </ol>
+      <p class="rest">209 other brokerages sold the remaining 483 in 2020.</p>
+    </div>
+    <div class="arch-sum" data-year="2019" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">107</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">60</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">46</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices-Drysdale Properties</span><span class="n">34</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">26</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">21</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">20</span></li>
+        <li><span class="b">California Advantage R.E</span><span class="n">20</span></li>
+      </ol>
+      <p class="rest">237 other brokerages sold the remaining 477 in 2019.</p>
+    </div>
+    <div class="arch-sum" data-year="2018" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">125</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">70</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices</span><span class="n">34</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">31</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">26</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">22</span></li>
+        <li><span class="b">Aspire Hometown Realty</span><span class="n">21</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">20</span></li>
+      </ol>
+      <p class="rest">226 other brokerages sold the remaining 538 in 2018.</p>
+    </div>
+    <div class="arch-sum" data-year="2017" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">133</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">59</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">49</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices</span><span class="n">40</span></li>
+        <li><span class="b">Standard Pacific Homes</span><span class="n">37</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">29</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">28</span></li>
+        <li><span class="b">C 21 M&amp;M and Associates</span><span class="n">23</span></li>
+      </ol>
+      <p class="rest">272 other brokerages sold the remaining 591 in 2017.</p>
+    </div>
+    <div class="arch-sum" data-year="2016" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">118</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">69</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">34</span></li>
+        <li><span class="b">Berkshire Hathaway HomeServices</span><span class="n">27</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">24</span></li>
+        <li><span class="b">C21 M&amp;M and Associates</span><span class="n">24</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">23</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">21</span></li>
+      </ol>
+      <p class="rest">253 other brokerages sold the remaining 562 in 2016.</p>
+    </div>
+    <div class="arch-sum" data-year="2015" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">113</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">106</span></li>
+        <li><span class="b">Century 21 M&amp;M and Associates</span><span class="n">52</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">35</span></li>
+        <li><span class="b">At Home Real Estate Group</span><span class="n">27</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">25</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">22</span></li>
+        <li><span class="b">Coldwell Banker Valley Central</span><span class="n">20</span></li>
+      </ol>
+      <p class="rest">217 other brokerages sold the remaining 491 in 2015.</p>
+    </div>
+    <div class="arch-sum" data-year="2014" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">105</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">65</span></li>
+        <li><span class="b">Century 21 M&amp;M and Associates</span><span class="n">41</span></li>
+        <li><span class="b">Boehm Vintage Realty</span><span class="n">30</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">28</span></li>
+        <li><span class="b">Boehm &amp; Associates</span><span class="n">20</span></li>
+        <li><span class="b">PMZ Real Estate</span><span class="n">17</span></li>
+        <li><span class="b">Taffeco Real Estate</span><span class="n">17</span></li>
+      </ol>
+      <p class="rest">217 other brokerages sold the remaining 444 in 2014.</p>
+    </div>
+    <div class="arch-sum" data-year="2013" hidden>
+      <h3>Listed by</h3>
+      <ol>
+        <li class="mine"><span class="b">Klemm Real Estate</span><span class="n">114</span></li>
+        <li><span class="b">Coldwell Banker TVG</span><span class="n">54</span></li>
+        <li><span class="b">Century 21 M&amp;M and Associates</span><span class="n">48</span></li>
+        <li><span class="b">Home Buyers Realty</span><span class="n">35</span></li>
+        <li><span class="b">Keller Williams Realty</span><span class="n">30</span></li>
+        <li><span class="b">Altera Real Estate</span><span class="n">15</span></li>
+        <li><span class="b">Realty World Millenium</span><span class="n">15</span></li>
+        <li><span class="b">Intero Real Estate Services</span><span class="n">14</span></li>
+      </ol>
+      <p class="rest">195 other brokerages sold the remaining 385 in 2013.</p>
+    </div>
+  </div>
+
+  <div class="archive-months">
+    <div class="year-block" data-year="2026" id="y2026">
+      <div class="year-head"><h3>2026</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2026.html" aria-label="January 2026 newsletter, 52 sales"><span class="m">January</span><span class="c">52</span></a></li>
+        <li><a href="newsletters/february-2026.html" aria-label="February 2026 newsletter, 19 sales"><span class="m">February</span><span class="c">19</span></a></li>
+        <li><a href="newsletters/march-2026.html" aria-label="March 2026 newsletter, 27 sales"><span class="m">March</span><span class="c">27</span></a></li>
+        <li><a href="newsletters/april-2026.html" aria-label="April 2026 newsletter, 54 sales"><span class="m">April</span><span class="c">54</span></a></li>
+        <li><a href="newsletters/may-2026.html" aria-label="May 2026 newsletter, 63 sales"><span class="m">May</span><span class="c">63</span></a></li>
+        <li><a href="newsletters/june-2026.html" aria-label="June 2026 newsletter, 56 sales"><span class="m">June</span><span class="c">56</span></a></li>
+        <li><a href="newsletters/july-2026.html" aria-label="July 2026 newsletter, 69 sales"><span class="m">July</span><span class="c">69</span></a></li>
+        <li><a href="newsletters/august-2026.html" aria-label="August 2026 newsletter, 68 sales, the latest issue"><span class="m">August</span><em class="tag">Latest</em><span class="c">68</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2025" id="y2025">
+      <div class="year-head"><h3>2025</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2025.html" aria-label="January 2025 newsletter, 49 sales"><span class="m">January</span><span class="c">49</span></a></li>
+        <li><a href="newsletters/february-2025.html" aria-label="February 2025 newsletter, 46 sales"><span class="m">February</span><span class="c">46</span></a></li>
+        <li><a href="newsletters/march-2025.html" aria-label="March 2025 newsletter, 38 sales"><span class="m">March</span><span class="c">38</span></a></li>
+        <li><a href="newsletters/april-2025.html" aria-label="April 2025 newsletter, 45 sales"><span class="m">April</span><span class="c">45</span></a></li>
+        <li><a href="newsletters/may-2025.html" aria-label="May 2025 newsletter, 53 sales"><span class="m">May</span><span class="c">53</span></a></li>
+        <li><a href="newsletters/june-2025.html" aria-label="June 2025 newsletter, 54 sales"><span class="m">June</span><span class="c">54</span></a></li>
+        <li><a href="newsletters/july-2025.html" aria-label="July 2025 newsletter, 65 sales"><span class="m">July</span><span class="c">65</span></a></li>
+        <li><a href="newsletters/august-2025.html" aria-label="August 2025 newsletter, 53 sales"><span class="m">August</span><span class="c">53</span></a></li>
+        <li><a href="newsletters/september-2025.html" aria-label="September 2025 newsletter, 50 sales"><span class="m">September</span><span class="c">50</span></a></li>
+        <li><a href="newsletters/october-2025.html" aria-label="October 2025 newsletter, 53 sales"><span class="m">October</span><span class="c">53</span></a></li>
+        <li><a href="newsletters/november-2025.html" aria-label="November 2025 newsletter, 55 sales"><span class="m">November</span><span class="c">55</span></a></li>
+        <li><a href="newsletters/december-2025.html" aria-label="December 2025 newsletter, 58 sales"><span class="m">December</span><span class="c">58</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2024" id="y2024">
+      <div class="year-head"><h3>2024</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2024.html" aria-label="January 2024 newsletter, 51 sales"><span class="m">January</span><span class="c">51</span></a></li>
+        <li><a href="newsletters/february-2024.html" aria-label="February 2024 newsletter, 51 sales"><span class="m">February</span><span class="c">51</span></a></li>
+        <li><a href="newsletters/march-2024.html" aria-label="March 2024 newsletter, 37 sales"><span class="m">March</span><span class="c">37</span></a></li>
+        <li><a href="newsletters/april-2024.html" aria-label="April 2024 newsletter, 61 sales"><span class="m">April</span><span class="c">61</span></a></li>
+        <li><a href="newsletters/may-2024.html" aria-label="May 2024 newsletter, 57 sales"><span class="m">May</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/june-2024.html" aria-label="June 2024 newsletter, 69 sales"><span class="m">June</span><span class="c">69</span></a></li>
+        <li><a href="newsletters/july-2024.html" aria-label="July 2024 newsletter, 69 sales"><span class="m">July</span><span class="c">69</span></a></li>
+        <li><a href="newsletters/august-2024.html" aria-label="August 2024 newsletter, 57 sales"><span class="m">August</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/september-2024.html" aria-label="September 2024 newsletter, 58 sales"><span class="m">September</span><span class="c">58</span></a></li>
+        <li><a href="newsletters/october-2024.html" aria-label="October 2024 newsletter, 44 sales"><span class="m">October</span><span class="c">44</span></a></li>
+        <li><a href="newsletters/november-2024.html" aria-label="November 2024 newsletter, 53 sales"><span class="m">November</span><span class="c">53</span></a></li>
+        <li><a href="newsletters/december-2024.html" aria-label="December 2024 newsletter, 52 sales"><span class="m">December</span><span class="c">52</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2023" id="y2023">
+      <div class="year-head"><h3>2023</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2023.html" aria-label="January 2023 newsletter, 54 sales"><span class="m">January</span><span class="c">54</span></a></li>
+        <li><a href="newsletters/february-2023.html" aria-label="February 2023 newsletter, 31 sales"><span class="m">February</span><span class="c">31</span></a></li>
+        <li><a href="newsletters/march-2023.html" aria-label="March 2023 newsletter, 29 sales"><span class="m">March</span><span class="c">29</span></a></li>
+        <li><a href="newsletters/april-2023.html" aria-label="April 2023 newsletter, 57 sales"><span class="m">April</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/may-2023.html" aria-label="May 2023 newsletter, 39 sales"><span class="m">May</span><span class="c">39</span></a></li>
+        <li><a href="newsletters/june-2023.html" aria-label="June 2023 newsletter, 67 sales"><span class="m">June</span><span class="c">67</span></a></li>
+        <li><a href="newsletters/july-2023.html" aria-label="July 2023 newsletter, 52 sales"><span class="m">July</span><span class="c">52</span></a></li>
+        <li><a href="newsletters/august-2023.html" aria-label="August 2023 newsletter, 58 sales"><span class="m">August</span><span class="c">58</span></a></li>
+        <li><a href="newsletters/september-2023.html" aria-label="September 2023 newsletter, 49 sales"><span class="m">September</span><span class="c">49</span></a></li>
+        <li><a href="newsletters/october-2023.html" aria-label="October 2023 newsletter, 54 sales"><span class="m">October</span><span class="c">54</span></a></li>
+        <li><a href="newsletters/november-2023.html" aria-label="November 2023 newsletter, 47 sales"><span class="m">November</span><span class="c">47</span></a></li>
+        <li><a href="newsletters/december-2023.html" aria-label="December 2023 newsletter, 45 sales"><span class="m">December</span><span class="c">45</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2022" id="y2022">
+      <div class="year-head"><h3>2022</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2022.html" aria-label="January 2022 newsletter, 104 sales"><span class="m">January</span><span class="c">104</span></a></li>
+        <li><a href="newsletters/february-2022.html" aria-label="February 2022 newsletter, 67 sales"><span class="m">February</span><span class="c">67</span></a></li>
+        <li><a href="newsletters/march-2022.html" aria-label="March 2022 newsletter, 60 sales"><span class="m">March</span><span class="c">60</span></a></li>
+        <li><a href="newsletters/april-2022.html" aria-label="April 2022 newsletter, 83 sales"><span class="m">April</span><span class="c">83</span></a></li>
+        <li><a href="newsletters/may-2022.html" aria-label="May 2022 newsletter, 87 sales"><span class="m">May</span><span class="c">87</span></a></li>
+        <li><a href="newsletters/june-2022.html" aria-label="June 2022 newsletter, 81 sales"><span class="m">June</span><span class="c">81</span></a></li>
+        <li><a href="newsletters/july-2022.html" aria-label="July 2022 newsletter, 63 sales"><span class="m">July</span><span class="c">63</span></a></li>
+        <li><a href="newsletters/august-2022.html" aria-label="August 2022 newsletter, 60 sales"><span class="m">August</span><span class="c">60</span></a></li>
+        <li><a href="newsletters/september-2022.html" aria-label="September 2022 newsletter, 78 sales"><span class="m">September</span><span class="c">78</span></a></li>
+        <li><a href="newsletters/october-2022.html" aria-label="October 2022 newsletter, 66 sales"><span class="m">October</span><span class="c">66</span></a></li>
+        <li><a href="newsletters/november-2022.html" aria-label="November 2022 newsletter, 61 sales"><span class="m">November</span><span class="c">61</span></a></li>
+        <li><a href="newsletters/december-2022.html" aria-label="December 2022 newsletter, 36 sales"><span class="m">December</span><span class="c">36</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2021" id="y2021">
+      <div class="year-head"><h3>2021</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2021.html" aria-label="January 2021 newsletter, 77 sales"><span class="m">January</span><span class="c">77</span></a></li>
+        <li><a href="newsletters/february-2021.html" aria-label="February 2021 newsletter, 47 sales"><span class="m">February</span><span class="c">47</span></a></li>
+        <li><a href="newsletters/march-2021.html" aria-label="March 2021 newsletter, 46 sales"><span class="m">March</span><span class="c">46</span></a></li>
+        <li><a href="newsletters/april-2021.html" aria-label="April 2021 newsletter, 76 sales"><span class="m">April</span><span class="c">76</span></a></li>
+        <li><a href="newsletters/may-2021.html" aria-label="May 2021 newsletter, 88 sales"><span class="m">May</span><span class="c">88</span></a></li>
+        <li><a href="newsletters/june-2021.html" aria-label="June 2021 newsletter, 93 sales"><span class="m">June</span><span class="c">93</span></a></li>
+        <li><a href="newsletters/july-2021.html" aria-label="July 2021 newsletter, 114 sales"><span class="m">July</span><span class="c">114</span></a></li>
+        <li><a href="newsletters/august-2021.html" aria-label="August 2021 newsletter, 106 sales"><span class="m">August</span><span class="c">106</span></a></li>
+        <li><a href="newsletters/september-2021.html" aria-label="September 2021 newsletter, 91 sales"><span class="m">September</span><span class="c">91</span></a></li>
+        <li><a href="newsletters/october-2021.html" aria-label="October 2021 newsletter, 107 sales"><span class="m">October</span><span class="c">107</span></a></li>
+        <li><a href="newsletters/november-2021.html" aria-label="November 2021 newsletter, 107 sales"><span class="m">November</span><span class="c">107</span></a></li>
+        <li><a href="newsletters/december-2021.html" aria-label="December 2021 newsletter, 78 sales"><span class="m">December</span><span class="c">78</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2020" id="y2020">
+      <div class="year-head"><h3>2020</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2020.html" aria-label="January 2020 newsletter, 82 sales"><span class="m">January</span><span class="c">82</span></a></li>
+        <li><a href="newsletters/february-2020.html" aria-label="February 2020 newsletter, 51 sales"><span class="m">February</span><span class="c">51</span></a></li>
+        <li><a href="newsletters/march-2020.html" aria-label="March 2020 newsletter, 58 sales"><span class="m">March</span><span class="c">58</span></a></li>
+        <li><a href="newsletters/april-2020.html" aria-label="April 2020 newsletter, 58 sales"><span class="m">April</span><span class="c">58</span></a></li>
+        <li><a href="newsletters/may-2020.html" aria-label="May 2020 newsletter, 50 sales"><span class="m">May</span><span class="c">50</span></a></li>
+        <li><a href="newsletters/june-2020.html" aria-label="June 2020 newsletter, 48 sales"><span class="m">June</span><span class="c">48</span></a></li>
+        <li><a href="newsletters/july-2020.html" aria-label="July 2020 newsletter, 76 sales"><span class="m">July</span><span class="c">76</span></a></li>
+        <li><a href="newsletters/august-2020.html" aria-label="August 2020 newsletter, 82 sales"><span class="m">August</span><span class="c">82</span></a></li>
+        <li><a href="newsletters/september-2020.html" aria-label="September 2020 newsletter, 78 sales"><span class="m">September</span><span class="c">78</span></a></li>
+        <li><a href="newsletters/october-2020.html" aria-label="October 2020 newsletter, 76 sales"><span class="m">October</span><span class="c">76</span></a></li>
+        <li><a href="newsletters/november-2020.html" aria-label="November 2020 newsletter, 96 sales"><span class="m">November</span><span class="c">96</span></a></li>
+        <li><a href="newsletters/december-2020.html" aria-label="December 2020 newsletter, 83 sales"><span class="m">December</span><span class="c">83</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2019" id="y2019">
+      <div class="year-head"><h3>2019</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2019.html" aria-label="January 2019 newsletter, 61 sales"><span class="m">January</span><span class="c">61</span></a></li>
+        <li><a href="newsletters/february-2019.html" aria-label="February 2019 newsletter, 47 sales"><span class="m">February</span><span class="c">47</span></a></li>
+        <li><a href="newsletters/march-2019.html" aria-label="March 2019 newsletter, 61 sales"><span class="m">March</span><span class="c">61</span></a></li>
+        <li><a href="newsletters/april-2019.html" aria-label="April 2019 newsletter, 65 sales"><span class="m">April</span><span class="c">65</span></a></li>
+        <li><a href="newsletters/may-2019.html" aria-label="May 2019 newsletter, 67 sales"><span class="m">May</span><span class="c">67</span></a></li>
+        <li><a href="newsletters/june-2019.html" aria-label="June 2019 newsletter, 95 sales"><span class="m">June</span><span class="c">95</span></a></li>
+        <li><a href="newsletters/july-2019.html" aria-label="July 2019 newsletter, 62 sales"><span class="m">July</span><span class="c">62</span></a></li>
+        <li><a href="newsletters/august-2019.html" aria-label="August 2019 newsletter, 73 sales"><span class="m">August</span><span class="c">73</span></a></li>
+        <li><a href="newsletters/september-2019.html" aria-label="September 2019 newsletter, 92 sales"><span class="m">September</span><span class="c">92</span></a></li>
+        <li><a href="newsletters/october-2019.html" aria-label="October 2019 newsletter, 55 sales"><span class="m">October</span><span class="c">55</span></a></li>
+        <li><a href="newsletters/november-2019.html" aria-label="November 2019 newsletter, 80 sales"><span class="m">November</span><span class="c">80</span></a></li>
+        <li><a href="newsletters/december-2019.html" aria-label="December 2019 newsletter, 53 sales"><span class="m">December</span><span class="c">53</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2018" id="y2018">
+      <div class="year-head"><h3>2018</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2018.html" aria-label="January 2018 newsletter, 62 sales"><span class="m">January</span><span class="c">62</span></a></li>
+        <li><a href="newsletters/february-2018.html" aria-label="February 2018 newsletter, 68 sales"><span class="m">February</span><span class="c">68</span></a></li>
+        <li><a href="newsletters/march-2018.html" aria-label="March 2018 newsletter, 57 sales"><span class="m">March</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/april-2018.html" aria-label="April 2018 newsletter, 79 sales"><span class="m">April</span><span class="c">79</span></a></li>
+        <li><a href="newsletters/may-2018.html" aria-label="May 2018 newsletter, 65 sales"><span class="m">May</span><span class="c">65</span></a></li>
+        <li><a href="newsletters/june-2018.html" aria-label="June 2018 newsletter, 87 sales"><span class="m">June</span><span class="c">87</span></a></li>
+        <li><a href="newsletters/july-2018.html" aria-label="July 2018 newsletter, 114 sales"><span class="m">July</span><span class="c">114</span></a></li>
+        <li><a href="newsletters/august-2018.html" aria-label="August 2018 newsletter, 85 sales"><span class="m">August</span><span class="c">85</span></a></li>
+        <li><a href="newsletters/september-2018.html" aria-label="September 2018 newsletter, 88 sales"><span class="m">September</span><span class="c">88</span></a></li>
+        <li><a href="newsletters/october-2018.html" aria-label="October 2018 newsletter, 50 sales"><span class="m">October</span><span class="c">50</span></a></li>
+        <li><a href="newsletters/november-2018.html" aria-label="November 2018 newsletter, 80 sales"><span class="m">November</span><span class="c">80</span></a></li>
+        <li><a href="newsletters/december-2018.html" aria-label="December 2018 newsletter, 52 sales"><span class="m">December</span><span class="c">52</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2017" id="y2017">
+      <div class="year-head"><h3>2017</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2017.html" aria-label="January 2017 newsletter, 94 sales"><span class="m">January</span><span class="c">94</span></a></li>
+        <li><a href="newsletters/february-2017.html" aria-label="February 2017 newsletter, 43 sales"><span class="m">February</span><span class="c">43</span></a></li>
+        <li><a href="newsletters/march-2017.html" aria-label="March 2017 newsletter, 49 sales"><span class="m">March</span><span class="c">49</span></a></li>
+        <li><a href="newsletters/april-2017.html" aria-label="April 2017 newsletter, 68 sales"><span class="m">April</span><span class="c">68</span></a></li>
+        <li><a href="newsletters/may-2017.html" aria-label="May 2017 newsletter, 85 sales"><span class="m">May</span><span class="c">85</span></a></li>
+        <li><a href="newsletters/june-2017.html" aria-label="June 2017 newsletter, 107 sales"><span class="m">June</span><span class="c">107</span></a></li>
+        <li><a href="newsletters/july-2017.html" aria-label="July 2017 newsletter, 105 sales"><span class="m">July</span><span class="c">105</span></a></li>
+        <li><a href="newsletters/august-2017.html" aria-label="August 2017 newsletter, 101 sales"><span class="m">August</span><span class="c">101</span></a></li>
+        <li><a href="newsletters/september-2017.html" aria-label="September 2017 newsletter, 96 sales"><span class="m">September</span><span class="c">96</span></a></li>
+        <li><a href="newsletters/october-2017.html" aria-label="October 2017 newsletter, 80 sales"><span class="m">October</span><span class="c">80</span></a></li>
+        <li><a href="newsletters/november-2017.html" aria-label="November 2017 newsletter, 84 sales"><span class="m">November</span><span class="c">84</span></a></li>
+        <li><a href="newsletters/december-2017.html" aria-label="December 2017 newsletter, 78 sales"><span class="m">December</span><span class="c">78</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2016" id="y2016">
+      <div class="year-head"><h3>2016</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2016.html" aria-label="January 2016 newsletter, 72 sales"><span class="m">January</span><span class="c">72</span></a></li>
+        <li><a href="newsletters/february-2016.html" aria-label="February 2016 newsletter, 62 sales"><span class="m">February</span><span class="c">62</span></a></li>
+        <li><a href="newsletters/march-2016.html" aria-label="March 2016 newsletter, 45 sales"><span class="m">March</span><span class="c">45</span></a></li>
+        <li><a href="newsletters/april-2016.html" aria-label="April 2016 newsletter, 83 sales"><span class="m">April</span><span class="c">83</span></a></li>
+        <li><a href="newsletters/may-2016.html" aria-label="May 2016 newsletter, 64 sales"><span class="m">May</span><span class="c">64</span></a></li>
+        <li><a href="newsletters/june-2016.html" aria-label="June 2016 newsletter, 89 sales"><span class="m">June</span><span class="c">89</span></a></li>
+        <li><a href="newsletters/july-2016.html" aria-label="July 2016 newsletter, 84 sales"><span class="m">July</span><span class="c">84</span></a></li>
+        <li><a href="newsletters/august-2016.html" aria-label="August 2016 newsletter, 79 sales"><span class="m">August</span><span class="c">79</span></a></li>
+        <li><a href="newsletters/september-2016.html" aria-label="September 2016 newsletter, 86 sales"><span class="m">September</span><span class="c">86</span></a></li>
+        <li><a href="newsletters/october-2016.html" aria-label="October 2016 newsletter, 74 sales"><span class="m">October</span><span class="c">74</span></a></li>
+        <li><a href="newsletters/november-2016.html" aria-label="November 2016 newsletter, 84 sales"><span class="m">November</span><span class="c">84</span></a></li>
+        <li><a href="newsletters/december-2016.html" aria-label="December 2016 newsletter, 80 sales"><span class="m">December</span><span class="c">80</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2015" id="y2015">
+      <div class="year-head"><h3>2015</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2015.html" aria-label="January 2015 newsletter, 57 sales"><span class="m">January</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/february-2015.html" aria-label="February 2015 newsletter, 54 sales"><span class="m">February</span><span class="c">54</span></a></li>
+        <li><a href="newsletters/march-2015.html" aria-label="March 2015 newsletter, 57 sales"><span class="m">March</span><span class="c">57</span></a></li>
+        <li><a href="newsletters/april-2015.html" aria-label="April 2015 newsletter, 72 sales"><span class="m">April</span><span class="c">72</span></a></li>
+        <li><a href="newsletters/may-2015.html" aria-label="May 2015 newsletter, 80 sales"><span class="m">May</span><span class="c">80</span></a></li>
+        <li><a href="newsletters/june-2015.html" aria-label="June 2015 newsletter, 83 sales"><span class="m">June</span><span class="c">83</span></a></li>
+        <li><a href="newsletters/july-2015.html" aria-label="July 2015 newsletter, 87 sales"><span class="m">July</span><span class="c">87</span></a></li>
+        <li><a href="newsletters/august-2015.html" aria-label="August 2015 newsletter, 95 sales"><span class="m">August</span><span class="c">95</span></a></li>
+        <li><a href="newsletters/september-2015.html" aria-label="September 2015 newsletter, 87 sales"><span class="m">September</span><span class="c">87</span></a></li>
+        <li><a href="newsletters/october-2015.html" aria-label="October 2015 newsletter, 90 sales"><span class="m">October</span><span class="c">90</span></a></li>
+        <li><a href="newsletters/november-2015.html" aria-label="November 2015 newsletter, 83 sales"><span class="m">November</span><span class="c">83</span></a></li>
+        <li><a href="newsletters/december-2015.html" aria-label="December 2015 newsletter, 46 sales"><span class="m">December</span><span class="c">46</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2014" id="y2014">
+      <div class="year-head"><h3>2014</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/january-2014.html" aria-label="January 2014 newsletter, 78 sales"><span class="m">January</span><span class="c">78</span></a></li>
+        <li><a href="newsletters/february-2014.html" aria-label="February 2014 newsletter, 59 sales"><span class="m">February</span><span class="c">59</span></a></li>
+        <li><a href="newsletters/march-2014.html" aria-label="March 2014 newsletter, 51 sales"><span class="m">March</span><span class="c">51</span></a></li>
+        <li><a href="newsletters/april-2014.html" aria-label="April 2014 newsletter, 66 sales"><span class="m">April</span><span class="c">66</span></a></li>
+        <li><a href="newsletters/may-2014.html" aria-label="May 2014 newsletter, 56 sales"><span class="m">May</span><span class="c">56</span></a></li>
+        <li><a href="newsletters/june-2014.html" aria-label="June 2014 newsletter, 70 sales"><span class="m">June</span><span class="c">70</span></a></li>
+        <li><a href="newsletters/july-2014.html" aria-label="July 2014 newsletter, 72 sales"><span class="m">July</span><span class="c">72</span></a></li>
+        <li><a href="newsletters/august-2014.html" aria-label="August 2014 newsletter, 71 sales"><span class="m">August</span><span class="c">71</span></a></li>
+        <li><a href="newsletters/september-2014.html" aria-label="September 2014 newsletter, 59 sales"><span class="m">September</span><span class="c">59</span></a></li>
+        <li><a href="newsletters/october-2014.html" aria-label="October 2014 newsletter, 66 sales"><span class="m">October</span><span class="c">66</span></a></li>
+        <li><a href="newsletters/november-2014.html" aria-label="November 2014 newsletter, 65 sales"><span class="m">November</span><span class="c">65</span></a></li>
+        <li><a href="newsletters/december-2014.html" aria-label="December 2014 newsletter, 55 sales"><span class="m">December</span><span class="c">55</span></a></li>
+      </ul>
+    </div>
+
+    <div class="year-block" data-year="2013" id="y2013">
+      <div class="year-head"><h3>2013</h3></div>
+      <ul class="month-grid">
+        <li><a href="newsletters/april-2013.html" aria-label="April 2013 newsletter, 75 sales"><span class="m">April</span><span class="c">75</span></a></li>
+        <li><a href="newsletters/may-2013.html" aria-label="May 2013 newsletter, 89 sales"><span class="m">May</span><span class="c">89</span></a></li>
+        <li><a href="newsletters/june-2013.html" aria-label="June 2013 newsletter, 88 sales"><span class="m">June</span><span class="c">88</span></a></li>
+        <li><a href="newsletters/july-2013.html" aria-label="July 2013 newsletter, 71 sales"><span class="m">July</span><span class="c">71</span></a></li>
+        <li><a href="newsletters/august-2013.html" aria-label="August 2013 newsletter, 81 sales"><span class="m">August</span><span class="c">81</span></a></li>
+        <li><a href="newsletters/september-2013.html" aria-label="September 2013 newsletter, 77 sales"><span class="m">September</span><span class="c">77</span></a></li>
+        <li><a href="newsletters/october-2013.html" aria-label="October 2013 newsletter, 88 sales"><span class="m">October</span><span class="c">88</span></a></li>
+        <li><a href="newsletters/november-2013.html" aria-label="November 2013 newsletter, 75 sales"><span class="m">November</span><span class="c">75</span></a></li>
+        <li><a href="newsletters/december-2013.html" aria-label="December 2013 newsletter, 66 sales"><span class="m">December</span><span class="c">66</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!-- archive:end -->
+</section>
+
+<section class="howitworks">
+  <div class="howitworks-inner reveal">
+    <span class="eyebrow">Why it's worth reading</span>
+    <h2>A local market deserves <span class="hl">a local perspective.</span></h2>
+    <p>Read Jack’s perspective on the communities he serves, then ask him how the market relates to your own plans.</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="foot-grid">
+    <div class="foot-name">Jack Klemm<span class="foot-brand">Klemm Real Estate</span></div>
+    <div class="foot-contact">
+      <a href="tel:+12093211094">209.321.1094</a><br>
+      <a href="mailto:jack@klemmre.com">jack@klemmre.com</a><br>
+      672 W 11th St, Ste 216, Tracy, CA 95376
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 Klemm Real Estate · DRE #01004092</span>
+    <span><a href="https://www.facebook.com/JackKlemmRE" style="color:inherit">Facebook</a> · <a href="https://www.zillow.com/profile/JackCKlemm" style="color:inherit">Zillow</a></span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+</script>
+
+<script>
+(function () {
+  const root = document.querySelector('.archive');
+  if (!root) return;
+  const input = root.querySelector('#archive-q');
+  const chips = Array.from(root.querySelectorAll('.year-chips button'));
+  const count = root.querySelector('.archive-count');
+  const results = root.querySelector('.archive-results');
+  const months = root.querySelector('.archive-months');
+  const blocks = Array.from(months.querySelectorAll('.year-block'));
+  const panels = Array.from(root.querySelectorAll('.arch-sum'));
+  const totals = count.textContent;
+  const dataUrl = document.querySelector('link[href$="archive-data.js"]').href;
+  const CAP = 300;
+
+  let index = null;
+  let loading = null;
+  let year = '';
+  let query = '';
+
+  const num = n => n.toLocaleString('en-US');
+  const norm = t => t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const esc = t => t.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
+  const label = slug => {
+    const parts = slug.split('-');
+    return parts[0][0].toUpperCase() + parts[0].slice(1) + ' ' + parts[1];
+  };
+
+  function load() {
+    if (loading) return loading;
+    loading = new Promise(function (resolve, reject) {
+      const tag = document.createElement('script');
+      tag.src = dataUrl;
+      tag.onload = function () {
+        const raw = window.KLEMM_ARCHIVE;
+        index = raw.i.map(function (issue) {
+          const slug = issue[0];
+          const text = norm(label(slug));
+          return {
+            slug: slug,
+            year: slug.split('-')[1],
+            label: label(slug),
+            rows: issue[1].map(function (sale) {
+              const by = sale[1] < 0 ? '' : raw.b[sale[1]];
+              return { addr: sale[0], by: by, hay: norm(sale[0] + ' ' + by + ' ' + text) };
+            })
+          };
+        });
+        resolve();
+      };
+      tag.onerror = reject;
+      document.head.appendChild(tag);
+    });
+    return loading;
+  }
+
+  function highlight(text, tokens) {
+    const safe = esc(text);
+    const usable = tokens.filter(t => t.length > 1);
+    if (!usable.length) return safe;
+    const re = new RegExp('(' + usable.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+    return safe.replace(re, '<mark>$1</mark>');
+  }
+
+  function showMonths() {
+    results.hidden = true;
+    results.innerHTML = '';
+    months.hidden = false;
+    let shown = 0;
+    blocks.forEach(function (b) {
+      const on = !year || b.dataset.year === year;
+      b.hidden = !on;
+      if (on) shown += b.querySelectorAll('li').length;
+    });
+    count.textContent = year
+      ? num(shown) + (shown === 1 ? ' issue' : ' issues') + ' in ' + year + '.'
+      : totals;
+  }
+
+  function showResults(tokens) {
+    const groups = [];
+    let total = 0;
+    for (const issue of index) {
+      if (year && issue.year !== year) continue;
+      const hits = issue.rows.filter(r => tokens.every(t => r.hay.indexOf(t) > -1));
+      if (hits.length) { total += hits.length; groups.push({ issue: issue, hits: hits }); }
+    }
+
+    if (!total) {
+      count.textContent = 'No matches' + (year ? ' in ' + year : '') + '.';
+      results.innerHTML = '<p class="archive-empty">Nothing here matches that. Try a street name on its own, like Kavanagh, or a brokerage, like Keller Williams.</p>';
+      return;
+    }
+
+    let left = CAP;
+    const html = [];
+    for (const g of groups) {
+      if (left <= 0) break;
+      const rows = g.hits.slice(0, left);
+      left -= rows.length;
+      html.push(
+        '<div class="res-group"><div class="res-head"><h4>' + g.issue.label + '</h4>' +
+        '<a href=' + JSON.stringify('newsletters/' + g.issue.slug + '.html') + '>Open the issue</a></div><ul>' +
+        rows.map(r =>
+          '<li' + (/^klemm real estate$/i.test(r.by) ? ' class="mine"' : '') + '><span class="addr">' + highlight(r.addr, tokens) + '</span>' +
+          (r.by ? '<span class="by">' + highlight(r.by, tokens) + '</span>' : '') + '</li>'
+        ).join('') +
+        '</ul></div>'
+      );
+    }
+    if (total > CAP) html.push('<p class="archive-note">Showing the first ' + num(CAP) + '. Narrow the search or pick a year.</p>');
+
+    count.textContent = num(total) + (total === 1 ? ' sale in ' : ' sales in ') +
+      num(groups.length) + (groups.length === 1 ? ' issue' : ' issues') +
+      (year ? ' in ' + year : '') + '.';
+    results.innerHTML = html.join('');
+  }
+
+  function render() {
+    const tokens = norm(query).split(' ').filter(Boolean);
+    if (!tokens.length) return showMonths();
+    months.hidden = true;
+    results.hidden = false;
+    if (!index) {
+      count.textContent = 'Loading the archive\u2026';
+      load().then(render, function () { count.textContent = 'The archive could not load. Reload the page and try again.'; });
+      return;
+    }
+    showResults(tokens);
+  }
+
+  let timer;
+  input.addEventListener('input', function () {
+    query = input.value;
+    clearTimeout(timer);
+    timer = setTimeout(render, 120);
+  });
+  input.addEventListener('focus', load, { once: true });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && input.value) { input.value = ''; query = ''; render(); }
+  });
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      year = chip.dataset.year;
+      chips.forEach(c => c.classList.toggle('on', c === chip));
+      panels.forEach(pn => { pn.hidden = pn.dataset.year !== year; });
+      render();
+    });
+  });
+})();
+</script>
+<script src="../shared/site.js" defer></script>
+</body>
+</html>

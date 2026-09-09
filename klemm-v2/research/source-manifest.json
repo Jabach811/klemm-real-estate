@@ -1,0 +1,1283 @@
+{
+  "captured_at_utc": "2026-09-09T17:03:11.107359+00:00",
+  "source_root": "C:\\Dev\\Joel's Workspaces\\Personal\\Work\\Jack Klemm Real Estate\\Klemm",
+  "git_head": "d0544816d909bce0a68adee4c76fc76781fef401",
+  "source_state": "Working tree contains uncommitted changes; hashes describe actual files, not HEAD alone.",
+  "snapshot_scope": "Selected web source code only. Not a runnable site or release package. Media inventoried, not copied. Secrets, account config, agreements, archives, dist and git metadata excluded.",
+  "files": [
+    {
+      "path": "home/index.html",
+      "bytes": 15695,
+      "sha256": "961820c230fd2188576c46b99094e5c9b439d663beb06d6260cd4ea72e8d0b79"
+    },
+    {
+      "path": "site/about.html",
+      "bytes": 9140,
+      "sha256": "921e6587aa97a955ccd2ff1236236d93da8f9d11a95a625691b20c268980c430"
+    },
+    {
+      "path": "site/buy.html",
+      "bytes": 11243,
+      "sha256": "2855ec430d1e5dbbcb12e021c514cb95183bec300fd06530913f49a40530b1de"
+    },
+    {
+      "path": "site/contact.html",
+      "bytes": 8726,
+      "sha256": "e5c2a756aba4fa3304376d91120e5c052b8ee390519f7a51921ef75e63716979"
+    },
+    {
+      "path": "site/find-me-a-home.html",
+      "bytes": 7197,
+      "sha256": "70013d2c4316c7aab742d7e641aae0dac220b674ccfb41303674b2795dbb9ea1"
+    },
+    {
+      "path": "site/find-me-an-investment-property.html",
+      "bytes": 7335,
+      "sha256": "07b4f102efcc1df0e942742dbf1fe23bd19841cad56fa9a8027f36344e7fac31"
+    },
+    {
+      "path": "site/i-want-a-free-cmv.html",
+      "bytes": 7533,
+      "sha256": "6b8682a22288273f6936d1b7c4e377fc4bdfbde37b7cdfe0fcbb2524c3b3001e"
+    },
+    {
+      "path": "site/i-want-to-sell-my-property.html",
+      "bytes": 7478,
+      "sha256": "5fdf8885fedb6c236eef3bc8ec706f0faee5ffaa5b477349eb1844b1d549d63d"
+    },
+    {
+      "path": "site/listings.html",
+      "bytes": 9668,
+      "sha256": "3f7ba0cfe329bab4389d6028cedda2d8e03e3a42a40a7748d2ecbdd83eb4db13"
+    },
+    {
+      "path": "site/meet-jack.html",
+      "bytes": 12145,
+      "sha256": "3d06d56acd815633f6a49c38c5d1da9dfe63ae477afb8dc59dd95b79cee25a7d"
+    },
+    {
+      "path": "site/newsletters/april-2013.html",
+      "bytes": 17133,
+      "sha256": "6b3705d6e1a9a1bea754888a08fd44700a7c43a4bcce2b76398cb54d791df40c"
+    },
+    {
+      "path": "site/newsletters/april-2014.html",
+      "bytes": 15988,
+      "sha256": "9bd38453d9bb7457b6478d12da3e5ebc32000b8c970dab8daca6e293a1856127"
+    },
+    {
+      "path": "site/newsletters/april-2015.html",
+      "bytes": 16788,
+      "sha256": "5fc69957c947b5362e48e07c31c5b75d6c0f0900551b2f0b1e79372ffe634e3d"
+    },
+    {
+      "path": "site/newsletters/april-2016.html",
+      "bytes": 18422,
+      "sha256": "ad673c3abc7b013ad3312da834dedd5466e6a45592c78f4a2cba3b282cfa36f3"
+    },
+    {
+      "path": "site/newsletters/april-2017.html",
+      "bytes": 16294,
+      "sha256": "7c3cc19019d0959c4b3a8e4be870bca782f9a05c900c377a7f7fe59266894b1c"
+    },
+    {
+      "path": "site/newsletters/april-2018.html",
+      "bytes": 17781,
+      "sha256": "a3c1b0fc3552099e230a0f6e87d22525489d73247463ae045b407f0a1efe15dc"
+    },
+    {
+      "path": "site/newsletters/april-2019.html",
+      "bytes": 15986,
+      "sha256": "36acb98d740e2a9e23304a2770306f0321ef0f14299d19df47f20365211ea434"
+    },
+    {
+      "path": "site/newsletters/april-2020.html",
+      "bytes": 14933,
+      "sha256": "3d8178d5b0743e3575eeda2ae0d57d72750dc6fb0a18ec306259ff462980bc8a"
+    },
+    {
+      "path": "site/newsletters/april-2021.html",
+      "bytes": 17341,
+      "sha256": "873e3016332fc8e2a24dc4119fa86e6561fef1e0e25da8d83a00d4348366d903"
+    },
+    {
+      "path": "site/newsletters/april-2022.html",
+      "bytes": 18137,
+      "sha256": "e264737a99256c132cf4921157eed3f56c1d021df6a358a588dc4db7493107b2"
+    },
+    {
+      "path": "site/newsletters/april-2023.html",
+      "bytes": 14941,
+      "sha256": "aa9b7cfc1dea42c533d1996c3959be9417d8e11aef46609d8631230be2344503"
+    },
+    {
+      "path": "site/newsletters/april-2024.html",
+      "bytes": 14781,
+      "sha256": "f92490ec51796b920abb8f150ea9474d3405c25e8ea8697d7f8fe334e55bde8b"
+    },
+    {
+      "path": "site/newsletters/april-2025.html",
+      "bytes": 13162,
+      "sha256": "291456a677ba4072cc0503c931e1753551ebcadeadd1715dfc83ebf776422153"
+    },
+    {
+      "path": "site/newsletters/april-2026.html",
+      "bytes": 14256,
+      "sha256": "f4947b6923256cbee091130876a1d464faba761a2c54a9d525e9e82dc9bc6d81"
+    },
+    {
+      "path": "site/newsletters/archive-data.js",
+      "bytes": 310720,
+      "sha256": "dd824215fb8913dd87c168606c64d1f799d6b39ea5ec55383691e72869a7571d"
+    },
+    {
+      "path": "site/newsletters/august-2013.html",
+      "bytes": 18012,
+      "sha256": "cecc13465194ef4ad707b083fe15a0fef9f4929ec4edee0821c7de30abb314ba"
+    },
+    {
+      "path": "site/newsletters/august-2014.html",
+      "bytes": 16751,
+      "sha256": "6dee2741b575471868d76e24b6986b1e8dd62097fa242b406f0fb71df830f5dd"
+    },
+    {
+      "path": "site/newsletters/august-2015.html",
+      "bytes": 19856,
+      "sha256": "d3744754ea2a1fa2eaab46b3288544de814a55189f3873ed1ada21ad1401a5e2"
+    },
+    {
+      "path": "site/newsletters/august-2016.html",
+      "bytes": 17681,
+      "sha256": "e1dde2f82143fc82c1f69f816237a02fa6f66817e4fbdb143cd728012fa12e7c"
+    },
+    {
+      "path": "site/newsletters/august-2017.html",
+      "bytes": 20730,
+      "sha256": "25102811c428169254e513aab3c087cdc769c75067b2e449896d232692664574"
+    },
+    {
+      "path": "site/newsletters/august-2018.html",
+      "bytes": 18504,
+      "sha256": "c10cccb287f7f6eca3f607ac7e0b8467b40af8472dc3d2873c27bfeeb007ba2c"
+    },
+    {
+      "path": "site/newsletters/august-2019.html",
+      "bytes": 16979,
+      "sha256": "487db342bb143bc2cd8ddaa1417db2eab865a81883baa2704097b76a0456b2a8"
+    },
+    {
+      "path": "site/newsletters/august-2020.html",
+      "bytes": 18210,
+      "sha256": "9688766018b2fe7a837a942247f2a8fed504642983074fc1c7c97c529be5a7f6"
+    },
+    {
+      "path": "site/newsletters/august-2021.html",
+      "bytes": 21103,
+      "sha256": "22b3c5b3864b0f94a61729751532a0abb4e92d1da258703cd0b27f577fd528fa"
+    },
+    {
+      "path": "site/newsletters/august-2022.html",
+      "bytes": 15315,
+      "sha256": "879449b53b6a908df4c9aa35c1ab25c4245886d04e1550f3161ae45a05a783be"
+    },
+    {
+      "path": "site/newsletters/august-2023.html",
+      "bytes": 15245,
+      "sha256": "fb5a5aa9f076a8cfc9c91be80dbbb61e5109601b055db126515a33b450192686"
+    },
+    {
+      "path": "site/newsletters/august-2024.html",
+      "bytes": 14430,
+      "sha256": "9d6c2e346b4b5ae29b84a4afeb0b0b8782eed70466cf3e983617937340280248"
+    },
+    {
+      "path": "site/newsletters/august-2025.html",
+      "bytes": 13928,
+      "sha256": "df72ef9624d769c6406547c8a5d4d4b26a6f1e9b9c3e81195c1cb8a5d0549361"
+    },
+    {
+      "path": "site/newsletters/august-2026.html",
+      "bytes": 15729,
+      "sha256": "2d079d1c2cbad4f62d630dfab37a0ef94f31b3ee3a359e7f3e25b6bc1d1656a8"
+    },
+    {
+      "path": "site/newsletters/december-2013.html",
+      "bytes": 16049,
+      "sha256": "7229a6a7d84dd852c989c32748f863230d01df0de3b21cb0fe3c5195a5778c77"
+    },
+    {
+      "path": "site/newsletters/december-2014.html",
+      "bytes": 14666,
+      "sha256": "a33b00d5e44028561e373b2b9e4f104324f0f6608b056bf29fe41298515cc301"
+    },
+    {
+      "path": "site/newsletters/december-2015.html",
+      "bytes": 13542,
+      "sha256": "54bb4d5a62ce03f1fe056465805c16e5d65892267a1cb789e3515fdf82446aa3"
+    },
+    {
+      "path": "site/newsletters/december-2016.html",
+      "bytes": 18062,
+      "sha256": "3f775f79401bd80b237c66af7c74d929766b4b33563edcfc0a9f38a942ea497d"
+    },
+    {
+      "path": "site/newsletters/december-2017.html",
+      "bytes": 17567,
+      "sha256": "442479177890bd9436ffe34ac374f1da40828413b08531d30821759b351ee6af"
+    },
+    {
+      "path": "site/newsletters/december-2018.html",
+      "bytes": 14391,
+      "sha256": "08e119b97e5b8d86d4adbca6a61267edf382cfcb5259203195deb8bfb7c1750e"
+    },
+    {
+      "path": "site/newsletters/december-2019.html",
+      "bytes": 14318,
+      "sha256": "9e51694481ca5276b1c908094a10afd1a03cc3f36b469e894d5fa4a5c8753f90"
+    },
+    {
+      "path": "site/newsletters/december-2020.html",
+      "bytes": 18212,
+      "sha256": "0993e5d1d0b16382d76e52cafe4066e2405c8e935b7b7f90e2b680ec80a4664f"
+    },
+    {
+      "path": "site/newsletters/december-2021.html",
+      "bytes": 17587,
+      "sha256": "461792dd0dd597e8e4fd25ea1a83c40fdb37f8b93d09323c2fcc7468a9fa1352"
+    },
+    {
+      "path": "site/newsletters/december-2022.html",
+      "bytes": 12151,
+      "sha256": "03be9a76aa9c4ed8805a50698348d8e4abb47d0b02eae0a2b5834d6f6c801cda"
+    },
+    {
+      "path": "site/newsletters/december-2023.html",
+      "bytes": 13078,
+      "sha256": "5a9ee93b8de4a028139570cd82b7f31e8b71d42e404562dcd3a6c46a96e2188a"
+    },
+    {
+      "path": "site/newsletters/december-2024.html",
+      "bytes": 13975,
+      "sha256": "6a2d96f596964b68f97421fbca9e25c27279ce0401818583c9d573f2933bcfc3"
+    },
+    {
+      "path": "site/newsletters/december-2025.html",
+      "bytes": 14699,
+      "sha256": "75daab2c462f2a6cf251939cc0a8f5a20679c85aa68a212f319a1aaf3ff991cb"
+    },
+    {
+      "path": "site/newsletters/february-2014.html",
+      "bytes": 15163,
+      "sha256": "a678cf1cf3007df3a19f48ea6639739b922a00457a23c9cda316a7ef44172f75"
+    },
+    {
+      "path": "site/newsletters/february-2015.html",
+      "bytes": 14509,
+      "sha256": "9610f0fffcf249619589e7dfe86a5152ee54a96438eafac4f23a85feb92cf973"
+    },
+    {
+      "path": "site/newsletters/february-2016.html",
+      "bytes": 15604,
+      "sha256": "35e6696d768231db13dc7ebc89892062d018cfe497a8cdad6a16c85d22238ec9"
+    },
+    {
+      "path": "site/newsletters/february-2017.html",
+      "bytes": 13132,
+      "sha256": "42ce0b2f6b11436eb6e18f222732866c6ca7af9d35ae90cdb35b0bc6ce1eebd7"
+    },
+    {
+      "path": "site/newsletters/february-2018.html",
+      "bytes": 16268,
+      "sha256": "e62056c7179820f405e521fe8f47966b4b97b5086af2cf9bc4c976125a4ee678"
+    },
+    {
+      "path": "site/newsletters/february-2019.html",
+      "bytes": 13682,
+      "sha256": "514f072a7690796f19b3dcf11252819778a7f99abe7ad242b08fbb8267ca8c5c"
+    },
+    {
+      "path": "site/newsletters/february-2020.html",
+      "bytes": 14197,
+      "sha256": "15749024e8e511ca37e495d37f0fac825a645b236fc8fae137ab33f778f41cd9"
+    },
+    {
+      "path": "site/newsletters/february-2021.html",
+      "bytes": 13631,
+      "sha256": "d32fb3cfbf0591a46783f90b8b3cfbea76550942ba948f39412a80166a127dd0"
+    },
+    {
+      "path": "site/newsletters/february-2022.html",
+      "bytes": 16030,
+      "sha256": "b7887bcd16f4704168e83357fc85186a884d41ae80ea02eb030b3d9052767c8a"
+    },
+    {
+      "path": "site/newsletters/february-2023.html",
+      "bytes": 11590,
+      "sha256": "294bc9a56529ca87e9aa9329bcdb02a23bfeaffd591a2fb6951e02fd84ffeb51"
+    },
+    {
+      "path": "site/newsletters/february-2024.html",
+      "bytes": 13739,
+      "sha256": "d8be6d6dd6910466b49268416aa201b865729914e2a5390f1982258aa9da6d9a"
+    },
+    {
+      "path": "site/newsletters/february-2025.html",
+      "bytes": 13177,
+      "sha256": "120bce217af63ce09914c6159cdecf5d182c91ef145d63e51d689c674e27ee3f"
+    },
+    {
+      "path": "site/newsletters/february-2026.html",
+      "bytes": 9718,
+      "sha256": "25b59def512e0107b17baa627a2ffaf6fd2d431cfe0d584a4d4ed327825a14b2"
+    },
+    {
+      "path": "site/newsletters/january-2014.html",
+      "bytes": 17584,
+      "sha256": "946b533667338b3e7b5afe6b031f7c3855026b27211e8a72a922976f5fc91046"
+    },
+    {
+      "path": "site/newsletters/january-2015.html",
+      "bytes": 14928,
+      "sha256": "7b241271f2838b4b61518ad28e55c97e95b222160a910bafe586bf70748218a3"
+    },
+    {
+      "path": "site/newsletters/january-2016.html",
+      "bytes": 16845,
+      "sha256": "86081ed8c7bb34265407c1760370adedb02ef47084a0144758376e094e3ff452"
+    },
+    {
+      "path": "site/newsletters/january-2017.html",
+      "bytes": 19708,
+      "sha256": "bd057720d0dcb402cd6a2a0844106082bb498bda3a36fcdd055502432d56804e"
+    },
+    {
+      "path": "site/newsletters/january-2018.html",
+      "bytes": 15581,
+      "sha256": "65a3283391f2c763f609dfd96c0a1be63061613defcdec688ce8d832de3c9f1b"
+    },
+    {
+      "path": "site/newsletters/january-2019.html",
+      "bytes": 15438,
+      "sha256": "918c20061341d12c1a6678fc89e10fced2085e238fa881457cbc60b0043607fd"
+    },
+    {
+      "path": "site/newsletters/january-2020.html",
+      "bytes": 18258,
+      "sha256": "627a8ca0608698d133bfe31671e66bd72b1c650a7c17ab63c5159dba122ee336"
+    },
+    {
+      "path": "site/newsletters/january-2021.html",
+      "bytes": 17318,
+      "sha256": "0d815118c76c620f949c5cef7ae5dee51892db67bf1344709abd70927bc64577"
+    },
+    {
+      "path": "site/newsletters/january-2022.html",
+      "bytes": 21038,
+      "sha256": "87c50cedfb61499177cd830fe93e789ac42b0f69f46a92fbe4fc408592682d4e"
+    },
+    {
+      "path": "site/newsletters/january-2023.html",
+      "bytes": 14407,
+      "sha256": "2e45d75e91ed80adeb46ca56caf187c511247f722ee815ef7afcbfd7865a4bc6"
+    },
+    {
+      "path": "site/newsletters/january-2024.html",
+      "bytes": 13798,
+      "sha256": "24971f50543dad2287330c137a33aa3d0c224fd159c4f14ddb3a659583230576"
+    },
+    {
+      "path": "site/newsletters/january-2025.html",
+      "bytes": 13475,
+      "sha256": "206221588f06732b1aa69485bd21c8c280fb894f3ade6667ceee90f84682826d"
+    },
+    {
+      "path": "site/newsletters/january-2026.html",
+      "bytes": 13787,
+      "sha256": "ed72f7d760d0f65b7c035c5bc2ed879e9c37de1b35793523dd6c16c1a62b35ae"
+    },
+    {
+      "path": "site/newsletters/july-2013.html",
+      "bytes": 16605,
+      "sha256": "88f463f3573f8ed30365243890c7ffb0055e7b17581d58a393f46e677a6ca8e0"
+    },
+    {
+      "path": "site/newsletters/july-2014.html",
+      "bytes": 16707,
+      "sha256": "4c2b724148777bebd28e14a30b5b8c5b82f2d4cf4060a0fabcaabfc6c299eec3"
+    },
+    {
+      "path": "site/newsletters/july-2015.html",
+      "bytes": 18846,
+      "sha256": "de6e49aca8bd45ae57dfb3335212d136c796458ddc0aaf836e8909d42517a07c"
+    },
+    {
+      "path": "site/newsletters/july-2016.html",
+      "bytes": 18424,
+      "sha256": "501999d102e60802d93b96d92aaa4c9c57459f9a07ac463572b4ad3062b33bae"
+    },
+    {
+      "path": "site/newsletters/july-2017.html",
+      "bytes": 21230,
+      "sha256": "c46df29ac0df2368151d18083cbf3d4f92e25ab029ec9789a4d1c3f812c430e0"
+    },
+    {
+      "path": "site/newsletters/july-2018.html",
+      "bytes": 22360,
+      "sha256": "6c4ca37558d86403e44b51f2823206839fca7ab2acc139e8875112bccc1ab4a1"
+    },
+    {
+      "path": "site/newsletters/july-2019.html",
+      "bytes": 15534,
+      "sha256": "cd9e67a236fc745c75a0742af7fef85f8b35f4f4e517c5db1c304bc5608f4ab3"
+    },
+    {
+      "path": "site/newsletters/july-2020.html",
+      "bytes": 17360,
+      "sha256": "a6f930a6dc9796b57715271b876e3b8e2fedd278d9129dfcfaddad9272dcad1c"
+    },
+    {
+      "path": "site/newsletters/july-2021.html",
+      "bytes": 22427,
+      "sha256": "09690c30e3af2786d81b6f74afecca22b27d9a2c787fe3051713971aaff4c03a"
+    },
+    {
+      "path": "site/newsletters/july-2022.html",
+      "bytes": 15672,
+      "sha256": "7e3898389f58821a088f119af2d20e92cfdeabfc5c017c83e4784fbb78f484e4"
+    },
+    {
+      "path": "site/newsletters/july-2023.html",
+      "bytes": 14050,
+      "sha256": "b4170b770008eb3f931ee27a33e7da7019bc2789009a1f389319d009de171a2a"
+    },
+    {
+      "path": "site/newsletters/july-2024.html",
+      "bytes": 15981,
+      "sha256": "92094635a6bef918dfa8c4aec237cc99951f44c97b74c87a5401fd54cca06494"
+    },
+    {
+      "path": "site/newsletters/july-2025.html",
+      "bytes": 15568,
+      "sha256": "9c2dd1ea34cf5b9570eeedd70b3bda1992ab527a4356a6b0eb9d47d076268824"
+    },
+    {
+      "path": "site/newsletters/july-2026.html",
+      "bytes": 15988,
+      "sha256": "47c0d5ebb3b67696b7ffc4f504e65fe88951f2d406906d09d9cc6ccbdfeb35a1"
+    },
+    {
+      "path": "site/newsletters/june-2013.html",
+      "bytes": 18817,
+      "sha256": "c11f35f0cd45ced3916c4275e2b68b725b7494e800544aad7d7b6b32a8b269f5"
+    },
+    {
+      "path": "site/newsletters/june-2014.html",
+      "bytes": 16468,
+      "sha256": "003b59fd9e4adf4ae652cf3069b27095fac3df5bec8ec3582532e21849f64b42"
+    },
+    {
+      "path": "site/newsletters/june-2015.html",
+      "bytes": 18161,
+      "sha256": "31565aec1eac80836ae98e18c9b92318853526ff7f44adf866e12028f48635a4"
+    },
+    {
+      "path": "site/newsletters/june-2016.html",
+      "bytes": 19012,
+      "sha256": "6c1d4e914cf6e1b725624638fda5e7da5b44937f9148115f8483c450163f27ff"
+    },
+    {
+      "path": "site/newsletters/june-2017.html",
+      "bytes": 21459,
+      "sha256": "98f09e03ac59efb99281c55681dae3c90bc1be69956ea61d199306304552c6d0"
+    },
+    {
+      "path": "site/newsletters/june-2018.html",
+      "bytes": 18729,
+      "sha256": "d0726bc9791bce14f3111a4078ad5b637e47464a867d1f8274cdad67aa42242d"
+    },
+    {
+      "path": "site/newsletters/june-2019.html",
+      "bytes": 19863,
+      "sha256": "36c38b6a85048c9d783b78dd02d6bbd01b6ce73d2953167cbc49543f9f8b7e1a"
+    },
+    {
+      "path": "site/newsletters/june-2020.html",
+      "bytes": 13743,
+      "sha256": "168bfcd4b30f44e12d9172e8369ce91c825ef9eb2e9d5446adba53db43874ad2"
+    },
+    {
+      "path": "site/newsletters/june-2021.html",
+      "bytes": 19450,
+      "sha256": "257b073694bd92e4b16262d71fdb88e4544adf274e1e11d04b2941ef2ca4becc"
+    },
+    {
+      "path": "site/newsletters/june-2022.html",
+      "bytes": 17944,
+      "sha256": "0da67e19e2d7c8856822b0ef4fce9de11e7bceb32b7b174828a211b511bc41b7"
+    },
+    {
+      "path": "site/newsletters/june-2023.html",
+      "bytes": 16032,
+      "sha256": "760788b12c9b833f409fc392832ed9ca65be4e005928d8755415f48a3b18da31"
+    },
+    {
+      "path": "site/newsletters/june-2024.html",
+      "bytes": 16042,
+      "sha256": "85fbbf1556144a9c6d473ac08d6243696842fdfbc3d85833e18d51494356f5cf"
+    },
+    {
+      "path": "site/newsletters/june-2025.html",
+      "bytes": 14175,
+      "sha256": "f42c4d2ab1da3be9647482c03c73b68c43065ed9ad779e9a04ee20732404bd7b"
+    },
+    {
+      "path": "site/newsletters/june-2026.html",
+      "bytes": 14334,
+      "sha256": "be71405fc7fc45ea93bc7f3e203e078e8a2ec85b5144819013f725c2cc3a5763"
+    },
+    {
+      "path": "site/newsletters/march-2014.html",
+      "bytes": 14017,
+      "sha256": "34a229bedf7b570404db84b07a33cb9b5c198ff89ed73286bcd32437ef1daf2a"
+    },
+    {
+      "path": "site/newsletters/march-2015.html",
+      "bytes": 14742,
+      "sha256": "e3eb6517c436df83a2edcabf5db05222e55c242f84f65c33700343b6f84aa2e1"
+    },
+    {
+      "path": "site/newsletters/march-2016.html",
+      "bytes": 13314,
+      "sha256": "36e39c1dd79a3047792294a8859878323ac6c886e36f8b1610dde0585e5bd349"
+    },
+    {
+      "path": "site/newsletters/march-2017.html",
+      "bytes": 13818,
+      "sha256": "ca8c6f2c3131c69580028123d875c92e46757942bbebf47693a67e31a15c95d9"
+    },
+    {
+      "path": "site/newsletters/march-2018.html",
+      "bytes": 14880,
+      "sha256": "37917c325bad20fac7d85be6fc2ef71f6b45ddb188d713c4ca20b53d4021b5d0"
+    },
+    {
+      "path": "site/newsletters/march-2019.html",
+      "bytes": 15318,
+      "sha256": "6604db8a417209fbc9222b084919b69d63ca757ee6ce268cf3ec5a613ec913c5"
+    },
+    {
+      "path": "site/newsletters/march-2020.html",
+      "bytes": 14994,
+      "sha256": "e0deb2914c3e1ae174d2af046bfa48fe1317389ebd9ab59002aad075167e53fa"
+    },
+    {
+      "path": "site/newsletters/march-2021.html",
+      "bytes": 13366,
+      "sha256": "a80b988c56586e1858af7a9ca7b1ead72f719b1da907d9cb528dbdca6bd26d1d"
+    },
+    {
+      "path": "site/newsletters/march-2022.html",
+      "bytes": 15098,
+      "sha256": "bdb01d24ca875182b0060f2b2c3703d48604b51e601b7addf8e06722fc053a9e"
+    },
+    {
+      "path": "site/newsletters/march-2023.html",
+      "bytes": 11279,
+      "sha256": "709a314eda7fdf76135e96af99f0722274040d3ce567c1d8ca8d4c2a4f2aade5"
+    },
+    {
+      "path": "site/newsletters/march-2024.html",
+      "bytes": 11994,
+      "sha256": "2485ae3cdc8ae282558412dab1f9108714f2d70a842bb595703118a46c2c4682"
+    },
+    {
+      "path": "site/newsletters/march-2025.html",
+      "bytes": 12077,
+      "sha256": "02054acc3322381e86555128e5ca47a26ec76168887f6413c4b768f7f624532f"
+    },
+    {
+      "path": "site/newsletters/march-2026.html",
+      "bytes": 10821,
+      "sha256": "9cfc8fb8ed93c626da6d5c7db7af901be9dfb8f4f5ca2f4cff9707686d991f40"
+    },
+    {
+      "path": "site/newsletters/may-2013.html",
+      "bytes": 18892,
+      "sha256": "5dd3c9aae2c84e9857d127a2fae8691b7af07eedb0cc8f003c40bd7ff4517eec"
+    },
+    {
+      "path": "site/newsletters/may-2014.html",
+      "bytes": 14701,
+      "sha256": "94066bdcdc8ab105b888dc0f1498ffa47d5e0c92e497a7aec77a7ef5e6ea83d9"
+    },
+    {
+      "path": "site/newsletters/may-2015.html",
+      "bytes": 17767,
+      "sha256": "46a506cd2898614a5351df7de578582399821823db90f4861ae2d49ea1ae1d29"
+    },
+    {
+      "path": "site/newsletters/may-2016.html",
+      "bytes": 15799,
+      "sha256": "177582f1bd9b4baf7e32423b05a6da33742ebd8bb8e68dc82abec15d5db818ea"
+    },
+    {
+      "path": "site/newsletters/may-2017.html",
+      "bytes": 18621,
+      "sha256": "0c54c55d46443909bf6ab506277cc229428b926416c70a96dec737ee95a760a8"
+    },
+    {
+      "path": "site/newsletters/may-2018.html",
+      "bytes": 15933,
+      "sha256": "8ed77ba68945b937c17db3f89f0bd9d62b9db5d5d888660ac5ff99ce75f235c1"
+    },
+    {
+      "path": "site/newsletters/may-2019.html",
+      "bytes": 16250,
+      "sha256": "88d4d5ce48d1305d21d17a75121e39854d43204856754502fa2759e7ecf4c273"
+    },
+    {
+      "path": "site/newsletters/may-2020.html",
+      "bytes": 14112,
+      "sha256": "2cf6ef5745ba6ba858af858d2defea83007ce68a2a107cdf6e5576813f310748"
+    },
+    {
+      "path": "site/newsletters/may-2021.html",
+      "bytes": 18676,
+      "sha256": "07d2bfd80a541b17c879ad6a7805ffc30e256c633c51941f045f2e84f19cb2fb"
+    },
+    {
+      "path": "site/newsletters/may-2022.html",
+      "bytes": 18757,
+      "sha256": "83bb3eac7e82581c693f67d5dda881b1498726b4015e71d5e95e2b794e4094f6"
+    },
+    {
+      "path": "site/newsletters/may-2023.html",
+      "bytes": 12344,
+      "sha256": "f65d61db681eddec78a23207a052772e685d495f847ec8c19e87124c9accb200"
+    },
+    {
+      "path": "site/newsletters/may-2024.html",
+      "bytes": 14419,
+      "sha256": "5aaf758f4652c3cee231f88ba58b6239739b74665498d65d40a16b014cb7a940"
+    },
+    {
+      "path": "site/newsletters/may-2025.html",
+      "bytes": 13962,
+      "sha256": "d419fa77cdd79a53f208391f810063147f3057cc3b28b435d846c8ee6a558067"
+    },
+    {
+      "path": "site/newsletters/may-2026.html",
+      "bytes": 15236,
+      "sha256": "9b905cf67565e74583aa2342e715ae72803217111d4c4cd7169f6a5383b0ba31"
+    },
+    {
+      "path": "site/newsletters/newsletters.html",
+      "bytes": 63256,
+      "sha256": "a14a29677f3587067111a0f558b2246557fa194336ac229b5201863ba005d3bb"
+    },
+    {
+      "path": "site/newsletters/november-2013.html",
+      "bytes": 17290,
+      "sha256": "eb1d8f7caa0cc79ecf3536116b14f7ad049f013bb01568c950d246ea5f5e2cfd"
+    },
+    {
+      "path": "site/newsletters/november-2014.html",
+      "bytes": 15901,
+      "sha256": "413bdc0884a7cc2e6f07486830580e7b2d0bea3368a1e2084269a6ac32cd0c9d"
+    },
+    {
+      "path": "site/newsletters/november-2015.html",
+      "bytes": 18213,
+      "sha256": "ca74a8fb1a8ea5ea46a4218e2b0f337b695cc4ddf687ea89e48e2fa4c3a7fc65"
+    },
+    {
+      "path": "site/newsletters/november-2016.html",
+      "bytes": 18493,
+      "sha256": "22d9fab345cc7342211c0f79eff62d40710047845bc26006d49dc2e4c27a51e9"
+    },
+    {
+      "path": "site/newsletters/november-2017.html",
+      "bytes": 18449,
+      "sha256": "9f148feadcc5335a29edd7cbd2efc6cc2a1c345b2096f83c816d4af7a2a37471"
+    },
+    {
+      "path": "site/newsletters/november-2018.html",
+      "bytes": 18122,
+      "sha256": "5551c5fc40127711dbfb2124eb6e2341de2554c2a7465538b68e95ddc06c4f82"
+    },
+    {
+      "path": "site/newsletters/november-2019.html",
+      "bytes": 17857,
+      "sha256": "e5ee6f37d725512248bc4eb8b5cf0c7b9175afb45e6b416a899d79435a00bf70"
+    },
+    {
+      "path": "site/newsletters/november-2020.html",
+      "bytes": 19969,
+      "sha256": "0d3aecc357b11435371a0bdadf39aad157db7c7862fc5d548805f4ac89c48089"
+    },
+    {
+      "path": "site/newsletters/november-2021.html",
+      "bytes": 21163,
+      "sha256": "77b7480cbe3f1b91f8adfbc3db5ee81ac02a4cc778cb3f9e6a70645bf8441c9f"
+    },
+    {
+      "path": "site/newsletters/november-2022.html",
+      "bytes": 15401,
+      "sha256": "e134d14eb539a16a3a041a8d7355e60e400878f780f02d0d9c411745e48fd7fe"
+    },
+    {
+      "path": "site/newsletters/november-2023.html",
+      "bytes": 13230,
+      "sha256": "4b2963ddedf5f5d7c356b003ad8e6ffb490dde93af4b56597d372f90ac847b02"
+    },
+    {
+      "path": "site/newsletters/november-2024.html",
+      "bytes": 14109,
+      "sha256": "0e80d56a70a6298554f337f6511eba08cea7659bd008c202b5c57a82b6a11408"
+    },
+    {
+      "path": "site/newsletters/november-2025.html",
+      "bytes": 14257,
+      "sha256": "42cb5b87d3d5bb66d0fddcbc2c9823d3e791bc62cadfeb9596023c8d77a51da2"
+    },
+    {
+      "path": "site/newsletters/october-2013.html",
+      "bytes": 18887,
+      "sha256": "2331bb4392d33ca3a4d561f4bbda8dc1db99b63108789fd79399e6436adfb4c8"
+    },
+    {
+      "path": "site/newsletters/october-2014.html",
+      "bytes": 16059,
+      "sha256": "cd39a896e4b3c9e02934e42c238ac85a72a0c31606400c6f3dcce2bcc224dace"
+    },
+    {
+      "path": "site/newsletters/october-2015.html",
+      "bytes": 19090,
+      "sha256": "1317d3f79e84d7b0e34534accf5b2cc35e3bd63e270b2c60c6a96afc86185726"
+    },
+    {
+      "path": "site/newsletters/october-2016.html",
+      "bytes": 17282,
+      "sha256": "53222c3d7a655afdf8ed92940fbe6b9a816331ca9899d34f3ff144d1fa75c262"
+    },
+    {
+      "path": "site/newsletters/october-2017.html",
+      "bytes": 17894,
+      "sha256": "56a2be391e3be006bd04adfc05c38656d8efd133445f34704ae7746c2a8ae9c3"
+    },
+    {
+      "path": "site/newsletters/october-2018.html",
+      "bytes": 13926,
+      "sha256": "17bc7c6812c1156b8395e5f5ffc3053b839c8020419402cd6fe10343c466605b"
+    },
+    {
+      "path": "site/newsletters/october-2019.html",
+      "bytes": 14675,
+      "sha256": "71151df598b1a7b474d8ae160d602123f0560d14d64ba049a13f35065e7a139c"
+    },
+    {
+      "path": "site/newsletters/october-2020.html",
+      "bytes": 17281,
+      "sha256": "7bf84207f6eb253d0028536066a4eefd59b58d599cb3ef2ac2312bbd2a5c834e"
+    },
+    {
+      "path": "site/newsletters/october-2021.html",
+      "bytes": 21351,
+      "sha256": "4480c36108eea9f29be2ee44ffa83e9b75c9144099f7f6be8caead42af6d89be"
+    },
+    {
+      "path": "site/newsletters/october-2022.html",
+      "bytes": 16001,
+      "sha256": "30b379249c1ca23e1a79a5d26c80c21f7e6df4a59df225d6ad27defafbdd77b9"
+    },
+    {
+      "path": "site/newsletters/october-2023.html",
+      "bytes": 14186,
+      "sha256": "36d79cf996f8e10b30f6ce27985dffd951c90fa72b5fb5bc62a59c9a1954d015"
+    },
+    {
+      "path": "site/newsletters/october-2024.html",
+      "bytes": 12963,
+      "sha256": "4c8fc9f778b7a46450bb1cca8958e7bcf711ac489aed83341a3f8bc2338fec5c"
+    },
+    {
+      "path": "site/newsletters/october-2025.html",
+      "bytes": 14058,
+      "sha256": "2f975df6f804cf4a28c65be9a622d4b4832068ec3bb7f98dd288794cf484a51e"
+    },
+    {
+      "path": "site/newsletters/september-2013.html",
+      "bytes": 17489,
+      "sha256": "53b3010ef1b7acae99c1a002989cd6a2f885b61e3e80b502e3ad494bcb6ca113"
+    },
+    {
+      "path": "site/newsletters/september-2014.html",
+      "bytes": 15116,
+      "sha256": "95224ece1b7a4ee5bd4db82006232b1dcea77d6fa8bb1ca8663ec60de4ede2fc"
+    },
+    {
+      "path": "site/newsletters/september-2015.html",
+      "bytes": 18832,
+      "sha256": "9cbf4afe4b5507ba19a2daeac3506320cd609264046f96e90cf9e2cfdca220de"
+    },
+    {
+      "path": "site/newsletters/september-2016.html",
+      "bytes": 18775,
+      "sha256": "e6b759bf4ace79895f505ef9b9f684c10d728a0796ea1d5a9b52e3b77dc0c1b7"
+    },
+    {
+      "path": "site/newsletters/september-2017.html",
+      "bytes": 19924,
+      "sha256": "feffea9cb30b0797d6863d2db8d3137f92a5827a194d74bfbf83201cbdda7f9f"
+    },
+    {
+      "path": "site/newsletters/september-2018.html",
+      "bytes": 18990,
+      "sha256": "cf09229747094f9db74d16ed98230e37f2f0578d0c6fde708cf8a181ac2b6fd5"
+    },
+    {
+      "path": "site/newsletters/september-2019.html",
+      "bytes": 19505,
+      "sha256": "cbba44d40c40c6f701c78bc059a5e1b241329ec09ae9adcf2c9cb129fdafd16e"
+    },
+    {
+      "path": "site/newsletters/september-2020.html",
+      "bytes": 17665,
+      "sha256": "cc3f5d422b6ceeb7d9faf971aa828dcb494e4d505ae465b3cf40dcbb865f377b"
+    },
+    {
+      "path": "site/newsletters/september-2021.html",
+      "bytes": 19377,
+      "sha256": "d538feafadf2fe732acf673feebf60202548ee456cd1181bc8b651339a8e1834"
+    },
+    {
+      "path": "site/newsletters/september-2022.html",
+      "bytes": 17658,
+      "sha256": "2998e70e853e4833bb0da4a7a622a21b9c55ce531e7123b4879edf8304180d1f"
+    },
+    {
+      "path": "site/newsletters/september-2023.html",
+      "bytes": 13682,
+      "sha256": "6eb0a8cd123ecbd1b0b9be5ba98e093a74a197cdbd83c27a4b0635638d447ff9"
+    },
+    {
+      "path": "site/newsletters/september-2024.html",
+      "bytes": 14743,
+      "sha256": "faba5522616d7762c68e41e792382912d8c0dd046026088d01281234f1d06e5d"
+    },
+    {
+      "path": "site/newsletters/september-2025.html",
+      "bytes": 13702,
+      "sha256": "11e7319f9d107b46ac7f9a559fa1cc359c34cce1cc14a5982f638dc4ef73f778"
+    },
+    {
+      "path": "site/newsletters.html",
+      "bytes": 67079,
+      "sha256": "19dcef29a186e798cd22da3b7a334cd7f0a1980372dcc48431e4feee2a23144b"
+    },
+    {
+      "path": "site/past-sales.html",
+      "bytes": 8715,
+      "sha256": "b592ff0845f9d70aae187bded88f07183b1db972709a4c7d0ff56e7c6365f22b"
+    },
+    {
+      "path": "site/reviews.html",
+      "bytes": 13442,
+      "sha256": "870cb7d126aa3ba3bb7b571fd46bc2b756cba09ea5db01a5df4134f8643a9ac0"
+    },
+    {
+      "path": "site/sell.html",
+      "bytes": 15830,
+      "sha256": "c16c756e7cd177f9bd5983df65199bded9ed5237671736dc05fc192af2f5ec41"
+    },
+    {
+      "path": "site/sites.html",
+      "bytes": 10249,
+      "sha256": "40d2c392a68ed10494a33e5fd7ce8d815b28bd7cc920fd765ea2cb7f5d45e4d8"
+    },
+    {
+      "path": "site/styles.css",
+      "bytes": 36372,
+      "sha256": "c86f1dd532ec6c6783f08a6dcd342ed600d8fa1693bcdee9f212eb19b4a0395f"
+    },
+    {
+      "path": "cities/lathrop/index.html",
+      "bytes": 19890,
+      "sha256": "ce48851bd1327107edb961f65b165ac0cd738aa58022b9f0a3fcf1011ecf844b"
+    },
+    {
+      "path": "cities/lathrop/tours.html",
+      "bytes": 33105,
+      "sha256": "73f2133311e2c2fa74c2b43acae34cd4d94760cb651b3cda7a475d2d9c0c9d0e"
+    },
+    {
+      "path": "cities/manteca/index.html",
+      "bytes": 16933,
+      "sha256": "63916659055b141a049dc28945ff8b12a34462e9f9df98b15dfbddf50f94a261"
+    },
+    {
+      "path": "cities/manteca/tours.html",
+      "bytes": 117000,
+      "sha256": "d800f27a31183130eb26ef8c192546c343cdd5d223a5c7dcb6539f3552974b77"
+    },
+    {
+      "path": "cities/mountain-house/index.html",
+      "bytes": 20709,
+      "sha256": "b077732dd014ef2ae4824116d145d0c1a8e33cab89fcdf64ed567268d86140e8"
+    },
+    {
+      "path": "cities/mountain-house/tours.html",
+      "bytes": 35055,
+      "sha256": "6d658b13a2bdd930afcbe3e4baf2342db145e2fa054853c75a6f7bd6f2eca9df"
+    },
+    {
+      "path": "cities/river-islands/index.html",
+      "bytes": 17467,
+      "sha256": "38ea050db317529d95e10c6cc5efefd26a8bba4f5b57792f8407427f11f3577f"
+    },
+    {
+      "path": "cities/woodbridge/index.html",
+      "bytes": 18264,
+      "sha256": "985162873ddcd5037d21c6d1e133df04183a42de010dab41863ffe5da247377e"
+    },
+    {
+      "path": "shared/forms.js",
+      "bytes": 2895,
+      "sha256": "8911ec375d447722263d1cbd80e7e18eb302504a2d74931905fd7ed15c1ffaa2"
+    },
+    {
+      "path": "shared/site.js",
+      "bytes": 8240,
+      "sha256": "34f399f41fa65f83ddb161bcb2fb0e1e9d9fd440d3f8cec77c73759af964233e"
+    },
+    {
+      "path": "shared/tours-feed.js",
+      "bytes": 2043,
+      "sha256": "4b26337f2498852647ee8ee1ef19b8341879cce2332ad9bc971fc60e62281584"
+    },
+    {
+      "path": "shared/tours.js",
+      "bytes": 801,
+      "sha256": "89ed59ace20d2fb38caac723e697c103907085cd7f957646a74534e56c7e323b"
+    },
+    {
+      "path": "api/contact.js",
+      "bytes": 5087,
+      "sha256": "a7ade647a62dfbf0f87505bae8e4f24196975124863ee62c4105358cf3b2af49"
+    },
+    {
+      "path": "tools/build-newsletters.mjs",
+      "bytes": 14157,
+      "sha256": "5fbb943a25e78df123d38c4ed8ec51d1739dce7943313f089db8ebb62fc07fd8"
+    },
+    {
+      "path": "tools/build-site.mjs",
+      "bytes": 5235,
+      "sha256": "9b9dff1a9b898a72d33d5303e44edc18283d65d308beadca7c0344cf3e6ee059"
+    },
+    {
+      "path": "tools/build-tours.mjs",
+      "bytes": 5202,
+      "sha256": "5e5a23bc82dbf47a6fff25ca5cc553785c0f21c576e192330cf2aabbf76e5c66"
+    },
+    {
+      "path": "tools/newsletter-issues.json",
+      "bytes": 926449,
+      "sha256": "bdb59841f33db9fcf9a43edc97a29d15033262e1eea8d3d8cc81e6b484f6d6a9"
+    },
+    {
+      "path": "tools/site-release.test.mjs",
+      "bytes": 2253,
+      "sha256": "a68b7e242a0d115bd7d20c6d7172810fca37016ee23928a05aab045157326c33"
+    },
+    {
+      "path": "tools/validate-site.py",
+      "bytes": 2194,
+      "sha256": "46a23c9c2561e757568ffc426d4cda6b12749f0b4876300e70f4029e5797f796"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 907,
+      "sha256": "dc9ae7ac056d01c8aa1d87bb1c9f2ec4df85c7c4c7545ecec273e88850726705"
+    },
+    {
+      "path": "site-worker.js",
+      "bytes": 207,
+      "sha256": "6ad7bb53b6bbccf6c4348259abd37b3d79362f299450fb99c48d5cec1a96caf5"
+    }
+  ],
+  "media_and_other_files": [
+    {
+      "path": "home/assets/Altamont Scape 1.jpg",
+      "bytes": 248861
+    },
+    {
+      "path": "home/assets/klemm windmill hero animation.mp4",
+      "bytes": 4304089
+    },
+    {
+      "path": "home/assets/Klemm windmill hero.png",
+      "bytes": 2045516
+    },
+    {
+      "path": "home/assets/klemm-hero-loop.mp4",
+      "bytes": 1310346
+    },
+    {
+      "path": "home/assets/Tracy City Scape 1.jpg",
+      "bytes": 192206
+    },
+    {
+      "path": "home/assets/tracy-altamont-windmills-hero.png",
+      "bytes": 2038324
+    },
+    {
+      "path": "home/assets/tracy-city-windfarm-aerial.png",
+      "bytes": 2111977
+    },
+    {
+      "path": "site/assets/email-logo.png",
+      "bytes": 16716
+    },
+    {
+      "path": "cities/ANIMATION-DIRECTIONS.md",
+      "bytes": 1714
+    },
+    {
+      "path": "cities/lathrop/assets/Lathrop City Scape 1.jpg",
+      "bytes": 378794
+    },
+    {
+      "path": "cities/lathrop/assets/Lathrop Hero Animation.mp4",
+      "bytes": 3310934
+    },
+    {
+      "path": "cities/lathrop/assets/Lathrop Hero.jpg",
+      "bytes": 1529919
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-historic-lathrop-original-town-grid.png",
+      "bytes": 2838214
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-levee-sunrise.png",
+      "bytes": 2288195
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-levee-water-hero.png",
+      "bytes": 2495925
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-mossdale-landing-ace-neighborhood.png",
+      "bytes": 2548345
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-river-islands-waterfront-community.png",
+      "bytes": 2442417
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-stonebridge-established-family-streets.png",
+      "bytes": 2725903
+    },
+    {
+      "path": "cities/lathrop/assets/lathrop-woodfield-towne-centre-neighborhood.png",
+      "bytes": 3087522
+    },
+    {
+      "path": "cities/lathrop/assets/march_11_2021-ri-february_23_2021-ri-dji_0584_2.jpg",
+      "bytes": 1247513
+    },
+    {
+      "path": "cities/manteca/assets/2442 Pepper Tree Lane, Manteca.png",
+      "bytes": 1329830
+    },
+    {
+      "path": "cities/manteca/assets/2498 Pepper Tree Lane, Manteca.png",
+      "bytes": 912481
+    },
+    {
+      "path": "cities/manteca/assets/2505 Chrysler Avenue, Manteca.png",
+      "bytes": 961206
+    },
+    {
+      "path": "cities/manteca/assets/Manteca City Scape 1.jpg",
+      "bytes": 352021
+    },
+    {
+      "path": "cities/manteca/assets/Manteca Hero Animation.mp4",
+      "bytes": 4453039
+    },
+    {
+      "path": "cities/manteca/assets/Manteca Water Tower Day.png",
+      "bytes": 2050958
+    },
+    {
+      "path": "cities/manteca/assets/Manteca Water Tower.png",
+      "bytes": 1371267
+    },
+    {
+      "path": "cities/manteca/assets/manteca-downtown-established-streets.png",
+      "bytes": 2847068
+    },
+    {
+      "path": "cities/manteca/assets/manteca-oakwood-shores-lakefront-estates.png",
+      "bytes": 2390361
+    },
+    {
+      "path": "cities/manteca/assets/manteca-orchard-neighborhood.png",
+      "bytes": 2677517
+    },
+    {
+      "path": "cities/manteca/assets/manteca-union-ranch-new-construction.png",
+      "bytes": 2114679
+    },
+    {
+      "path": "cities/manteca/assets/manteca-water-tower-hero.png",
+      "bytes": 2855718
+    },
+    {
+      "path": "cities/manteca/assets/manteca-woodward-park-family-neighborhood.png",
+      "bytes": 2756823
+    },
+    {
+      "path": "cities/mountain-house/assets/122 W Riverside Pl, Mountain house.jpg",
+      "bytes": 105346
+    },
+    {
+      "path": "cities/mountain-house/assets/295 Ryan Ave, Mountain House, CA .jpg",
+      "bytes": 129515
+    },
+    {
+      "path": "cities/mountain-house/assets/357 w tuscan lane mountain house.jpg",
+      "bytes": 439248
+    },
+    {
+      "path": "cities/mountain-house/assets/Mountain House City Scape 1.jpg",
+      "bytes": 284434
+    },
+    {
+      "path": "cities/mountain-house/assets/Mountain House Hero Animation.mp4",
+      "bytes": 2585193
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-altamont-village.jpg",
+      "bytes": 261194
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-bethany-village.jpg",
+      "bytes": 463376
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-cordes-village.jpg",
+      "bytes": 340051
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-greenbelt-twilight.jpg",
+      "bytes": 269845
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-hansen-village.jpg",
+      "bytes": 340765
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-oasis-blue-hour-aerial.png",
+      "bytes": 1951567
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-oasis-windfarm-aerial.png",
+      "bytes": 2457088
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-questa-village.jpg",
+      "bytes": 309644
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-rooftop-windmill-glide.png",
+      "bytes": 2242794
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-wicklund-village.jpg",
+      "bytes": 361620
+    },
+    {
+      "path": "cities/mountain-house/assets/mountain-house-windmills-hero.jpg",
+      "bytes": 211191
+    },
+    {
+      "path": "cities/README.md",
+      "bytes": 558
+    },
+    {
+      "path": "cities/river-islands/assets/city scape.png",
+      "bytes": 2463559
+    },
+    {
+      "path": "cities/river-islands/assets/hero-loop.mp4",
+      "bytes": 3798630
+    },
+    {
+      "path": "cities/river-islands/assets/hero-poster.jpg",
+      "bytes": 99473
+    },
+    {
+      "path": "cities/river-islands/assets/River Islands City Scape 1.jpg",
+      "bytes": 259560
+    },
+    {
+      "path": "cities/river-islands/assets/River Islands Hero.png",
+      "bytes": 889151
+    },
+    {
+      "path": "cities/river-islands/assets/river-islands-blue-hour-waterfront.png",
+      "bytes": 2067286
+    },
+    {
+      "path": "cities/river-islands/assets/river-islands-lakefront-hero.png",
+      "bytes": 2283115
+    },
+    {
+      "path": "cities/woodbridge/assets/bocce-garden.png",
+      "bytes": 3014601
+    },
+    {
+      "path": "cities/woodbridge/assets/clubhouse-hero.png",
+      "bytes": 2551464
+    },
+    {
+      "path": "cities/woodbridge/assets/hero-loop.mp4",
+      "bytes": 2478615
+    },
+    {
+      "path": "cities/woodbridge/assets/hero-poster.jpg",
+      "bytes": 240765
+    },
+    {
+      "path": "cities/woodbridge/assets/lakeview.png",
+      "bytes": 2689462
+    },
+    {
+      "path": "cities/woodbridge/assets/Woodbridge City Scape 1.jpg",
+      "bytes": 292971
+    },
+    {
+      "path": "shared/jack/Jack Portrait.jpg",
+      "bytes": 135025
+    },
+    {
+      "path": "shared/listing-prep/buy-street.jpg",
+      "bytes": 307760
+    },
+    {
+      "path": "shared/listing-prep/staging-after.jpg",
+      "bytes": 202592
+    },
+    {
+      "path": "shared/listing-prep/staging-before.jpg",
+      "bytes": 181167
+    },
+    {
+      "path": "shared/listing-prep/staging-detail.jpg",
+      "bytes": 149873
+    }
+  ]
+}

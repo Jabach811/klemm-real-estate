@@ -1,0 +1,2362 @@
+{
+  "audit_date": "2026-09-09",
+  "source_root": "C:\\Dev\\Joel's Workspaces\\Personal\\Work\\Jack Klemm Real Estate\\Klemm",
+  "forms": [
+    {
+      "source": "home/index.html",
+      "line": 174,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Home",
+          "line": 175
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Home",
+          "line": 176
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 177
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 178
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 179
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 180
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 181
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/lathrop/index.html",
+      "line": 252,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell Your Lathrop Home",
+          "line": 253
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell Your Lathrop Home",
+          "line": 254
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 255
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 256
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 257
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 258
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 259
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/lathrop/tours.html",
+      "line": 87,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Lathrop and River Islands Home Video Tours",
+          "line": 88
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Lathrop and River Islands Home Video Tours",
+          "line": 89
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 90
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 91
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 92
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Selling",
+          "options": [],
+          "value": "Selling",
+          "line": 96
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Buying",
+          "options": [],
+          "value": "Buying",
+          "line": 97
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Just curious",
+          "options": [],
+          "value": "Just curious",
+          "line": 98
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/manteca/index.html",
+      "line": 174,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell Your Manteca Home",
+          "line": 175
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell Your Manteca Home",
+          "line": 176
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 177
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 178
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 179
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 180
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 181
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/manteca/tours.html",
+      "line": 242,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Manteca Home Video Tours",
+          "line": 243
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Manteca Home Video Tours",
+          "line": 244
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 245
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 246
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 247
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Selling",
+          "options": [],
+          "value": "Selling",
+          "line": 251
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Buying",
+          "options": [],
+          "value": "Buying",
+          "line": 252
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Just curious",
+          "options": [],
+          "value": "Just curious",
+          "line": 253
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/mountain-house/index.html",
+      "line": 252,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell Your Mountain House Home",
+          "line": 253
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell Your Mountain House Home",
+          "line": 254
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 255
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 256
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 257
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 258
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 259
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/mountain-house/tours.html",
+      "line": 89,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Mountain House Home Video Tours",
+          "line": 90
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Mountain House Home Video Tours",
+          "line": 91
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 92
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 93
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 94
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Selling",
+          "options": [],
+          "value": "Selling",
+          "line": 98
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Buying",
+          "options": [],
+          "value": "Buying",
+          "line": 99
+        },
+        {
+          "name": "regarding",
+          "type": "radio",
+          "required": false,
+          "label": "Just curious",
+          "options": [],
+          "value": "Just curious",
+          "line": 100
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/river-islands/index.html",
+      "line": 239,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell Your River Islands Home",
+          "line": 240
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell Your River Islands Home",
+          "line": 241
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 242
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 243
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 244
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 245
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 246
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "cities/woodbridge/index.html",
+      "line": 253,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell Your Del Webb Woodbridge Home",
+          "line": 254
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell Your Del Webb Woodbridge Home",
+          "line": 255
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 256
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 257
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 258
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 259
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 260
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/about.html",
+      "line": 136,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — About Jack",
+          "line": 137
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "About Jack",
+          "line": 138
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 139
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 140
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 141
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 142
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 143
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/buy.html",
+      "line": 212,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Buy With Jack",
+          "line": 213
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Buy With Jack",
+          "line": 214
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 215
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 216
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 217
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 218
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 219
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/contact.html",
+      "line": 146,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Contact",
+          "line": 147
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Contact",
+          "line": 148
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 149
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 150
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 151
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 152
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 153
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/find-me-a-home.html",
+      "line": 59,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Find Me a Home",
+          "line": 60
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Find Me a Home",
+          "line": 61
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 62
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 64
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 65
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 66
+        },
+        {
+          "name": "your_address",
+          "type": "text",
+          "required": false,
+          "label": "Address",
+          "options": [],
+          "value": "",
+          "line": 67
+        },
+        {
+          "name": "your_city",
+          "type": "text",
+          "required": false,
+          "label": "City",
+          "options": [],
+          "value": "",
+          "line": 68
+        },
+        {
+          "name": "your_state",
+          "type": "text",
+          "required": false,
+          "label": "State",
+          "options": [],
+          "value": "",
+          "line": 69
+        },
+        {
+          "name": "your_zip",
+          "type": "text",
+          "required": false,
+          "label": "Zip",
+          "options": [],
+          "value": "",
+          "line": 70
+        },
+        {
+          "name": "move_date",
+          "type": "text",
+          "required": false,
+          "label": "Approximate date of move",
+          "options": [],
+          "value": "",
+          "line": 71
+        },
+        {
+          "name": "contact_method",
+          "type": "select",
+          "required": false,
+          "label": "Preferred method of contact",
+          "options": [
+            "Choose one",
+            "Phone",
+            "Email",
+            "Phone or email"
+          ],
+          "value": "",
+          "line": 74
+        },
+        {
+          "name": "preferred_cities",
+          "type": "text",
+          "required": false,
+          "label": "Preferred cities",
+          "options": [],
+          "value": "",
+          "line": 83
+        },
+        {
+          "name": "max_price",
+          "type": "text",
+          "required": false,
+          "label": "Max. price",
+          "options": [],
+          "value": "",
+          "line": 84
+        },
+        {
+          "name": "min_bedrooms",
+          "type": "select",
+          "required": false,
+          "label": "Minimum bedrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 87
+        },
+        {
+          "name": "min_bathrooms",
+          "type": "select",
+          "required": false,
+          "label": "Minimum bathrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 95
+        },
+        {
+          "name": "min_sf",
+          "type": "text",
+          "required": false,
+          "label": "Min. house square feet",
+          "options": [],
+          "value": "",
+          "line": 101
+        },
+        {
+          "name": "max_age",
+          "type": "text",
+          "required": false,
+          "label": "Max. age of home",
+          "options": [],
+          "value": "",
+          "line": 102
+        },
+        {
+          "name": "must_haves",
+          "type": "text",
+          "required": false,
+          "label": "Other must-haves",
+          "options": [],
+          "value": "",
+          "line": 103
+        },
+        {
+          "name": "comments",
+          "type": "textarea",
+          "required": false,
+          "label": "Additional comments",
+          "options": [],
+          "value": "",
+          "line": 104
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/find-me-an-investment-property.html",
+      "line": 59,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Find Me An Investment Property",
+          "line": 60
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Find Me An Investment Property",
+          "line": 61
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 62
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 64
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 65
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 66
+        },
+        {
+          "name": "your_address",
+          "type": "text",
+          "required": false,
+          "label": "Address",
+          "options": [],
+          "value": "",
+          "line": 67
+        },
+        {
+          "name": "your_city",
+          "type": "text",
+          "required": false,
+          "label": "City",
+          "options": [],
+          "value": "",
+          "line": 68
+        },
+        {
+          "name": "your_state",
+          "type": "text",
+          "required": false,
+          "label": "State",
+          "options": [],
+          "value": "",
+          "line": 69
+        },
+        {
+          "name": "your_zip",
+          "type": "text",
+          "required": false,
+          "label": "Zip",
+          "options": [],
+          "value": "",
+          "line": 70
+        },
+        {
+          "name": "move_date",
+          "type": "text",
+          "required": false,
+          "label": "Approximate date of move",
+          "options": [],
+          "value": "",
+          "line": 71
+        },
+        {
+          "name": "contact_method",
+          "type": "select",
+          "required": false,
+          "label": "Preferred method of contact",
+          "options": [
+            "Choose one",
+            "Phone",
+            "Email",
+            "Phone or email"
+          ],
+          "value": "",
+          "line": 74
+        },
+        {
+          "name": "preferred_cities",
+          "type": "text",
+          "required": false,
+          "label": "Preferred cities",
+          "options": [],
+          "value": "",
+          "line": 83
+        },
+        {
+          "name": "max_price",
+          "type": "text",
+          "required": false,
+          "label": "Max. price",
+          "options": [],
+          "value": "",
+          "line": 84
+        },
+        {
+          "name": "min_bedrooms",
+          "type": "select",
+          "required": false,
+          "label": "Minimum bedrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 87
+        },
+        {
+          "name": "min_bathrooms",
+          "type": "select",
+          "required": false,
+          "label": "Minimum bathrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 95
+        },
+        {
+          "name": "min_sf",
+          "type": "text",
+          "required": false,
+          "label": "Min. house square feet",
+          "options": [],
+          "value": "",
+          "line": 101
+        },
+        {
+          "name": "max_age",
+          "type": "text",
+          "required": false,
+          "label": "Max. age of home",
+          "options": [],
+          "value": "",
+          "line": 102
+        },
+        {
+          "name": "must_haves",
+          "type": "text",
+          "required": false,
+          "label": "Other must-haves",
+          "options": [],
+          "value": "",
+          "line": 103
+        },
+        {
+          "name": "comments",
+          "type": "textarea",
+          "required": false,
+          "label": "Additional comments",
+          "options": [],
+          "value": "",
+          "line": 104
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/i-want-a-free-cmv.html",
+      "line": 59,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — I Want a FREE CMV",
+          "line": 60
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "I Want a FREE CMV",
+          "line": 61
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 62
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 64
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 65
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 66
+        },
+        {
+          "name": "your_address",
+          "type": "text",
+          "required": false,
+          "label": "Address",
+          "options": [],
+          "value": "",
+          "line": 67
+        },
+        {
+          "name": "your_city",
+          "type": "text",
+          "required": false,
+          "label": "City",
+          "options": [],
+          "value": "",
+          "line": 68
+        },
+        {
+          "name": "your_state",
+          "type": "text",
+          "required": false,
+          "label": "State",
+          "options": [],
+          "value": "",
+          "line": 69
+        },
+        {
+          "name": "your_zip",
+          "type": "text",
+          "required": false,
+          "label": "Zip",
+          "options": [],
+          "value": "",
+          "line": 70
+        },
+        {
+          "name": "move_date",
+          "type": "text",
+          "required": false,
+          "label": "Approximate date of move",
+          "options": [],
+          "value": "",
+          "line": 71
+        },
+        {
+          "name": "contact_method",
+          "type": "select",
+          "required": false,
+          "label": "Preferred method of contact",
+          "options": [
+            "Choose one",
+            "Phone",
+            "Email",
+            "Phone or email"
+          ],
+          "value": "",
+          "line": 74
+        },
+        {
+          "name": "sale_address",
+          "type": "text",
+          "required": false,
+          "label": "Address of home to be sold",
+          "options": [],
+          "value": "",
+          "line": 83
+        },
+        {
+          "name": "bedrooms",
+          "type": "select",
+          "required": false,
+          "label": "Bedrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 86
+        },
+        {
+          "name": "bathrooms",
+          "type": "select",
+          "required": false,
+          "label": "Bathrooms",
+          "options": [
+            "Choose",
+            "1",
+            "1.5",
+            "2",
+            "2.5",
+            "3",
+            "3.5",
+            "4",
+            "4.5",
+            "5+"
+          ],
+          "value": "",
+          "line": 94
+        },
+        {
+          "name": "square_footage",
+          "type": "text",
+          "required": false,
+          "label": "Square footage",
+          "options": [],
+          "value": "",
+          "line": 101
+        },
+        {
+          "name": "year_built",
+          "type": "text",
+          "required": false,
+          "label": "Year built",
+          "options": [],
+          "value": "",
+          "line": 102
+        },
+        {
+          "name": "pool",
+          "type": "select",
+          "required": false,
+          "label": "Pool",
+          "options": [
+            "Choose",
+            "Yes",
+            "No"
+          ],
+          "value": "",
+          "line": 105
+        },
+        {
+          "name": "comments",
+          "type": "textarea",
+          "required": false,
+          "label": "Additional comments",
+          "options": [],
+          "value": "",
+          "line": 112
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/i-want-to-sell-my-property.html",
+      "line": 59,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — I Want to Sell My Property",
+          "line": 60
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "I Want to Sell My Property",
+          "line": 61
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 62
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 64
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 65
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 66
+        },
+        {
+          "name": "your_address",
+          "type": "text",
+          "required": false,
+          "label": "Address",
+          "options": [],
+          "value": "",
+          "line": 67
+        },
+        {
+          "name": "your_city",
+          "type": "text",
+          "required": false,
+          "label": "City",
+          "options": [],
+          "value": "",
+          "line": 68
+        },
+        {
+          "name": "your_state",
+          "type": "text",
+          "required": false,
+          "label": "State",
+          "options": [],
+          "value": "",
+          "line": 69
+        },
+        {
+          "name": "your_zip",
+          "type": "text",
+          "required": false,
+          "label": "Zip",
+          "options": [],
+          "value": "",
+          "line": 70
+        },
+        {
+          "name": "move_date",
+          "type": "text",
+          "required": false,
+          "label": "Approximate date of move",
+          "options": [],
+          "value": "",
+          "line": 71
+        },
+        {
+          "name": "contact_method",
+          "type": "select",
+          "required": false,
+          "label": "Preferred method of contact",
+          "options": [
+            "Choose one",
+            "Phone",
+            "Email",
+            "Phone or email"
+          ],
+          "value": "",
+          "line": 74
+        },
+        {
+          "name": "sale_address",
+          "type": "text",
+          "required": false,
+          "label": "Address of home to be sold",
+          "options": [],
+          "value": "",
+          "line": 83
+        },
+        {
+          "name": "bedrooms",
+          "type": "select",
+          "required": false,
+          "label": "Bedrooms",
+          "options": [
+            "Choose",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5+"
+          ],
+          "value": "",
+          "line": 86
+        },
+        {
+          "name": "bathrooms",
+          "type": "select",
+          "required": false,
+          "label": "Bathrooms",
+          "options": [
+            "Choose",
+            "1",
+            "1.5",
+            "2",
+            "2.5",
+            "3",
+            "3.5",
+            "4",
+            "4.5",
+            "5+"
+          ],
+          "value": "",
+          "line": 94
+        },
+        {
+          "name": "square_footage",
+          "type": "text",
+          "required": false,
+          "label": "Square footage",
+          "options": [],
+          "value": "",
+          "line": 101
+        },
+        {
+          "name": "year_built",
+          "type": "text",
+          "required": false,
+          "label": "Year built",
+          "options": [],
+          "value": "",
+          "line": 102
+        },
+        {
+          "name": "pool",
+          "type": "select",
+          "required": false,
+          "label": "Pool",
+          "options": [
+            "Choose",
+            "Yes",
+            "No"
+          ],
+          "value": "",
+          "line": 105
+        },
+        {
+          "name": "comments",
+          "type": "textarea",
+          "required": false,
+          "label": "Additional comments",
+          "options": [],
+          "value": "",
+          "line": 112
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/listings.html",
+      "line": 110,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Listings & Video Tours",
+          "line": 111
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Listings & Video Tours",
+          "line": 112
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 113
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 114
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 115
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 116
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 117
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/meet-jack.html",
+      "line": 187,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Meet Jack",
+          "line": 188
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Meet Jack",
+          "line": 189
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 190
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 191
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 192
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 193
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 194
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/newsletters.html",
+      "line": 265,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Newsletters",
+          "line": 266
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Newsletters",
+          "line": 267
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 268
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 269
+        },
+        {
+          "name": "deliver",
+          "type": "checkbox",
+          "required": false,
+          "label": "Email",
+          "options": [],
+          "value": "Email",
+          "line": 273
+        },
+        {
+          "name": "deliver",
+          "type": "checkbox",
+          "required": false,
+          "label": "Printed copy",
+          "options": [],
+          "value": "Print",
+          "line": 274
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": false,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 277
+        },
+        {
+          "name": "address",
+          "type": "text",
+          "required": false,
+          "label": "Mailing address (for the printed copy)",
+          "options": [],
+          "value": "",
+          "line": 278
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/newsletters.html",
+      "line": 296,
+      "action": null,
+      "method": null,
+      "fields": [
+        {
+          "name": null,
+          "type": "search",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 298
+        }
+      ],
+      "category": "archive-search"
+    },
+    {
+      "source": "site/past-sales.html",
+      "line": 120,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Past Sales",
+          "line": 121
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Past Sales",
+          "line": 122
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 123
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 124
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 125
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 126
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 127
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/reviews.html",
+      "line": 233,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Reviews",
+          "line": 234
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Reviews",
+          "line": 235
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 236
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 237
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 238
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 239
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 240
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/sell.html",
+      "line": 286,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Sell With Jack",
+          "line": 287
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Sell With Jack",
+          "line": 288
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 289
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 290
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 291
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 292
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 293
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/sites.html",
+      "line": 92,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Communities",
+          "line": 93
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Communities",
+          "line": 94
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 95
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 96
+        },
+        {
+          "name": "phone",
+          "type": "tel",
+          "required": true,
+          "label": "Phone",
+          "options": [],
+          "value": "",
+          "line": 97
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 98
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": false,
+          "label": "Message",
+          "options": [],
+          "value": "",
+          "line": 99
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/newsletters/newsletters.html",
+      "line": 262,
+      "action": "/api/contact",
+      "method": "post",
+      "fields": [
+        {
+          "name": "_subject",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Klemm site — Newsletters",
+          "line": 263
+        },
+        {
+          "name": "Page",
+          "type": "hidden",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "Newsletters",
+          "line": 264
+        },
+        {
+          "name": "_gotcha",
+          "type": "text",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 265
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "Name",
+          "options": [],
+          "value": "",
+          "line": 266
+        },
+        {
+          "name": "deliver",
+          "type": "checkbox",
+          "required": false,
+          "label": "Email",
+          "options": [],
+          "value": "Email",
+          "line": 270
+        },
+        {
+          "name": "deliver",
+          "type": "checkbox",
+          "required": false,
+          "label": "Printed copy",
+          "options": [],
+          "value": "Print",
+          "line": 271
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": false,
+          "label": "Email",
+          "options": [],
+          "value": "",
+          "line": 274
+        },
+        {
+          "name": "address",
+          "type": "text",
+          "required": false,
+          "label": "Mailing address (for the printed copy)",
+          "options": [],
+          "value": "",
+          "line": 275
+        }
+      ],
+      "category": "contact"
+    },
+    {
+      "source": "site/newsletters/newsletters.html",
+      "line": 292,
+      "action": null,
+      "method": null,
+      "fields": [
+        {
+          "name": null,
+          "type": "search",
+          "required": false,
+          "label": "",
+          "options": [],
+          "value": "",
+          "line": 294
+        }
+      ],
+      "category": "archive-search"
+    }
+  ],
+  "summary": {
+    "contact_forms": 24,
+    "contact_forms_requiring_email": 19,
+    "archive_search_forms": 2
+  }
+}

@@ -19,6 +19,8 @@
   button.addEventListener('click',()=>{button.closest('.area-list').querySelectorAll('.area-select').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));});
  });
  document.querySelectorAll('.hero-media video').forEach(video=>{
+  const heroRate=Number(video.dataset.heroRate);
+  if(heroRate>0 && heroRate<=1){video.defaultPlaybackRate=heroRate;video.playbackRate=heroRate;}
   const button=document.createElement('button');button.type='button';button.className='motion-toggle';
   const sync=()=>{button.textContent=video.paused?'Play background':'Pause background';button.setAttribute('aria-label',button.textContent+' video');};
   video.addEventListener('play',sync);video.addEventListener('pause',sync);
@@ -43,7 +45,7 @@
   render();
  });
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
- document.querySelectorAll('form.contact-form[action^="https://formspree.io/"]').forEach(form=>{
+ document.querySelectorAll('form.contact-form[action]').forEach(form=>{
   const button=form.querySelector('button[type=submit]');if(!button)return;
   const swap=document.createElement('div');swap.className='form-swap';
   form.before(swap);swap.append(form);
@@ -66,14 +68,33 @@
    swap.addEventListener('transitionend',onEnd);
    setTimeout(()=>{if(swap.classList.contains('is-swapping'))settle();},900);
   };
+  const emails=[...form.querySelectorAll('input[type=email]')];
+  const validEmail=v=>/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.trim());
+  const fieldError=(input,message)=>{
+   const host=input.closest('label')||input;
+   let note=host.nextElementSibling;
+   if(!note||!note.classList.contains('field-error')){
+    if(!message){input.removeAttribute('aria-invalid');return;}
+    note=document.createElement('p');note.className='field-error';note.setAttribute('role','alert');host.after(note);
+   }
+   if(!message){note.remove();input.removeAttribute('aria-invalid');return;}
+   note.textContent=message;input.setAttribute('aria-invalid','true');
+  };
+  const emailNote=input=>input.value.trim()?(validEmail(input.value)?'':'That doesn\u2019t look like a complete email address.'):(input.required?'Please add an email address so Jack can reach you.':'');
+  emails.forEach(input=>{
+   input.addEventListener('blur',()=>fieldError(input,emailNote(input)));
+   input.addEventListener('input',()=>{if(input.getAttribute('aria-invalid'))fieldError(input,emailNote(input));});
+  });
   form.addEventListener('submit',async event=>{
    event.preventDefault();
+   const badEmail=emails.find(i=>emailNote(i));
+   if(badEmail){fieldError(badEmail,emailNote(badEmail));badEmail.focus();return;}
    const label=button.textContent;
    button.style.minWidth=button.offsetWidth+'px';
    button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='Sending';button.classList.add('is-sending');
    const started=Date.now();
    try{
-    const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    const response=await fetch(form.action,{method:'POST',body:new URLSearchParams(new FormData(form)),headers:{Accept:'application/json'}});
     if(!response.ok)throw new Error(response.status);
     await new Promise(r=>setTimeout(r,Math.max(0,450-(Date.now()-started))));
     button.classList.remove('is-sending');button.textContent='Sent';button.classList.add('is-sent');

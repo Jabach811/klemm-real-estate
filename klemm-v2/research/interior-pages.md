@@ -1,0 +1,49 @@
+# Interior page audit and V2 plan
+
+Source review only, 2026-09-09. No source pages changed. Layout observations are inferred from HTML/CSS; browser rendering, image crops, font loading and mobile appearance remain unverified. References below are relative to the read-only source root `C:/Dev/Joel's Workspaces/Personal/Work/Jack Klemm Real Estate/Klemm`.
+
+## Keep the approved identity
+
+- Retain Libre Caslon Display headings, Libre Caslon Text emphasis/quotes, Inter body and controls. Both home and interiors explicitly load these families (`home/index.html:17`, `site/styles.css:8-10`). Do not adopt the experimental newsletter preview's Georgia replacement as brand authority.
+- Retain warm light paper, dark brown ink and brick accent. Interior values are paper #F6F1E8, ink #1B1712, brick #A03D22 (`site/styles.css:1-11`). Bright primary sections should dominate; large dark secondary bands can become light sections with brick details, where appropriate.
+- Keep the personal voice: the homepage's “The agent who answers his own phone” (`home/index.html:111`), Buy's “Then go live your life” (`site/buy.html:154`), and Sell's “Jack does the rest” (`site/sell.html:180`) are distinguishing copy, not problems to replace with generic sales claims.
+- Home declares `<base href="../site/">` (`home/index.html:4`), so its relative `styles.css` link (`home/index.html:18`) correctly resolves to `site/styles.css`. Home and interiors already share the same stylesheet and brand tokens.
+
+## Shared changes before page-specific polish
+
+1. Unify navigation and route destinations. Home has nine links and production URLs (`home/index.html:22`); most interiors have seven local links, with Contact (`site/buy.html:149`), while Meet Jack substitutes Meet Jack (`site/meet-jack.html:142`). The four lead pages retain the nine-link production navigation (`site/find-me-a-home.html:49`). Choose one consistent local V2 navigation, same order and labels, preserving production routes at release. Keep direct phone access.
+2. Retain typefaces but reduce repeated interior hero height. Several heroes use 72–150px top padding, 56–110px bottom padding and headings up to 80px (`site/about.html:20-26`, `site/contact.html:20-26`, `site/past-sales.html:20-26`). Use a smaller shared interior heading rhythm, especially on forms, archives and listings. Homepage storytelling can remain more spacious.
+3. One common footer, contact pattern, button treatment and current-page state. Avoid repeating oversized “start a conversation” sections beneath every short content section. Put the next useful action close to the relevant content.
+4. Email is required on every form under the user's new instruction. Existing lead and general contact forms already mark it required (e.g. `site/find-me-a-home.html:65`, `site/meet-jack.html:194`); newsletter email does not (`site/newsletters.html:277`). Retain required email for printed newsletter delivery too. Correct “name and number” helper copy where it understates requirements (`site/meet-jack.html:185`). Backend enforcement is a separate audit.
+
+## Per-page direction
+
+| Page | Decision | Specific V2 plan and evidence |
+|---|---|---|
+| Buy | Tighten | Keep personal headline and three-step explanation (`site/buy.html:154,166`). Bring search/request action into the first section; shorten vertical gaps. Replace the oversized dark commute section with a lighter local-advice block (`site/buy.html:95,201`). Preserve the locally specific commute copy and existing form intent. |
+| Sell | Retain + tighten | Preserve headline, six steps, actual preparation imagery and hands-on service story (`site/sell.html:180,190,260`). Keep photo stack only if crops and controls test well. Reduce repeated headline scale and lighten the dark crew/payment band (`site/sell.html:121`). Put free valuation beside the process entry, then a focused form (`site/sell.html:284-293`). |
+| Communities / sites | Retain structure | Six-community image mosaic is already distinct and useful (`site/sites.html:7-18,36-66`). Preserve actual local photos and concise descriptions. Consider light captions outside photos where legibility/crops fail; keep dark image overlay only as needed for readable type. Do not turn the whole page into abstract cards. Confirm relationship of Woodbridge to Manteca rather than calling it a separate city. |
+| Newsletters | Redesign layout within brand | Retain “Written by Jack. Not a marketing company” voice (`site/newsletters.html:258`). Latest issue first, archive next, signup after the useful sample; current signup precedes archive (`site/newsletters.html:263,292`). Reuse search/filter improvements from preview while restoring Caslon fonts, approved header/footer and required email. Keep all historical issues and genuine search data. Remove “for how much” unless issue content actually contains verified sale prices (`site/newsletters.html:259`). Rankings become secondary below archive. |
+| About | Consolidate | Good personal origin/story and familiar portrait; avoid separate duplicated biography (`site/about.html:85,95`). Merge into Meet Jack and preserve incoming about route. |
+| Contact | Consolidate with immediate access | Keep call/text, email and office details (`site/contact.html:121,128,135`) and direct form. Contact navigation should land at the merged page's contact section, not require a reader to scroll through the biography. Remove duplicated large intro and dark testimonial section (`site/contact.html:20-26,86`). |
+| Meet Jack | Best consolidation base | Already contains biography, two reviews, a form, direct contact details and another quote (`site/meet-jack.html:151-224`). Keep a bright portrait-and-story first section with visible contact shortcut. Add anchored About / Reviews / Contact navigation. Shorten repetitive phone-answering claims and repeated large quote sections; keep honest concrete copy. |
+| Reviews | Consolidate selected proof; preserve full access | Keep source-attributed client words, displayed rating source/date and links. The title commits to 123 five-star reviews (`site/reviews.html:148`); treat that as a dated source claim, not a permanently live number. Put selected excerpts on Meet Jack; retain complete existing review content through a reviews anchor or archive route. Avoid “Read all 123 reviews” pointing at a smaller excerpt collection (`site/meet-jack.html:178`). The dark quote band can become a light inset (`site/reviews.html:78-80`). |
+| Listings & tours | Tighten and distinguish | A short current-listings action already links to external inventory; historical tours are explicitly marked archival (`site/listings.html:58,62`). Preserve that distinction prominently. Current listings first, past marketing examples second; concise card labels and reliable video controls. Do not imply archive tours are available homes. Reduce hero before useful links (`site/listings.html:20-26`). |
+| Past sales | Tighten, preserve honest scope | Keep public sales-profile destination and neighborhood comparison action (`site/past-sales.html:99`). Stats already have a checked date and buyer/seller representation caveat: retain them. Reduce 80px hero and large spacer sections; do not invent a local transaction ledger or live inventory from aggregate claims (`site/past-sales.html:20-26,88-99`). |
+| Find me a home | Retain form, tighten presentation | Preserve intent-specific questions and familiar workflow. Keep the direct headline (`site/find-me-a-home.html:54`) and required email (`:65`). Replace 72–150px lead top space plus 48–96px form gap with compact introduction and visible first fields (`:19-43`). Shared navigation and clear field groups. |
+| Find me an investment property | Retain separate intent | Preserve investor questions and direct heading (`site/find-me-an-investment-property.html:54,59`). Same compact lead layout, required email (`:65`), and common controls; do not merge investment requirements into the basic home request. |
+| Free current market value | Retain route, tighten | Plain heading and no-charge positioning are useful (`site/i-want-a-free-cmv.html:54-55`). Keep property questions, distinguish this valuation request from a commitment to sell, and use the same lead-form layout. Email already required (`:65`). |
+| I want to sell my property | Retain route, tighten | Preserve decisive “I want to move. Let's get this going” voice (`site/i-want-to-sell-my-property.html:54`). Keep separate seller intent and property details. Same compact shell and form pattern; required email already present (`:65`). |
+
+## Consolidation and route preservation
+
+Use `meet-jack.html` as the content base for one About Jack page with stable `#about`, `#reviews` and `#contact` sections. Add visible Call / Email / Send a message choices near its top. Map existing about URLs to the biography section, contact URLs to contact, and reviews URLs to reviews or the complete preserved review collection. Keep old URLs operational with deliberate redirects or equivalent route content; no dead links, blanket home redirects or silent review loss. Production pretty URLs and source .html paths require separate mapping in the release plan. Keep past sales separate because it answers a different question.
+
+## Build order after audit approval
+
+1. Retain the verified shared stylesheet; establish one consistent light brand shell and route map.
+2. Build the merged About Jack page and one lead form as the shared pattern.
+3. Apply compact spacing/navigation to Buy, Sell, Listings and Past Sales; retain page-specific content.
+4. Adapt newsletter improvements to the approved brand; require email for all delivery modes.
+5. Verify every retained route, form field/response, actual image, mobile layout and keyboard path in an authorized browser context before declaring visual completion.
+

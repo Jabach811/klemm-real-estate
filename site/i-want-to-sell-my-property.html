@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Want to Sell My Property — Klemm Real Estate | Tracy, CA</title>
+<meta name="description" content="Fill this in and Jack will call you to plan the sale of your property.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="I Want to Sell My Property — Klemm Real Estate | Tracy, CA">
+<meta property="og:description" content="Fill this in and Jack will call you to plan the sale of your property.">
+<meta property="og:url" content="https://klemmre.com/i-want-to-sell-my-property.html">
+<meta property="og:image" content="https://klemmre.com/home/assets/Klemm%20windmill%20hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .lead-hero {
+    padding: clamp(72px, 12vh, 150px) var(--pad) clamp(40px, 6vh, 72px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .lead-hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 68px);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    max-width: 20ch;
+    margin-top: 18px;
+  }
+  .lead-hero p { margin-top: 24px; max-width: 54ch; font-size: 16px; color: var(--ink-soft); }
+  .lead-form { padding: clamp(48px, 8vh, 96px) var(--pad) clamp(72px, 11vh, 140px); }
+  .lead-group {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: clamp(22px, 3.5vh, 40px);
+    padding-top: clamp(22px, 3.5vh, 40px);
+    border-top: 1px solid var(--hairline);
+  }
+  .lead-form .contact-form > .lead-group:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+</style>
+</head>
+<body id="top">
+
+<a class="skip-link" href="i-want-to-sell-my-property.html#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../home/index.html">Klemm <span>Real Estate</span></a><a class="header-phone" href="tel:+12093211094" aria-label="Call Jack at 209.321.1094"><span class="phone-full">209.321.1094</span><span class="phone-short">Call</span></a><nav id="primary-nav" aria-label="Main navigation"><a href="../home/index.html">Home</a><a href="https://www.klemmre.com/about/">About</a><a href="https://www.klemmre.com/featured-listings/">Featured Listings</a><a href="https://www.klemmre.com/i-want-a-free-cmv/">Sellers</a><a href="https://www.klemmre.com/find-me-a-home/">Buyers</a><a href="https://www.klemmre.com/latest-news/">Newsletters</a><a href="https://www.klemmre.com/past-sales/">Past Sales</a><a href="https://www.klemmre.com/communities/">Communities</a><a href="https://www.klemmre.com/contact/">Contact</a></nav></header>
+<main id="main" tabindex="-1">
+
+<section class="lead-hero">
+  <span class="eyebrow">Sellers</span>
+  <h1>I want to move. Let's get this going.</h1>
+  <p>Fill this in and Jack will call you to plan the sale of your property.</p>
+</section>
+
+<section class="lead-form">
+  <form class="contact-form" data-done="Got it. Jack will call you about your property." action="/api/contact" method="post">
+    <input type="hidden" name="_subject" value="Klemm site — I Want to Sell My Property">
+    <input type="hidden" name="Page" value="I Want to Sell My Property">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+  <h3 class="lead-group">Contact information</h3>
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <label>Email<input type="email" name="email" autocomplete="email" required></label>
+  <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+  <label>Address<input type="text" name="your_address" autocomplete="street-address"></label>
+  <label>City<input type="text" name="your_city" autocomplete="address-level2"></label>
+  <label>State<input type="text" name="your_state" autocomplete="address-level1"></label>
+  <label>Zip<input type="text" name="your_zip" autocomplete="postal-code"></label>
+  <label>Approximate date of move<input type="text" name="move_date"></label>
+  <span class="field-label">Preferred method of contact
+    <div class="select">
+      <select name="contact_method" data-placeholder="Choose one" aria-label="Preferred method of contact">
+        <option value="">Choose one</option>
+        <option>Phone</option>
+        <option>Email</option>
+        <option>Phone or email</option>
+      </select>
+    </div>
+  </span>
+  <h3 class="lead-group">Home details</h3>
+  <label>Address of home to be sold<input type="text" name="sale_address"></label>
+  <span class="field-label">Bedrooms
+    <div class="select">
+      <select name="bedrooms" data-placeholder="Choose" aria-label="Bedrooms">
+        <option value="">Choose</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+      </select>
+    </div>
+  </span>
+  <span class="field-label">Bathrooms
+    <div class="select">
+      <select name="bathrooms" data-placeholder="Choose" aria-label="Bathrooms">
+        <option value="">Choose</option>
+        <option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option>
+        <option>3.5</option><option>4</option><option>4.5</option><option>5+</option>
+      </select>
+    </div>
+  </span>
+  <label>Square footage<input type="text" name="square_footage"></label>
+  <label>Year built<input type="text" name="year_built"></label>
+  <span class="field-label">Pool
+    <div class="select">
+      <select name="pool" data-placeholder="Choose" aria-label="Pool">
+        <option value="">Choose</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+  </span>
+  <label>Additional comments<textarea name="comments" rows="5"></textarea></label>
+    <div class="form-actions">
+      <button class="btn" type="submit">Send to Jack</button>
+      <p>Or call or text Jack at <a href="tel:+12093211094">209.321.1094</a>.</p>
+    </div>
+  </form>
+</section>
+
+</main>
+<footer>
+  <div class="footer-links"><a href="about.html">About Jack</a><a href="reviews.html">Client reviews</a><a href="past-sales.html">Sales record</a><a href="sms:+12093211094">Text Jack</a></div>
+  <div class="foot-grid">
+    <div class="foot-name">Jack Klemm<span class="foot-brand">Klemm Real Estate</span></div>
+    <div class="foot-contact">
+      <a href="tel:+12093211094">209.321.1094</a><br>
+      <a href="mailto:jack@klemmre.com">jack@klemmre.com</a><br>
+      672 W 11th St, Ste 216, Tracy, CA 95376
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 Klemm Real Estate · DRE #01004092</span>
+    <span><a href="https://www.facebook.com/JackKlemmRE" style="color:inherit">Facebook</a> · <a href="https://www.zillow.com/profile/JackCKlemm" style="color:inherit">Zillow</a></span>
+  </div>
+</footer>
+
+<script src="../shared/site.js" defer></script>
+<script src="../shared/forms.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* One introduction and emphasis system for all interior landing pages. */
+.interior-intro { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); align-items:center; gap:48px; min-height:360px; padding-block:40px; }
+.interior-heading h1 { margin:16px 0 0; font:400 clamp(38px,4.2vw,56px)/1.12 var(--serif); letter-spacing:-.01em; max-width:22ch; }
+.interior-heading h1 em { font:italic 400 .82em/1.2 var(--serif-text); color:var(--brick); }
+.interior-deck { min-width:0; color:var(--ink-soft); }
+.interior-deck > p { max-width:55ch; }
+.interior-deck > p + p { margin-top:14px; }
+.interior-actions { display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px; margin-top:24px; }
+.interior-actions > a:not(.btn) { font-size:14px; }
+.interior-buy-image .buy-photo img { width:100%; height:340px; aspect-ratio:auto; object-fit:cover; object-position:center 55%; }
+h2 em { font:italic 400 .88em/1.2 var(--serif-text); color:var(--brick); }
+@media(max-width:850px) {
+  .interior-intro { grid-template-columns:1fr; align-content:center; gap:24px; min-height:0; padding-block:32px; }
+  .interior-heading h1 { max-width:24ch; }
+  .interior-buy-image .buy-photo img { height:auto; aspect-ratio:3/2; }
+}
+
+.review-card .hl { font-family:var(--serif-text); font-style:italic; font-weight:400; }

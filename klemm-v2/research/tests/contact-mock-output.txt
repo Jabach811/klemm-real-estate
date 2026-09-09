@@ -1,0 +1,6 @@
+PASS missing email: 422, no sends
+PASS valid email: two sends, correct recipients and reply paths
+CONFIRMED duplicate delivery values: raw string body retains Print only
+CONFIRMED second-send failure: 502 even though first send succeeded
+(node:99928) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

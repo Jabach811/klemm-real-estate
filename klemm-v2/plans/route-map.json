@@ -1,0 +1,1453 @@
+{
+  "status": "Proposed route ownership; not active configuration",
+  "unresolved": "Verify alternate legacy host before domain cutover. www.klemmre.com alone cannot remain a legacy origin when it points at V2.",
+  "additional_v2_pages": [
+    "/buy/",
+    "/sell/",
+    "/meet-jack/",
+    "/newsletters/",
+    "/woodbridgere.html"
+  ],
+  "routes": [
+    {
+      "legacy_path": "/",
+      "v2_source": "home/index.html",
+      "proposed_v2_path": "/",
+      "transition_owner": "approved-front",
+      "status": "proposal-not-implemented",
+      "notes": "Approved front page; retain current public destination behavior."
+    },
+    {
+      "legacy_path": "/about/",
+      "v2_source": "site/meet-jack.html",
+      "proposed_v2_path": "/meet-jack/#about",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Proposed merged page; preserve biography and add stable anchor."
+    },
+    {
+      "legacy_path": "/contact/",
+      "v2_source": "site/meet-jack.html",
+      "proposed_v2_path": "/meet-jack/#contact",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Direct contact access; no forced biography scroll."
+    },
+    {
+      "legacy_path": "/testimonials/",
+      "v2_source": "site/reviews.html",
+      "proposed_v2_path": "/reviews/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Keep complete existing review collection accessible; selected reviews on Meet Jack."
+    },
+    {
+      "legacy_path": "/featured-listings/",
+      "v2_source": "site/listings.html",
+      "proposed_v2_path": "/listings/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Current inventory provider remains external until a replacement is verified."
+    },
+    {
+      "legacy_path": "/past-sales/",
+      "v2_source": "site/past-sales.html",
+      "proposed_v2_path": "/past-sales/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Keep profile sources, checked dates and representation caveats."
+    },
+    {
+      "legacy_path": "/communities/",
+      "v2_source": "site/sites.html",
+      "proposed_v2_path": "/communities/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Retain six community destinations and current aliases."
+    },
+    {
+      "legacy_path": "/delivery-preference/",
+      "v2_source": "site/newsletters.html",
+      "proposed_v2_path": "/newsletters/#signup",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Must preserve legacy preference/removal fields and print frequency."
+    },
+    {
+      "legacy_path": "/latest-news/",
+      "v2_source": null,
+      "proposed_v2_path": null,
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Do not relabel generic news as the monthly newsletter archive; inspect and retain legacy content separately."
+    },
+    {
+      "legacy_path": "/i-want-a-free-show-ready-consultation/",
+      "v2_source": null,
+      "proposed_v2_path": null,
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "No local equivalent; keep legacy destination until scope/fields are confirmed."
+    },
+    {
+      "legacy_path": "/find-me-a-home/",
+      "v2_source": "site/find-me-a-home.html",
+      "proposed_v2_path": "/find-me-a-home/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve familiar form intent, labels and all questions; email required."
+    },
+    {
+      "legacy_path": "/find-me-an-investment-property/",
+      "v2_source": "site/find-me-an-investment-property.html",
+      "proposed_v2_path": "/find-me-an-investment-property/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve familiar form intent, labels and all questions; email required."
+    },
+    {
+      "legacy_path": "/i-want-a-free-cmv/",
+      "v2_source": "site/i-want-a-free-cmv.html",
+      "proposed_v2_path": "/i-want-a-free-cmv/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve familiar form intent, labels and all questions; email required."
+    },
+    {
+      "legacy_path": "/i-want-to-sell-my-property/",
+      "v2_source": "site/i-want-to-sell-my-property.html",
+      "proposed_v2_path": "/i-want-to-sell-my-property/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve familiar form intent, labels and all questions; email required."
+    },
+    {
+      "legacy_path": "/communities/tracy/",
+      "v2_source": "home/index.html",
+      "proposed_v2_path": "/",
+      "transition_owner": "approved-front/legacy-alias-pending",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve legacy nested city URL in addition to approved current alias; exact cutover pending."
+    },
+    {
+      "legacy_path": "/communities/mountain-house/",
+      "v2_source": "cities/mountain-house/index.html",
+      "proposed_v2_path": "/mountainhousere.html",
+      "transition_owner": "approved-front/legacy-alias-pending",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve legacy nested city URL in addition to approved current alias; exact cutover pending."
+    },
+    {
+      "legacy_path": "/communities/manteca/",
+      "v2_source": "cities/manteca/index.html",
+      "proposed_v2_path": "/mantecare.html",
+      "transition_owner": "approved-front/legacy-alias-pending",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve legacy nested city URL in addition to approved current alias; exact cutover pending."
+    },
+    {
+      "legacy_path": "/communities/lathrop/",
+      "v2_source": "cities/lathrop/index.html",
+      "proposed_v2_path": "/lathropre.html",
+      "transition_owner": "approved-front/legacy-alias-pending",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve legacy nested city URL in addition to approved current alias; exact cutover pending."
+    },
+    {
+      "legacy_path": "/communities/river-islands-in-lathrop-ca/",
+      "v2_source": "cities/river-islands/index.html",
+      "proposed_v2_path": "/riverislandsre.html",
+      "transition_owner": "approved-front/legacy-alias-pending",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve legacy nested city URL in addition to approved current alias; exact cutover pending."
+    },
+    {
+      "legacy_path": "/august-2026/",
+      "v2_source": "site/newsletters/august-2026.html",
+      "proposed_v2_path": "/newsletters/august-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 68 source sale records."
+    },
+    {
+      "legacy_path": "/july-2026/",
+      "v2_source": "site/newsletters/july-2026.html",
+      "proposed_v2_path": "/newsletters/july-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 69 source sale records."
+    },
+    {
+      "legacy_path": "/june-2026/",
+      "v2_source": "site/newsletters/june-2026.html",
+      "proposed_v2_path": "/newsletters/june-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 56 source sale records."
+    },
+    {
+      "legacy_path": "/may-2026/",
+      "v2_source": "site/newsletters/may-2026.html",
+      "proposed_v2_path": "/newsletters/may-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 63 source sale records."
+    },
+    {
+      "legacy_path": "/april-2026/",
+      "v2_source": "site/newsletters/april-2026.html",
+      "proposed_v2_path": "/newsletters/april-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 54 source sale records."
+    },
+    {
+      "legacy_path": "/march-2026/",
+      "v2_source": "site/newsletters/march-2026.html",
+      "proposed_v2_path": "/newsletters/march-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 27 source sale records."
+    },
+    {
+      "legacy_path": "/february-2026/",
+      "v2_source": "site/newsletters/february-2026.html",
+      "proposed_v2_path": "/newsletters/february-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 19 source sale records."
+    },
+    {
+      "legacy_path": "/january-2026/",
+      "v2_source": "site/newsletters/january-2026.html",
+      "proposed_v2_path": "/newsletters/january-2026/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 52 source sale records."
+    },
+    {
+      "legacy_path": "/december-2025/",
+      "v2_source": "site/newsletters/december-2025.html",
+      "proposed_v2_path": "/newsletters/december-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 58 source sale records."
+    },
+    {
+      "legacy_path": "/november-2025/",
+      "v2_source": "site/newsletters/november-2025.html",
+      "proposed_v2_path": "/newsletters/november-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 55 source sale records."
+    },
+    {
+      "legacy_path": "/october-2025/",
+      "v2_source": "site/newsletters/october-2025.html",
+      "proposed_v2_path": "/newsletters/october-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 53 source sale records."
+    },
+    {
+      "legacy_path": "/september-2025/",
+      "v2_source": "site/newsletters/september-2025.html",
+      "proposed_v2_path": "/newsletters/september-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 50 source sale records."
+    },
+    {
+      "legacy_path": "/august-2025/",
+      "v2_source": "site/newsletters/august-2025.html",
+      "proposed_v2_path": "/newsletters/august-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 53 source sale records."
+    },
+    {
+      "legacy_path": "/july-2025/",
+      "v2_source": "site/newsletters/july-2025.html",
+      "proposed_v2_path": "/newsletters/july-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 65 source sale records."
+    },
+    {
+      "legacy_path": "/june-2025/",
+      "v2_source": "site/newsletters/june-2025.html",
+      "proposed_v2_path": "/newsletters/june-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 54 source sale records."
+    },
+    {
+      "legacy_path": "/may-2025/",
+      "v2_source": "site/newsletters/may-2025.html",
+      "proposed_v2_path": "/newsletters/may-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 53 source sale records."
+    },
+    {
+      "legacy_path": "/april-2025/",
+      "v2_source": "site/newsletters/april-2025.html",
+      "proposed_v2_path": "/newsletters/april-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 45 source sale records."
+    },
+    {
+      "legacy_path": "/march-2025/",
+      "v2_source": "site/newsletters/march-2025.html",
+      "proposed_v2_path": "/newsletters/march-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 38 source sale records."
+    },
+    {
+      "legacy_path": "/february-2025/",
+      "v2_source": "site/newsletters/february-2025.html",
+      "proposed_v2_path": "/newsletters/february-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 46 source sale records."
+    },
+    {
+      "legacy_path": "/january-2025/",
+      "v2_source": "site/newsletters/january-2025.html",
+      "proposed_v2_path": "/newsletters/january-2025/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 49 source sale records."
+    },
+    {
+      "legacy_path": "/december-2024/",
+      "v2_source": "site/newsletters/december-2024.html",
+      "proposed_v2_path": "/newsletters/december-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 52 source sale records."
+    },
+    {
+      "legacy_path": "/november-2024/",
+      "v2_source": "site/newsletters/november-2024.html",
+      "proposed_v2_path": "/newsletters/november-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 53 source sale records."
+    },
+    {
+      "legacy_path": "/october-2024/",
+      "v2_source": "site/newsletters/october-2024.html",
+      "proposed_v2_path": "/newsletters/october-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 44 source sale records."
+    },
+    {
+      "legacy_path": "/september-2024/",
+      "v2_source": "site/newsletters/september-2024.html",
+      "proposed_v2_path": "/newsletters/september-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 58 source sale records."
+    },
+    {
+      "legacy_path": "/august-2024/",
+      "v2_source": "site/newsletters/august-2024.html",
+      "proposed_v2_path": "/newsletters/august-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/july-2024/",
+      "v2_source": "site/newsletters/july-2024.html",
+      "proposed_v2_path": "/newsletters/july-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 69 source sale records."
+    },
+    {
+      "legacy_path": "/june-2024/",
+      "v2_source": "site/newsletters/june-2024.html",
+      "proposed_v2_path": "/newsletters/june-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 69 source sale records."
+    },
+    {
+      "legacy_path": "/may-2024/",
+      "v2_source": "site/newsletters/may-2024.html",
+      "proposed_v2_path": "/newsletters/may-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/april-2024/",
+      "v2_source": "site/newsletters/april-2024.html",
+      "proposed_v2_path": "/newsletters/april-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 61 source sale records."
+    },
+    {
+      "legacy_path": "/march-2024/",
+      "v2_source": "site/newsletters/march-2024.html",
+      "proposed_v2_path": "/newsletters/march-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 37 source sale records."
+    },
+    {
+      "legacy_path": "/february-2024/",
+      "v2_source": "site/newsletters/february-2024.html",
+      "proposed_v2_path": "/newsletters/february-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 51 source sale records."
+    },
+    {
+      "legacy_path": "/january-2024/",
+      "v2_source": "site/newsletters/january-2024.html",
+      "proposed_v2_path": "/newsletters/january-2024/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 51 source sale records."
+    },
+    {
+      "legacy_path": "/december-2023/",
+      "v2_source": "site/newsletters/december-2023.html",
+      "proposed_v2_path": "/newsletters/december-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 45 source sale records."
+    },
+    {
+      "legacy_path": "/november-2023/",
+      "v2_source": "site/newsletters/november-2023.html",
+      "proposed_v2_path": "/newsletters/november-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 47 source sale records."
+    },
+    {
+      "legacy_path": "/october-2023/",
+      "v2_source": "site/newsletters/october-2023.html",
+      "proposed_v2_path": "/newsletters/october-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 54 source sale records."
+    },
+    {
+      "legacy_path": "/september-2023/",
+      "v2_source": "site/newsletters/september-2023.html",
+      "proposed_v2_path": "/newsletters/september-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 49 source sale records."
+    },
+    {
+      "legacy_path": "/august-2023/",
+      "v2_source": "site/newsletters/august-2023.html",
+      "proposed_v2_path": "/newsletters/august-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 58 source sale records."
+    },
+    {
+      "legacy_path": "/july-2023/",
+      "v2_source": "site/newsletters/july-2023.html",
+      "proposed_v2_path": "/newsletters/july-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 52 source sale records."
+    },
+    {
+      "legacy_path": "/june-2023/",
+      "v2_source": "site/newsletters/june-2023.html",
+      "proposed_v2_path": "/newsletters/june-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 67 source sale records."
+    },
+    {
+      "legacy_path": "/may-2023/",
+      "v2_source": "site/newsletters/may-2023.html",
+      "proposed_v2_path": "/newsletters/may-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 39 source sale records."
+    },
+    {
+      "legacy_path": "/april-2023/",
+      "v2_source": "site/newsletters/april-2023.html",
+      "proposed_v2_path": "/newsletters/april-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/march-2023/",
+      "v2_source": "site/newsletters/march-2023.html",
+      "proposed_v2_path": "/newsletters/march-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 29 source sale records."
+    },
+    {
+      "legacy_path": "/february-2023/",
+      "v2_source": "site/newsletters/february-2023.html",
+      "proposed_v2_path": "/newsletters/february-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 31 source sale records."
+    },
+    {
+      "legacy_path": "/january-2023/",
+      "v2_source": "site/newsletters/january-2023.html",
+      "proposed_v2_path": "/newsletters/january-2023/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 54 source sale records."
+    },
+    {
+      "legacy_path": "/december-2022/",
+      "v2_source": "site/newsletters/december-2022.html",
+      "proposed_v2_path": "/newsletters/december-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 36 source sale records."
+    },
+    {
+      "legacy_path": "/november-2022/",
+      "v2_source": "site/newsletters/november-2022.html",
+      "proposed_v2_path": "/newsletters/november-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 61 source sale records."
+    },
+    {
+      "legacy_path": "/october-2022/",
+      "v2_source": "site/newsletters/october-2022.html",
+      "proposed_v2_path": "/newsletters/october-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 66 source sale records."
+    },
+    {
+      "legacy_path": "/september-2022/",
+      "v2_source": "site/newsletters/september-2022.html",
+      "proposed_v2_path": "/newsletters/september-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 78 source sale records."
+    },
+    {
+      "legacy_path": "/august-2022/",
+      "v2_source": "site/newsletters/august-2022.html",
+      "proposed_v2_path": "/newsletters/august-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 60 source sale records."
+    },
+    {
+      "legacy_path": "/july-2022/",
+      "v2_source": "site/newsletters/july-2022.html",
+      "proposed_v2_path": "/newsletters/july-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 63 source sale records."
+    },
+    {
+      "legacy_path": "/june-2022/",
+      "v2_source": "site/newsletters/june-2022.html",
+      "proposed_v2_path": "/newsletters/june-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 81 source sale records."
+    },
+    {
+      "legacy_path": "/may-2022/",
+      "v2_source": "site/newsletters/may-2022.html",
+      "proposed_v2_path": "/newsletters/may-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 87 source sale records."
+    },
+    {
+      "legacy_path": "/april-2022/",
+      "v2_source": "site/newsletters/april-2022.html",
+      "proposed_v2_path": "/newsletters/april-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 83 source sale records."
+    },
+    {
+      "legacy_path": "/march-2022/",
+      "v2_source": "site/newsletters/march-2022.html",
+      "proposed_v2_path": "/newsletters/march-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 60 source sale records."
+    },
+    {
+      "legacy_path": "/february-2022/",
+      "v2_source": "site/newsletters/february-2022.html",
+      "proposed_v2_path": "/newsletters/february-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 67 source sale records."
+    },
+    {
+      "legacy_path": "/january-2022/",
+      "v2_source": "site/newsletters/january-2022.html",
+      "proposed_v2_path": "/newsletters/january-2022/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 104 source sale records."
+    },
+    {
+      "legacy_path": "/december-2021/",
+      "v2_source": "site/newsletters/december-2021.html",
+      "proposed_v2_path": "/newsletters/december-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 78 source sale records."
+    },
+    {
+      "legacy_path": "/november-2021/",
+      "v2_source": "site/newsletters/november-2021.html",
+      "proposed_v2_path": "/newsletters/november-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 107 source sale records."
+    },
+    {
+      "legacy_path": "/october-2021/",
+      "v2_source": "site/newsletters/october-2021.html",
+      "proposed_v2_path": "/newsletters/october-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 107 source sale records."
+    },
+    {
+      "legacy_path": "/september-2021/",
+      "v2_source": "site/newsletters/september-2021.html",
+      "proposed_v2_path": "/newsletters/september-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 91 source sale records."
+    },
+    {
+      "legacy_path": "/august-2021/",
+      "v2_source": "site/newsletters/august-2021.html",
+      "proposed_v2_path": "/newsletters/august-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 106 source sale records."
+    },
+    {
+      "legacy_path": "/july-2021/",
+      "v2_source": "site/newsletters/july-2021.html",
+      "proposed_v2_path": "/newsletters/july-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 114 source sale records."
+    },
+    {
+      "legacy_path": "/june-2021/",
+      "v2_source": "site/newsletters/june-2021.html",
+      "proposed_v2_path": "/newsletters/june-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 93 source sale records."
+    },
+    {
+      "legacy_path": "/may-2021/",
+      "v2_source": "site/newsletters/may-2021.html",
+      "proposed_v2_path": "/newsletters/may-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 88 source sale records."
+    },
+    {
+      "legacy_path": "/april-2021/",
+      "v2_source": "site/newsletters/april-2021.html",
+      "proposed_v2_path": "/newsletters/april-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 76 source sale records."
+    },
+    {
+      "legacy_path": "/march-2021/",
+      "v2_source": "site/newsletters/march-2021.html",
+      "proposed_v2_path": "/newsletters/march-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 46 source sale records."
+    },
+    {
+      "legacy_path": "/february-2021/",
+      "v2_source": "site/newsletters/february-2021.html",
+      "proposed_v2_path": "/newsletters/february-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 47 source sale records."
+    },
+    {
+      "legacy_path": "/january-2021/",
+      "v2_source": "site/newsletters/january-2021.html",
+      "proposed_v2_path": "/newsletters/january-2021/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 77 source sale records."
+    },
+    {
+      "legacy_path": "/december-2020/",
+      "v2_source": "site/newsletters/december-2020.html",
+      "proposed_v2_path": "/newsletters/december-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 83 source sale records."
+    },
+    {
+      "legacy_path": "/november-2020/",
+      "v2_source": "site/newsletters/november-2020.html",
+      "proposed_v2_path": "/newsletters/november-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 96 source sale records."
+    },
+    {
+      "legacy_path": "/october-2020/",
+      "v2_source": "site/newsletters/october-2020.html",
+      "proposed_v2_path": "/newsletters/october-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 76 source sale records."
+    },
+    {
+      "legacy_path": "/september-2020/",
+      "v2_source": "site/newsletters/september-2020.html",
+      "proposed_v2_path": "/newsletters/september-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 78 source sale records."
+    },
+    {
+      "legacy_path": "/august-2020/",
+      "v2_source": "site/newsletters/august-2020.html",
+      "proposed_v2_path": "/newsletters/august-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 82 source sale records."
+    },
+    {
+      "legacy_path": "/july-2020/",
+      "v2_source": "site/newsletters/july-2020.html",
+      "proposed_v2_path": "/newsletters/july-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 76 source sale records."
+    },
+    {
+      "legacy_path": "/june-2020/",
+      "v2_source": "site/newsletters/june-2020.html",
+      "proposed_v2_path": "/newsletters/june-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 48 source sale records."
+    },
+    {
+      "legacy_path": "/may-2020/",
+      "v2_source": "site/newsletters/may-2020.html",
+      "proposed_v2_path": "/newsletters/may-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 50 source sale records."
+    },
+    {
+      "legacy_path": "/april-2020/",
+      "v2_source": "site/newsletters/april-2020.html",
+      "proposed_v2_path": "/newsletters/april-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 58 source sale records."
+    },
+    {
+      "legacy_path": "/march-2020/",
+      "v2_source": "site/newsletters/march-2020.html",
+      "proposed_v2_path": "/newsletters/march-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 58 source sale records."
+    },
+    {
+      "legacy_path": "/february-2020/",
+      "v2_source": "site/newsletters/february-2020.html",
+      "proposed_v2_path": "/newsletters/february-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 51 source sale records."
+    },
+    {
+      "legacy_path": "/january-2020/",
+      "v2_source": "site/newsletters/january-2020.html",
+      "proposed_v2_path": "/newsletters/january-2020/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 82 source sale records."
+    },
+    {
+      "legacy_path": "/december-2019/",
+      "v2_source": "site/newsletters/december-2019.html",
+      "proposed_v2_path": "/newsletters/december-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 53 source sale records."
+    },
+    {
+      "legacy_path": "/november-2019/",
+      "v2_source": "site/newsletters/november-2019.html",
+      "proposed_v2_path": "/newsletters/november-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 80 source sale records."
+    },
+    {
+      "legacy_path": "/october-2019/",
+      "v2_source": "site/newsletters/october-2019.html",
+      "proposed_v2_path": "/newsletters/october-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 55 source sale records."
+    },
+    {
+      "legacy_path": "/september-2019/",
+      "v2_source": "site/newsletters/september-2019.html",
+      "proposed_v2_path": "/newsletters/september-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 92 source sale records."
+    },
+    {
+      "legacy_path": "/august-2019/",
+      "v2_source": "site/newsletters/august-2019.html",
+      "proposed_v2_path": "/newsletters/august-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 73 source sale records."
+    },
+    {
+      "legacy_path": "/july-2019/",
+      "v2_source": "site/newsletters/july-2019.html",
+      "proposed_v2_path": "/newsletters/july-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 62 source sale records."
+    },
+    {
+      "legacy_path": "/june-2019/",
+      "v2_source": "site/newsletters/june-2019.html",
+      "proposed_v2_path": "/newsletters/june-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 95 source sale records."
+    },
+    {
+      "legacy_path": "/may-2019/",
+      "v2_source": "site/newsletters/may-2019.html",
+      "proposed_v2_path": "/newsletters/may-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 67 source sale records."
+    },
+    {
+      "legacy_path": "/april-2019/",
+      "v2_source": "site/newsletters/april-2019.html",
+      "proposed_v2_path": "/newsletters/april-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 65 source sale records."
+    },
+    {
+      "legacy_path": "/march-2019/",
+      "v2_source": "site/newsletters/march-2019.html",
+      "proposed_v2_path": "/newsletters/march-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 61 source sale records."
+    },
+    {
+      "legacy_path": "/february-2019/",
+      "v2_source": "site/newsletters/february-2019.html",
+      "proposed_v2_path": "/newsletters/february-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 47 source sale records."
+    },
+    {
+      "legacy_path": "/january-2019/",
+      "v2_source": "site/newsletters/january-2019.html",
+      "proposed_v2_path": "/newsletters/january-2019/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 61 source sale records."
+    },
+    {
+      "legacy_path": "/december-2018/",
+      "v2_source": "site/newsletters/december-2018.html",
+      "proposed_v2_path": "/newsletters/december-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 52 source sale records."
+    },
+    {
+      "legacy_path": "/november-2018/",
+      "v2_source": "site/newsletters/november-2018.html",
+      "proposed_v2_path": "/newsletters/november-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 80 source sale records."
+    },
+    {
+      "legacy_path": "/october-2018/",
+      "v2_source": "site/newsletters/october-2018.html",
+      "proposed_v2_path": "/newsletters/october-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 50 source sale records."
+    },
+    {
+      "legacy_path": "/september-2018/",
+      "v2_source": "site/newsletters/september-2018.html",
+      "proposed_v2_path": "/newsletters/september-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 88 source sale records."
+    },
+    {
+      "legacy_path": "/august-2018/",
+      "v2_source": "site/newsletters/august-2018.html",
+      "proposed_v2_path": "/newsletters/august-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 85 source sale records."
+    },
+    {
+      "legacy_path": "/july-2018/",
+      "v2_source": "site/newsletters/july-2018.html",
+      "proposed_v2_path": "/newsletters/july-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 114 source sale records."
+    },
+    {
+      "legacy_path": "/june-2018/",
+      "v2_source": "site/newsletters/june-2018.html",
+      "proposed_v2_path": "/newsletters/june-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 87 source sale records."
+    },
+    {
+      "legacy_path": "/may-2018/",
+      "v2_source": "site/newsletters/may-2018.html",
+      "proposed_v2_path": "/newsletters/may-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 65 source sale records."
+    },
+    {
+      "legacy_path": "/april-2018/",
+      "v2_source": "site/newsletters/april-2018.html",
+      "proposed_v2_path": "/newsletters/april-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 79 source sale records."
+    },
+    {
+      "legacy_path": "/march-2018/",
+      "v2_source": "site/newsletters/march-2018.html",
+      "proposed_v2_path": "/newsletters/march-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/february-2018/",
+      "v2_source": "site/newsletters/february-2018.html",
+      "proposed_v2_path": "/newsletters/february-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 68 source sale records."
+    },
+    {
+      "legacy_path": "/january-2018/",
+      "v2_source": "site/newsletters/january-2018.html",
+      "proposed_v2_path": "/newsletters/january-2018/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 62 source sale records."
+    },
+    {
+      "legacy_path": "/december-2017/",
+      "v2_source": "site/newsletters/december-2017.html",
+      "proposed_v2_path": "/newsletters/december-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 78 source sale records."
+    },
+    {
+      "legacy_path": "/november-2017/",
+      "v2_source": "site/newsletters/november-2017.html",
+      "proposed_v2_path": "/newsletters/november-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 84 source sale records."
+    },
+    {
+      "legacy_path": "/october-2017/",
+      "v2_source": "site/newsletters/october-2017.html",
+      "proposed_v2_path": "/newsletters/october-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 80 source sale records."
+    },
+    {
+      "legacy_path": "/september-2017/",
+      "v2_source": "site/newsletters/september-2017.html",
+      "proposed_v2_path": "/newsletters/september-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 96 source sale records."
+    },
+    {
+      "legacy_path": "/august-2017/",
+      "v2_source": "site/newsletters/august-2017.html",
+      "proposed_v2_path": "/newsletters/august-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 101 source sale records."
+    },
+    {
+      "legacy_path": "/july-2017/",
+      "v2_source": "site/newsletters/july-2017.html",
+      "proposed_v2_path": "/newsletters/july-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 105 source sale records."
+    },
+    {
+      "legacy_path": "/june-2017/",
+      "v2_source": "site/newsletters/june-2017.html",
+      "proposed_v2_path": "/newsletters/june-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 107 source sale records."
+    },
+    {
+      "legacy_path": "/may-2017/",
+      "v2_source": "site/newsletters/may-2017.html",
+      "proposed_v2_path": "/newsletters/may-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 85 source sale records."
+    },
+    {
+      "legacy_path": "/april-2017/",
+      "v2_source": "site/newsletters/april-2017.html",
+      "proposed_v2_path": "/newsletters/april-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 68 source sale records."
+    },
+    {
+      "legacy_path": "/march-2017/",
+      "v2_source": "site/newsletters/march-2017.html",
+      "proposed_v2_path": "/newsletters/march-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 49 source sale records."
+    },
+    {
+      "legacy_path": "/february-2017/",
+      "v2_source": "site/newsletters/february-2017.html",
+      "proposed_v2_path": "/newsletters/february-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 43 source sale records."
+    },
+    {
+      "legacy_path": "/january-2017/",
+      "v2_source": "site/newsletters/january-2017.html",
+      "proposed_v2_path": "/newsletters/january-2017/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 94 source sale records."
+    },
+    {
+      "legacy_path": "/december-2016/",
+      "v2_source": "site/newsletters/december-2016.html",
+      "proposed_v2_path": "/newsletters/december-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 80 source sale records."
+    },
+    {
+      "legacy_path": "/november-2016/",
+      "v2_source": "site/newsletters/november-2016.html",
+      "proposed_v2_path": "/newsletters/november-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 84 source sale records."
+    },
+    {
+      "legacy_path": "/october-2016/",
+      "v2_source": "site/newsletters/october-2016.html",
+      "proposed_v2_path": "/newsletters/october-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 74 source sale records."
+    },
+    {
+      "legacy_path": "/september-2016/",
+      "v2_source": "site/newsletters/september-2016.html",
+      "proposed_v2_path": "/newsletters/september-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 86 source sale records."
+    },
+    {
+      "legacy_path": "/august-2016/",
+      "v2_source": "site/newsletters/august-2016.html",
+      "proposed_v2_path": "/newsletters/august-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 79 source sale records."
+    },
+    {
+      "legacy_path": "/july-2016/",
+      "v2_source": "site/newsletters/july-2016.html",
+      "proposed_v2_path": "/newsletters/july-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 84 source sale records."
+    },
+    {
+      "legacy_path": "/june-2016/",
+      "v2_source": "site/newsletters/june-2016.html",
+      "proposed_v2_path": "/newsletters/june-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 89 source sale records."
+    },
+    {
+      "legacy_path": "/may-2016/",
+      "v2_source": "site/newsletters/may-2016.html",
+      "proposed_v2_path": "/newsletters/may-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 64 source sale records."
+    },
+    {
+      "legacy_path": "/april-2016/",
+      "v2_source": "site/newsletters/april-2016.html",
+      "proposed_v2_path": "/newsletters/april-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 83 source sale records."
+    },
+    {
+      "legacy_path": "/march-2016/",
+      "v2_source": "site/newsletters/march-2016.html",
+      "proposed_v2_path": "/newsletters/march-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 45 source sale records."
+    },
+    {
+      "legacy_path": "/february-2016/",
+      "v2_source": "site/newsletters/february-2016.html",
+      "proposed_v2_path": "/newsletters/february-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 62 source sale records."
+    },
+    {
+      "legacy_path": "/january-2016/",
+      "v2_source": "site/newsletters/january-2016.html",
+      "proposed_v2_path": "/newsletters/january-2016/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 72 source sale records."
+    },
+    {
+      "legacy_path": "/december-2015/",
+      "v2_source": "site/newsletters/december-2015.html",
+      "proposed_v2_path": "/newsletters/december-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 46 source sale records."
+    },
+    {
+      "legacy_path": "/november-2015/",
+      "v2_source": "site/newsletters/november-2015.html",
+      "proposed_v2_path": "/newsletters/november-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 83 source sale records."
+    },
+    {
+      "legacy_path": "/october-2015/",
+      "v2_source": "site/newsletters/october-2015.html",
+      "proposed_v2_path": "/newsletters/october-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 90 source sale records."
+    },
+    {
+      "legacy_path": "/september-2015/",
+      "v2_source": "site/newsletters/september-2015.html",
+      "proposed_v2_path": "/newsletters/september-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 87 source sale records."
+    },
+    {
+      "legacy_path": "/august-2015/",
+      "v2_source": "site/newsletters/august-2015.html",
+      "proposed_v2_path": "/newsletters/august-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 95 source sale records."
+    },
+    {
+      "legacy_path": "/july-2015/",
+      "v2_source": "site/newsletters/july-2015.html",
+      "proposed_v2_path": "/newsletters/july-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 87 source sale records."
+    },
+    {
+      "legacy_path": "/june-2015/",
+      "v2_source": "site/newsletters/june-2015.html",
+      "proposed_v2_path": "/newsletters/june-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 83 source sale records."
+    },
+    {
+      "legacy_path": "/may-2015/",
+      "v2_source": "site/newsletters/may-2015.html",
+      "proposed_v2_path": "/newsletters/may-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 80 source sale records."
+    },
+    {
+      "legacy_path": "/april-2015/",
+      "v2_source": "site/newsletters/april-2015.html",
+      "proposed_v2_path": "/newsletters/april-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 72 source sale records."
+    },
+    {
+      "legacy_path": "/march-2015/",
+      "v2_source": "site/newsletters/march-2015.html",
+      "proposed_v2_path": "/newsletters/march-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/february-2015/",
+      "v2_source": "site/newsletters/february-2015.html",
+      "proposed_v2_path": "/newsletters/february-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 54 source sale records."
+    },
+    {
+      "legacy_path": "/january-2015/",
+      "v2_source": "site/newsletters/january-2015.html",
+      "proposed_v2_path": "/newsletters/january-2015/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 57 source sale records."
+    },
+    {
+      "legacy_path": "/december-2014/",
+      "v2_source": "site/newsletters/december-2014.html",
+      "proposed_v2_path": "/newsletters/december-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 55 source sale records."
+    },
+    {
+      "legacy_path": "/november-2014/",
+      "v2_source": "site/newsletters/november-2014.html",
+      "proposed_v2_path": "/newsletters/november-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 65 source sale records."
+    },
+    {
+      "legacy_path": "/october-2014/",
+      "v2_source": "site/newsletters/october-2014.html",
+      "proposed_v2_path": "/newsletters/october-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 66 source sale records."
+    },
+    {
+      "legacy_path": "/september-2014/",
+      "v2_source": "site/newsletters/september-2014.html",
+      "proposed_v2_path": "/newsletters/september-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 59 source sale records."
+    },
+    {
+      "legacy_path": "/august-2014/",
+      "v2_source": "site/newsletters/august-2014.html",
+      "proposed_v2_path": "/newsletters/august-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 71 source sale records."
+    },
+    {
+      "legacy_path": "/july-2014/",
+      "v2_source": "site/newsletters/july-2014.html",
+      "proposed_v2_path": "/newsletters/july-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 72 source sale records."
+    },
+    {
+      "legacy_path": "/june-2014/",
+      "v2_source": "site/newsletters/june-2014.html",
+      "proposed_v2_path": "/newsletters/june-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 70 source sale records."
+    },
+    {
+      "legacy_path": "/may-2014/",
+      "v2_source": "site/newsletters/may-2014.html",
+      "proposed_v2_path": "/newsletters/may-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 56 source sale records."
+    },
+    {
+      "legacy_path": "/april-2014/",
+      "v2_source": "site/newsletters/april-2014.html",
+      "proposed_v2_path": "/newsletters/april-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 66 source sale records."
+    },
+    {
+      "legacy_path": "/march-2014/",
+      "v2_source": "site/newsletters/march-2014.html",
+      "proposed_v2_path": "/newsletters/march-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 51 source sale records."
+    },
+    {
+      "legacy_path": "/february-2014/",
+      "v2_source": "site/newsletters/february-2014.html",
+      "proposed_v2_path": "/newsletters/february-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 59 source sale records."
+    },
+    {
+      "legacy_path": "/january-2014/",
+      "v2_source": "site/newsletters/january-2014.html",
+      "proposed_v2_path": "/newsletters/january-2014/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 78 source sale records."
+    },
+    {
+      "legacy_path": "/december-2013/",
+      "v2_source": "site/newsletters/december-2013.html",
+      "proposed_v2_path": "/newsletters/december-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 66 source sale records."
+    },
+    {
+      "legacy_path": "/november-2013/",
+      "v2_source": "site/newsletters/november-2013.html",
+      "proposed_v2_path": "/newsletters/november-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 75 source sale records."
+    },
+    {
+      "legacy_path": "/october-2013/",
+      "v2_source": "site/newsletters/october-2013.html",
+      "proposed_v2_path": "/newsletters/october-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 88 source sale records."
+    },
+    {
+      "legacy_path": "/september-2013/",
+      "v2_source": "site/newsletters/september-2013.html",
+      "proposed_v2_path": "/newsletters/september-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 77 source sale records."
+    },
+    {
+      "legacy_path": "/august-2013/",
+      "v2_source": "site/newsletters/august-2013.html",
+      "proposed_v2_path": "/newsletters/august-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 81 source sale records."
+    },
+    {
+      "legacy_path": "/july-2013/",
+      "v2_source": "site/newsletters/july-2013.html",
+      "proposed_v2_path": "/newsletters/july-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 71 source sale records."
+    },
+    {
+      "legacy_path": "/june-2013/",
+      "v2_source": "site/newsletters/june-2013.html",
+      "proposed_v2_path": "/newsletters/june-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 88 source sale records."
+    },
+    {
+      "legacy_path": "/may-2013/",
+      "v2_source": "site/newsletters/may-2013.html",
+      "proposed_v2_path": "/newsletters/may-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 89 source sale records."
+    },
+    {
+      "legacy_path": "/april-2013/",
+      "v2_source": "site/newsletters/april-2013.html",
+      "proposed_v2_path": "/newsletters/april-2013/",
+      "transition_owner": "legacy",
+      "status": "proposal-not-implemented",
+      "notes": "Preserve monthly issue URL and 75 source sale records."
+    }
+  ]
+}
