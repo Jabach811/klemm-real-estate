@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const out=path.join(root,'dist','client');
+const out=path.join(root,'dist');
 const origin=(process.env.SITE_ORIGIN || 'https://klemm-real-estate-tracy.jabach0811.chatgpt.site').replace(/\/$/,'');
 if(new URL(origin).protocol!=='https:')throw new Error('SITE_ORIGIN must use HTTPS');
 const formEndpoint=new URL(process.env.FORM_ENDPOINT || 'https://release-two-pages.vercel.app/api/contact');

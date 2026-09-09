@@ -45,11 +45,20 @@ test('Full GPT Sites build excludes the broken duplicate newsletter route', () =
   env: { ...process.env, LIVE_INTERIOR_PAGES: 'all', YOUTUBE_API_KEY: 'test-key' },
   stdio: 'pipe',
  });
- assert.ok(fs.existsSync('dist/client/newsletters.html'));
- assert.equal(fs.existsSync('dist/client/newsletters/newsletters.html'), false);
+ assert.ok(fs.existsSync('dist/newsletters.html'));
+ assert.equal(fs.existsSync('dist/newsletters/newsletters.html'), false);
+});
+test('GPT Sites deployment root contains the built home page', () => {
+ execFileSync(process.execPath, ['tools/build-site.mjs'], {
+  env: { ...process.env, LIVE_INTERIOR_PAGES: 'all', YOUTUBE_API_KEY: 'test-key' },
+  stdio: 'pipe',
+ });
+ const hosting = JSON.parse(fs.readFileSync('.openai/hosting.json', 'utf8'));
+ assert.equal(hosting.static.directory, 'dist');
+ assert.ok(fs.existsSync('dist/index.html'));
 });
 test('Built GPT Sites pages send forms to the Resend endpoint', () => {
- const built = walk('dist/client').filter(file => file.endsWith('.html'));
+ const built = walk('dist').filter(file => file.endsWith('.html'));
  assert.ok(built.length > 0, 'build emitted no customer pages');
  for (const file of built) {
   const html = fs.readFileSync(file, 'utf8');
