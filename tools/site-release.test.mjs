@@ -33,6 +33,13 @@ test('Contact forms retain the Resend API route on every source page', () => {
  }
  assert.ok(contactPageCount > 0, 'no customer contact forms found');
 });
+test('CMV address selection fills only its matching contact location fields', () => {
+ const html = fs.readFileSync('site/i-want-a-free-cmv.html', 'utf8');
+ assert.match(html, /<input[^>]*id="cmv-your_address"[^>]*data-address-autocomplete[^>]*data-address-city="cmv-your_city"[^>]*data-address-state="cmv-your_state"[^>]*data-address-zip="cmv-your_zip"/);
+ assert.match(html, /<input[^>]*id="cmv-sale_address"[^>]*data-address-autocomplete/);
+ assert.match(html, /href="\.\.\/shared\/address-autocomplete\.css"/);
+ for (const script of ['address-config.js', 'address-google.js', 'address-autocomplete.js']) assert.match(html, new RegExp(`src="\\.\\.\\/shared\\/${script}"`));
+});
 test('Full GPT Sites build excludes the broken duplicate newsletter route', () => {
  execFileSync(process.execPath, ['tools/build-site.mjs'], {
   env: { ...process.env, LIVE_INTERIOR_PAGES: 'all', YOUTUBE_API_KEY: 'test-key' },
