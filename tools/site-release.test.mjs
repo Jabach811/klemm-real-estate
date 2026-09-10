@@ -40,6 +40,23 @@ test('CMV address selection fills only its matching contact location fields', ()
  assert.match(html, /href="\.\.\/shared\/address-autocomplete\.css"/);
  for (const script of ['address-config.js', 'address-google.js', 'address-autocomplete.js']) assert.match(html, new RegExp(`src="\\.\\.\\/shared\\/${script}"`));
 });
+test('Every published address form offers the same address suggestions', () => {
+ const contacts = [
+  ['site/find-me-a-home.html', 'home-your_address', 'home-your_city', 'home-your_state', 'home-your_zip'],
+  ['site/find-me-an-investment-property.html', 'investment-your_address', 'investment-your_city', 'investment-your_state', 'investment-your_zip'],
+  ['site/i-want-to-sell-my-property.html', 'sell-your_address', 'sell-your_city', 'sell-your_state', 'sell-your_zip'],
+ ];
+ for (const [file, address, city, state, zip] of contacts) {
+  const html = fs.readFileSync(file, 'utf8');
+  assert.match(html, new RegExp(`id="${address}"[^>]*data-address-autocomplete[^>]*data-address-city="${city}"[^>]*data-address-state="${state}"[^>]*data-address-zip="${zip}"`), file);
+  for (const script of ['address-config.js', 'address-google.js', 'address-autocomplete.js']) assert.match(html, new RegExp(`src="\\.\\.\\/shared\\/${script}"`), file);
+ }
+ for (const [file, id] of [['site/i-want-to-sell-my-property.html', 'sell-sale_address'], ['site/newsletters.html', 'newsletter-mailing_address']]) {
+  const html = fs.readFileSync(file, 'utf8');
+  assert.match(html, new RegExp(`id="${id}"[^>]*data-address-autocomplete`), file);
+  for (const script of ['address-config.js', 'address-google.js', 'address-autocomplete.js']) assert.match(html, new RegExp(`src="\\.\\.\\/shared\\/${script}"`), file);
+ }
+});
 test('Full GPT Sites build excludes the broken duplicate newsletter route', () => {
  execFileSync(process.execPath, ['tools/build-site.mjs'], {
   env: { ...process.env, LIVE_INTERIOR_PAGES: 'all', YOUTUBE_API_KEY: 'test-key' },

@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../shared/address-autocomplete.css">
 <link rel="prefetch" as="script" href="newsletters/archive-data.js">
 <style>
   .news-hero {
@@ -275,7 +276,7 @@
     </div>
   </fieldset>
   <label>Email<input type="email" name="email" autocomplete="email"></label>
-  <label>Mailing address (for the printed copy)<input type="text" name="address" autocomplete="street-address"></label>
+  <label>Mailing address (for the printed copy)<input type="text" id="newsletter-mailing_address" data-address-autocomplete name="address" autocomplete="street-address"></label>
   <div class="form-actions">
     <button class="btn" type="submit">Sign me up</button>
     <p>Jack keeps the list himself. Stop any time.</p>
@@ -932,5 +933,8 @@
 })();
 </script>
 <script src="../shared/site.js" defer></script>
+<script src="../shared/address-config.js" defer></script>
+<script src="../shared/address-google.js" defer></script>
+<script src="../shared/address-autocomplete.js" defer></script>
 </body>
 </html>

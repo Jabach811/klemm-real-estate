@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../shared/address-autocomplete.css">
 <style>
   .lead-hero {
     padding: clamp(72px, 12vh, 150px) var(--pad) clamp(40px, 6vh, 72px);
@@ -64,10 +65,10 @@
   <label>Name<input type="text" name="name" autocomplete="name" required></label>
   <label>Email<input type="email" name="email" autocomplete="email" required></label>
   <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-  <label>Address<input type="text" name="your_address" autocomplete="street-address"></label>
-  <label>City<input type="text" name="your_city" autocomplete="address-level2"></label>
-  <label>State<input type="text" name="your_state" autocomplete="address-level1"></label>
-  <label>Zip<input type="text" name="your_zip" autocomplete="postal-code"></label>
+  <label>Address<input type="text" id="home-your_address" data-address-autocomplete data-address-city="home-your_city" data-address-state="home-your_state" data-address-zip="home-your_zip" name="your_address" autocomplete="street-address"></label>
+  <label>City<input type="text" id="home-your_city" name="your_city" autocomplete="address-level2"></label>
+  <label>State<input type="text" id="home-your_state" name="your_state" autocomplete="address-level1"></label>
+  <label>Zip<input type="text" id="home-your_zip" name="your_zip" autocomplete="postal-code"></label>
   <label>Approximate date of move<input type="text" name="move_date"></label>
   <span class="field-label">Preferred method of contact
     <div class="select">
@@ -128,5 +129,8 @@
 
 <script src="../shared/site.js" defer></script>
 <script src="../shared/forms.js" defer></script>
+<script src="../shared/address-config.js" defer></script>
+<script src="../shared/address-google.js" defer></script>
+<script src="../shared/address-autocomplete.js" defer></script>
 </body>
 </html>
