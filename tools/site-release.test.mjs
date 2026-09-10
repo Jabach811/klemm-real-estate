@@ -41,6 +41,14 @@ test('Every Phase Two inquiry form acknowledges a completed request', () => {
   assert.match(form, /data-done="[^"]+"/, file);
  }
 });
+test('Every Phase Two inquiry form includes an address suggestion field', () => {
+ for (const file of ['site/contact.html', 'site/find-me-a-home.html', 'site/find-me-an-investment-property.html', 'site/i-want-a-free-cmv.html', 'site/i-want-to-sell-my-property.html', 'site/newsletters.html']) {
+  const html = fs.readFileSync(file, 'utf8');
+  assert.match(html, /<input[^>]*data-address-autocomplete/, file);
+  assert.match(html, /href="\.\.\/shared\/address-autocomplete\.css"/, file);
+  for (const script of ['address-config.js', 'address-google.js', 'address-autocomplete.js']) assert.match(html, new RegExp(`src="\\.\\.\\/shared\\/${script}"`), file);
+ }
+});
 test('CMV address selection fills only its matching contact location fields', () => {
  const html = fs.readFileSync('site/i-want-a-free-cmv.html', 'utf8');
  assert.match(html, /<input[^>]*id="cmv-your_address"[^>]*data-address-autocomplete[^>]*data-address-city="cmv-your_city"[^>]*data-address-state="cmv-your_state"[^>]*data-address-zip="cmv-your_zip"/);

@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../shared/address-autocomplete.css">
 <style>
   .contact-hero {
     padding: clamp(72px, 12vh, 150px) var(--pad) clamp(56px, 9vh, 110px);
@@ -150,6 +151,10 @@
       <label>Name<input type="text" name="name" autocomplete="name" required></label>
       <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
       <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>Property address<input type="text" id="contact-property_address" data-address-autocomplete data-address-city="contact-property_city" data-address-state="contact-property_state" data-address-zip="contact-property_zip" name="property_address" autocomplete="street-address"></label>
+      <label>City<input type="text" id="contact-property_city" name="property_city" autocomplete="address-level2"></label>
+      <label>State<input type="text" id="contact-property_state" name="property_state" autocomplete="address-level1"></label>
+      <label>ZIP code<input type="text" id="contact-property_zip" name="property_zip" autocomplete="postal-code"></label>
       <label>Message<textarea name="message" rows="5"></textarea></label>
       <div class="form-actions">
     <button class="btn" type="submit">Send to Jack</button>
@@ -192,5 +197,8 @@
 </script>
 
 <script src="../shared/site.js" defer></script>
+<script src="../shared/address-config.js" defer></script>
+<script src="../shared/address-google.js" defer></script>
+<script src="../shared/address-autocomplete.js" defer></script>
 </body>
 </html>
