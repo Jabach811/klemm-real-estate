@@ -33,6 +33,14 @@ test('Contact forms retain the Resend API route on every source page', () => {
  }
  assert.ok(contactPageCount > 0, 'no customer contact forms found');
 });
+test('Every Phase Two inquiry form acknowledges a completed request', () => {
+ for (const file of ['site/contact.html', 'site/find-me-a-home.html', 'site/find-me-an-investment-property.html', 'site/i-want-a-free-cmv.html', 'site/i-want-to-sell-my-property.html', 'site/newsletters.html']) {
+  const html = fs.readFileSync(file, 'utf8');
+  const form = [...html.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/g)].map(match => match[0]).find(value => value.includes('contact-form'));
+  assert.ok(form, file + ': inquiry form missing');
+  assert.match(form, /data-done="[^"]+"/, file);
+ }
+});
 test('CMV address selection fills only its matching contact location fields', () => {
  const html = fs.readFileSync('site/i-want-a-free-cmv.html', 'utf8');
  assert.match(html, /<input[^>]*id="cmv-your_address"[^>]*data-address-autocomplete[^>]*data-address-city="cmv-your_city"[^>]*data-address-state="cmv-your_state"[^>]*data-address-zip="cmv-your_zip"/);
